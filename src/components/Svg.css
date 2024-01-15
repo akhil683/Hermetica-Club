@@ -1,0 +1,33 @@
+
+.star {
+  fill: #ffffff;
+  animation: twinkle 2s infinite;
+  transform-origin: center;
+}
+
+@keyframes twinkle {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.planet {
+  fill: #4a90e2;
+  animation: rotatePlanet 10s infinite linear;
+  transform-origin: center;
+}
+
+@keyframes rotatePlanet {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

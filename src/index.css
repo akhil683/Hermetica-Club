@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-hover {
+  @apply duration-200 hover:bg-iconbgHover hover:scale-125 hover:text-mainText rounded-full;
+}
+.social-icon {
+  @apply p-4 bg-mainBg rounded-full;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  background-color: #1e1e32;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 10px;
+};
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #52527a;
+  border-radius: 50px;
+}
