@@ -67,15 +67,16 @@ const Form = () => {
           <option value="First Year">Volunteer</option>
         </select>
 
-        <button className='py-2 mt-2 text-mainText bg-violet rounded-lg text-xl' onClick={(e) => onSubmit(e)}>
+        <button className='py-2 mt-2 h-12 text-mainText bg-violet rounded-lg text-xl' onClick={(e) => onSubmit(e)}>
           {isLoading 
-          ? <TailSpin className="h-full w-full" /> 
+          ? 
+          <div className='h-full m-auto inline-block'>
+            <TailSpin height="35" radius="3" color='#fff' /> 
+          </div>
           : 'SUBMIT'
           }
           </button>
-
       </form>
-        
     </div>
   )
 }
