@@ -69,7 +69,7 @@ const Form = () => {
 
         <button className='py-2 mt-2 text-mainText bg-violet rounded-lg text-xl' onClick={(e) => onSubmit(e)}>
           {isLoading 
-          ? <TailSpin /> 
+          ? <TailSpin className="h-full w-full" /> 
           : 'SUBMIT'
           }
           </button>

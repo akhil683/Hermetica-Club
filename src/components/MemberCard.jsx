@@ -5,7 +5,7 @@ import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const MemberCard = ({ member }) => {
 
-  const {name, Image, Position} = member;
+  const {name, LinkedIn, Instagram, Position} = member;
   // const [ isHovered, setIsHovered ] = useState(false);
 
   // const MemberInfoElement = useRef(null);
@@ -62,8 +62,8 @@ const MemberCard = ({ member }) => {
           className='relative group overflow-hidden'
           >
           <div className='absolute flex gap-2 left-2 top-12 z-20 group-hover:top-2 opacity-0 group-hover:opacity-100 duration-500'>
-            <span className='p-3 text-xl hover:bg-iconBg rounded-full bg-iconbgHover hover:text-violet hover:shadow-iconbgHover hover:shadow-md hover:scale-110 cursor-pointer duration-300'><FaInstagram /></span>
-            <span className='p-3 text-xl hover:bg-iconBg rounded-full bg-iconbgHover hover:text-violet hover:shadow-iconbgHover hover:shadow-md hover:scale-110 cursor-pointer duration-300'><FaLinkedinIn /></span>
+            <a href={Instagram} className='p-3 text-xl hover:bg-iconBg rounded-full bg-iconbgHover hover:text-violet hover:shadow-iconbgHover hover:shadow-md hover:scale-110 cursor-pointer duration-300' target='_blank'><FaInstagram /></a>
+            <a  href={LinkedIn} className='p-3 text-xl hover:bg-iconBg rounded-full bg-iconbgHover hover:text-violet hover:shadow-iconbgHover hover:shadow-md hover:scale-110 cursor-pointer duration-300' target='_blank'><FaLinkedinIn /></a>
           </div>
           <div className='absolute left-4 -bottom-12 text-iconBg font-semibold group-hover:bottom-2 duration-500 z-20'>
             <span className='px-4 py-2 rounded-full bg-mainText duration-200 opacity-50 group-hover:opacity-100'>{name}</span>
