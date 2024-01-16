@@ -2,22 +2,21 @@ import React, { lazy, Suspense, useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from './components/ErrorFallback';
-
 import { TailSpin } from 'react-loader-spinner';
-// import { Player } from '@lottiefiles/react-lottie-player';
 
 const About = lazy(() => import('./routes/About'))
+const Details = lazy(() => import('./components/Details'));
+const Events = lazy(() => import('./routes/Events'));
+const Gallery = lazy(() => import('./routes/Gallery'));
+const Home = lazy(() => import('./routes/Home'))
 const Members = lazy(() => import('./routes/Members'))
 const NoPage = lazy(() => import('./routes/NoPage'))
-const Home = lazy(() => import('./routes/Home'))
 const Projects = lazy(() => import('./routes/Projects'))
-const Events = lazy(() => import('./routes/Events'));
-const Details = lazy(() => import('./components/Details'));
+
 
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Gallery from './routes/Gallery';
-// import Svg from './components/Svg';
+// import Gallery from './routes/Gallery';
 
 const Loader = () => {
   return (
@@ -40,12 +39,12 @@ const App = () => {
 
   const [ isLoading, setIsLoading ] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-    return () => clearTimeout(timer);
-  })
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setIsLoading(false);
+  }, 4000);
+  return () => clearTimeout(timer);
+})
 
   const navigate = useNavigate();
   const Data = {
@@ -177,18 +176,19 @@ const App = () => {
   }
   const { Project, Event, Member } = Data;
 
-  // if(isLoading) {
-  //   return <iframe src="https://lottie.host/embed/ffd70ffd-82b2-4282-9a4a-184cbf67cf14/9MYlUbduoT.json" className='w-screen h-screen'></iframe>
-  // }
-
   return (
     <div className=' bg-mainBg'>
-      
-      <Header />
-      <div className='z-30'>
 
+      {isLoading && 
+            <div className='fixed z-50 bg-mainBg h-screen w-screen'>
+            <iframe src="https://lottie.host/embed/ffd70ffd-82b2-4282-9a4a-184cbf67cf14/9MYlUbduoT.json" className='w-screen h-screen'></iframe>
+            </div>
+          }
+      <Header />
+
+      <div className='z-30'>
       <Routes>
-        
+      
           <Route path='/' element={
             <ErrorBoundary
             FallbackComponent={ErrorFallback}
