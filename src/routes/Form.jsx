@@ -1,25 +1,37 @@
 import React, { useState } from 'react';
-import { TailSpin } from 'react-loader-spinner';
+import { TailSpin } from 'react-loader-spinner';4
+import { addDoc } from 'firebase/firestore';
+import { membersRef } from '../utils/firebase.utils';
 
 const Form = () => {
   const [isLoading, setIsLoading ] = useState(false);
-
   const [form, setForm ] = useState({
     name: '',
     Position: '',
     LinkedIn: '',
     Instagram: '',
-    Year: '',
   })
-
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      setIsLoading(true);
+      await addDoc(membersRef, form);
+
+      setIsLoading(false);
+
+    } catch (e) {
+      alert("Error, Please try again");
+      console.log(e.message);
+    }
   }
+
   return (
     <div className='mx-6 my-4'>
+
       <h2 className='text-2xl text-center mb-6'>Members <span className=' text-violet'>Form</span></h2>
       <form className='flex flex-col max-w-[600px] m-auto gap-4 text-mainBg'>
-        
+
         <input 
         value={form.name}
         onChange={(e) => setForm({...form, name: e.target.value})}
@@ -44,37 +56,18 @@ const Form = () => {
         className='py-2 px-4 rounded-lg outline-none w-full'
         />
 
-        <input 
-        list='positions'
-        value={form.Position}
-        onChange={(e) => setForm({...form, Position: e.target.value})}
-        type="text" 
-        placeholder='Position'
-        className='py-2 px-4 rounded-lg outline-none w-full'
-        />
-        <datalist id='positions'>
-          <option value="Final Year Member" />
-          <option value="Coordinator" />
-          <option value="Executive Member" />
-          <option value="First Year" />
-        </datalist>
+        <select 
+          className='py-2 px-4 rounded-lg w-full' 
+          onChange={(e) => setForm({...form, Position: e.target.value})}
+        >
+          <option value="Your Position">Your Position</option>
+          <option value="Final Year Member">Final Year Member</option>
+          <option value="Coordinator" >Coordinator</option>
+          <option value="Executive Member" >Executive Member</option>
+          <option value="First Year">Volunteer</option>
+        </select>
 
-        <input 
-        list='year'
-        value={form.Year}
-        onChange={(e) => setForm({...form, Year: e.target.value})}
-        type="text"
-        placeholder='Year'
-        className='py-2 px-4 rounded-lg outline-none w-full'
-        />
-        <datalist id='year'>
-            <option value="Final Year" />
-            <option value="Third Year" />
-            <option value="Second Year" />
-            <option value="First Year" />
-        </datalist>
-
-        <button className='py-2 text-mainText bg-violet rounded-lg text-xl' onClick={(e) => onSubmit(e)}>
+        <button className='py-2 mt-2 text-mainText bg-violet rounded-lg text-xl' onClick={(e) => onSubmit(e)}>
           {isLoading 
           ? <TailSpin /> 
           : 'SUBMIT'
