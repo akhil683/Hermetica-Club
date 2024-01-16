@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import MemberCard from '../components/MemberCard';
 import { getDocs } from 'firebase/firestore';
 import { membersRef } from '../utils/firebase.utils';
 
-const Members = ({ Members }) => {
+import MemberCard from '../components/MemberCard';
+import Skeleton from '../components/Skeleton';
+
+const Members = () => {
   const [data, setData ] = useState([]);
   const [ isLoading, setIsLoading ] = useState(false);
 
-  const defaultMembers = data.filter(member => member.year === "Final Year");
+  const defaultMembers = data.filter(member => member.Year === "Final Year");
   const [ filteredMembers, setFilteredMembers ] = useState(defaultMembers);
 
   const handleClick = (year) => {
-    const filteredMembers = Members.filter(member => member.year === year);
+    const filteredMembers = data.filter(member => member.Year === year);
     setFilteredMembers(filteredMembers);
   }
 
@@ -37,12 +39,19 @@ const Members = ({ Members }) => {
           <button onClick={() => handleClick("First Year")} className='p-2 cursor-pointer bg-iconbgHover duration-200 hover:bg-violet focus:bg-violet rounded-full px-4'>1st Year</button>
         </div>
 
-        <div className='flex flex-wrap justify-center mt-16 gap-4 mx-8'>
-          {filteredMembers.map((member) => {
-            return (
-              <MemberCard member={member} key={member.id} />
-            )})}
-        </div>
+        {isLoading 
+          ? <div className='flex flex-wrap justify-center nt-16 gap-4 mx-8'>
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+          </div>
+          : <div className='flex flex-wrap justify-center mt-16 gap-4 mx-8'>
+              {filteredMembers.map((member) => {
+                return (
+                  <MemberCard member={member} key={member.id} />
+              )})}
+            </div>
+        }
       </div>
   )
 }

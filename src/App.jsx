@@ -12,7 +12,7 @@ const Home = lazy(() => import('./routes/Home'))
 const Members = lazy(() => import('./routes/Members'))
 const NoPage = lazy(() => import('./routes/NoPage'))
 const Projects = lazy(() => import('./routes/Projects'))
-
+const Form = lazy(() => import('./routes/Form'))
 
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -261,6 +261,17 @@ useEffect(() => {
             >
             <Suspense fallback={<Loader />}>
               <Members Members={Member} />
+            </Suspense>
+          </ErrorBoundary>} 
+          />
+
+          <Route path='/form' element={
+            <ErrorBoundary
+            FallbackComponent={ErrorFallback}
+            onReset={() => navigate('/')}
+            >
+            <Suspense fallback={<Loader />}>
+              <Form />
             </Suspense>
           </ErrorBoundary>} 
           />
