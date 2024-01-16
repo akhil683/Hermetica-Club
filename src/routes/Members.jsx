@@ -1,17 +1,31 @@
-import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import Profile from '../assets/profile.jpg';
+import React, { useEffect, useState } from 'react';
 import MemberCard from '../components/MemberCard';
+import { getDocs } from 'firebase/firestore';
+import { membersRef } from '../utils/firebase.utils';
 
 const Members = ({ Members }) => {
+  const [data, setData ] = useState([]);
+  const [ isLoading, setIsLoading ] = useState(false);
 
-  const defaultMembers = Members.filter(member => member.year === "Final Year");
+  const defaultMembers = data.filter(member => member.year === "Final Year");
   const [ filteredMembers, setFilteredMembers ] = useState(defaultMembers);
 
   const handleClick = (year) => {
     const filteredMembers = Members.filter(member => member.year === year);
     setFilteredMembers(filteredMembers);
   }
+
+  useEffect(() => {
+    const getData = async () => {
+      setIsLoading(true);
+      const _data = await getDocs(membersRef);
+      _data.forEach((doc) => {
+        setData((prev) => [...prev, {...(doc.data()), id: doc.id}]);
+      })
+      setIsLoading(false);
+    }
+    getData();
+  }, [])
   
   return (
     <div className='mt-4 mb-12'>
