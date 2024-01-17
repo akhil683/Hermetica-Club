@@ -1,13 +1,14 @@
 import React from 'react'
-import Hero from '../components/Hero'
+import Hero from '../components/Home/Hero';
 import CcImage from '../assets/profile.jpg';
 import { motion } from 'framer-motion'
+import Nimbus from '../components/Home/Nimbus';
 
 const Home = () => {
   return (
     <>
       <Hero /> 
-      
+      <Nimbus />
       <div className='p-6 pb-12 sm:h-screen bg-iconBg'>
       
         <h2 className='text-center sm:text-5xl text-3xl my-12 font-popppins'><span className='text-violet'>Club</span> Co-ordinators</h2>

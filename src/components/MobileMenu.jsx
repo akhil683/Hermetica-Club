@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import { AiFillHome } from "react-icons/ai";
-import { FaInstagram, FaLinkedinIn, FaGithub, FaProjectDiagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaProjectDiagram, FaYoutube } from "react-icons/fa";
 import { IoMdInformationCircle } from "react-icons/io";
 import { MdOutlineSupervisorAccount, MdEmojiEvents, MdPhotoSizeSelectActual } from "react-icons/md";
 
@@ -12,7 +12,7 @@ const MobileMenu = ({ control }) => {
   return (
     <motion.div
       animate={control}
-      className='w-72 absolute -right-72 mr-0 text-2xl font-popppins'
+      className='w-64 absolute -right-72 mr-0 text-xl'
     >
       <ul className='sticky bg-iconBg text-subMainText rounded-xl overflow-hidden'>
         <li className='px-4 py-3 duration-150 hover:text-mainText hover:bg-iconbgHover'>
