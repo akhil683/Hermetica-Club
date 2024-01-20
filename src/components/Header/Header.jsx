@@ -7,6 +7,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 import MobileMenu from './MobileMenu';
 import HermeticaImg from '../../assets/hermetica-logo.jpg';
+import FramerReveal from '../FramerReveal';
 
 const Header = () => {
 

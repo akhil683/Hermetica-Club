@@ -22,12 +22,14 @@ export default {
     colors: {
       'mainBg': '#000',
       // 1e1e32
-      'mainText': '#ffffff',
+      'mainText': '#ffff',
       'subMainText': '#d1d1d1',
+      // 'iconBg': '#163020',
       'iconBg': '#1e1e32',
       // 2f2f50
       'iconbgHover': '#52527a',
       'violet': '#c082ff',
+      // 'violet': '#16FF00',
     },
     extend: {
       animation: {

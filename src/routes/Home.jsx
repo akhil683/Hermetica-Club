@@ -4,6 +4,7 @@ import CcImage from '../assets/profile.jpg';
 import { motion } from 'framer-motion'
 import Nimbus from '../components/Home/Nimbus';
 import Domains from '../components/Home/Domains';
+import FramerReveal from '../components/FramerReveal';
 
 const Home = () => {
   return (
@@ -13,10 +14,13 @@ const Home = () => {
       <Domains />
       <div className='p-6 pb-12 sm:h-screen bg-iconBg'>
       
+      <FramerReveal>
         <h2 className='text-center sm:text-5xl text-3xl my-12 font-popppins'><span className='text-violet'>Club</span> Co-ordinators</h2>
+      </FramerReveal>
      
         <div className='flex max-sm:flex-col max-sm:gap-12 justify-around'>
           {/* Aditya Saroch Sir  */}
+        <FramerReveal>
         <motion.div 
           className='relative group mx-4'
         >
@@ -43,8 +47,10 @@ const Home = () => {
               </div>
           </div>
         </motion.div>
+        </FramerReveal>
 
         {/* Nikhil Sir  */}
+        <FramerReveal>
         <motion.div 
           className='relative group mx-4'
         >
@@ -70,6 +76,7 @@ const Home = () => {
               </div>
           </div>
         </motion.div>
+        </FramerReveal>
       </div>
       </div>
     </>

@@ -16,7 +16,7 @@ const Details = ({ data }) => {
     <div className='mb-12 mt-4'>
       <h3 className='text-violet text-4xl text-center mb-12'>{name}</h3>
       <div className='flex mx-4 flex-wrap gap-12 justify-center'>
-        <div className='relative sm:w-[350px] p-1 bg-subMainText w-full sm:h-[400px] h-[450px] rounded-xl overflow-hidden '>
+        <div className='relative sm:w-[350px] border border-iconbgHover bg-subMainText w-full sm:h-[400px] h-[450px] rounded-xl overflow-hidden '>
           <img src={Img} alt="" className=' w-full h-full object-cover rounded-lg' />
         </div>
         <div className='sm:max-w-[500px] w-full font-montserrat'>
@@ -49,7 +49,7 @@ const Details = ({ data }) => {
         />
         <input className=' rounded-md w-full py-2 px-4 outline-none' type="text" placeholder='Your Name' />
         <input className=' rounded-md w-full py-2 px-4 outline-none' type="text" placeholder='Suggestions' />
-        <button className=' bg-violet py-2 text-mainText text-xl rounded-md' type='submit'>SUBMIT</button>
+        <button className='bg-violet text-mainText py-2 font-semibold duration-200 text-xl rounded-md' type='submit'>SUBMIT</button>
       </form>
       </div>
 

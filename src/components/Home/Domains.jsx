@@ -1,5 +1,6 @@
 import React from 'react';
 import DomainImg from '../../assets/profile.jpg';
+import FramerReveal from '../FramerReveal';
 
 const Domains = () => {
   const Domains = [
@@ -22,17 +23,21 @@ const Domains = () => {
   ]
 
   return (
-    <div className='min-h-screen flex max-lg:my-12 flex-col items-center justify-center'>
-      <h3 className='text-3xl sm:text-5xl text-center mb-12'>Our <span className='text-violet'>Domains</span></h3>
+    <div className='min-h-screen flex max-md:my-12 flex-col gap-6 justify-center'>
+      <FramerReveal>
+        <h3 className='text-3xl sm:text-5xl text-center mb-12'>Our <span className='text-violet'>Domains</span></h3>
+      </FramerReveal>
 
       <div className='flex max-sm:flex-col gap-6 flex-wrap justify-center items-center'>
         {Domains.map(domain => (
-          <div key={domain.name} className='flex flex-col justify-center items-center'>
+          <FramerReveal  key={domain.name} >
+          <div className='flex flex-col justify-center items-center'>
             <div className='w-72 h-72 bg-subMainText rounded-full overflow-hidden'>
               <img src={DomainImg} alt="" />
             </div>
             <p className='px-4 py-2 bg-mainText text-mainBg mt-4 rounded-full w-[70%] text-center'>{domain.name}</p>
           </div>
+          </FramerReveal>
         ))}
       </div>
     </div>

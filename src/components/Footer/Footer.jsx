@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import FooterImg from '../../assets/footer.webp';
 
 import FooterSocials from './FooterSocials'
 
 const Footer = () => {
   return (
-    <footer className='py-12 px-12 bg-mainBg'>
-      <div className='flex flex-wrap gap-6 sm:justify-around justify-center'>
+    <footer className='relative py-12 px-12 overflow-hidden group'>
+      <div className='flex z-50 flex-wrap gap-6 sm:justify-around justify-center'>
         <FooterSocials />
         <div>
           <h4 className='text-lg my-4'>Projects</h4>
@@ -37,8 +38,10 @@ const Footer = () => {
               <p>Copyright2023</p>
           </div>
       </div>
+      {/* <div className='absolute w-[10vw] h-[10vw] opacity-15 -translate-y-[10%] group-hover:-translate-y-[30%] duration-1000 rounded-full bg-iconbgHover'></div> */}
+      {/* <img src={FooterImg} alt="" className='w-full h-full object-cover' /> */}
     </footer>
   )
 }
 
-export default Footer
+export default Footer;
