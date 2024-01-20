@@ -6,6 +6,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { IoIosArrowForward } from "react-icons/io";
 
 import MobileMenu from './MobileMenu';
+import HermeticaImg from '../../assets/hermetica-logo.jpg';
 
 const Header = () => {
 
@@ -35,7 +36,8 @@ const Header = () => {
     <>
     <nav className='flex sm:justify-around justify-between sticky top-0 items-center bg-gradient-to-b from-mainBg to-transparent p-4 overflow-hidden z-50'>
 
-      <Link to='/'  className='bg-iconBg px-4 py-2 rounded-full duration-200 my-auto hover:bg-iconbgHover hover:scale-110'>
+      <Link to='/'  className='bg-iconBg flex items-center gap-1 px-4 py-2 rounded-full duration-200 my-auto hover:bg-iconbgHover hover:scale-110'>
+        <img src={HermeticaImg} alt="" className='h-5 w-5 object-cover rounded-full' />
         <span className='sm:text-xl'>Hermetica</span>
       </Link>
 

@@ -5,7 +5,7 @@ const Searchbar = ({ onSearchChange, Placeholder }) => {
 
 
   return (
-      <div className='text-center m-auto w-[350px] sm:w-[500px] flex center group duration-200 hover:scale-110'>
+      <div className='text-center m-auto w-[340px] sm:w-[500px] flex center group duration-200 hover:scale-110'>
       <IoMdSearch 
         style={{marginLeft: "1rem", marginTop: "0.5rem", position: "absolute"}}
         className=' text-violet text-2xl' 

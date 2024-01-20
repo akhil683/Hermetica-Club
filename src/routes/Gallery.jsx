@@ -9,7 +9,7 @@ const Gallery = () => {
         {/* <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet'>Extensions</button> */}
         <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet'>Hermetica Day</button>
       </div>
-      <div className='mx-6 flex flex-wrap gap-6'>
+      <div className='mx-2 flex flex-wrap justify-center items-center gap-6'>
         <div className='w-full sm:w-[350px] h-[300px] border border-iconbgHover'>
           <img src={Img} alt="" className='w-full h-full object-cover' />
         </div>

@@ -5,7 +5,7 @@ import ErrorFallback from './components/ErrorFallback';
 import { TailSpin } from 'react-loader-spinner';
 
 const About = lazy(() => import('./routes/About'))
-const Details = lazy(() => import('./components/Details'));
+const Details = lazy(() => import('./components/Details/Details'));
 const Events = lazy(() => import('./routes/Events'));
 const Gallery = lazy(() => import('./routes/Gallery'));
 const Home = lazy(() => import('./routes/Home'))
@@ -14,8 +14,8 @@ const NoPage = lazy(() => import('./routes/NoPage'))
 const Projects = lazy(() => import('./routes/Projects'))
 const Form = lazy(() => import('./routes/Form'))
 
-import Footer from './components/Footer'
-import Header from './components/Header'
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header'
 // import Gallery from './routes/Gallery';
 
 const Loader = () => {
@@ -51,7 +51,7 @@ useEffect(() => {
     "Project": [
       {
         id: 1,
-        name: "asper from Baggase",
+        name: "Ink from carbon soot",
         url: "paper_from_baggase",
         proposedBy: "Akhil",
         Abstract: "ajdsfl asdjf lkasdn lkasd nlkvnasd k",
@@ -59,7 +59,7 @@ useEffect(() => {
       },
       {
         id: 2,
-        name: "Paper from Baggase",
+        name: "Noise proofing by agro waste",
         url: "paper_from_baggase",
         proposedBy: "Akhil",
         Abstract: "ajdsfl asdjf lkasdn lkasd nlkvnasd k",
@@ -67,7 +67,7 @@ useEffect(() => {
       },
       {
         id: 3,
-        name: "Paper from Baggase",
+        name: "Electricity generating tiles",
         url: "paper_from_baggase",
         proposedBy: "Akhil",
         Abstract: "ajdsfl asdjf lkasdn lkasd nlkvnasd k",
@@ -75,7 +75,7 @@ useEffect(() => {
       },
       {
         id: 4,
-        name: "Paper from Baggase",
+        name: "Solar Tracker",
         url: "paper_from_baggase",
         proposedBy: "Akhil",
         Abstract: "ajdsfl asdjf lkasdn lkasd nlkvnasd k",
