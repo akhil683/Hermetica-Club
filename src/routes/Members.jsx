@@ -4,14 +4,25 @@ import { membersRef } from '../utils/firebase.utils';
 
 import MemberCard from '../components/MemberCard';
 import Skeleton from '../components/Skeleton';
-import useFetch from '../components/UseFetch';
+// import useFetch from '../components/UseFetch';
 
 const Members = () => {
   // const [data, setData ] = useState([]);
-  const [ data ] = useFetch(membersRef);
-
+  // const [ data ] = useFetch(membersRef);
+  const [ data, setData ] = useState([]);
   const [ isLoading, setIsLoading ] = useState(false);
 
+  useEffect(() => {
+    const getData = async () => {
+      setIsLoading(true);
+      const _data = await getDocs(membersRef);
+      _data.forEach((doc) => {
+        setData((prev) => [...prev, {...(doc.data()), id: doc.id}]);
+      })
+      setIsLoading(false);
+    }
+    getData();
+  }, [])
   const defaultMembers = data.filter(member => member.Position === "Final Year Member");
   const [ filteredMembers, setFilteredMembers ] = useState(defaultMembers);
 
