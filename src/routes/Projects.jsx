@@ -3,7 +3,7 @@ import React, { useState, useEffect} from 'react';
 import Searchbar from '../components/Searchbar';
 import Card from '../components/Card';
 import Skeleton from '../components/Skeleton';
-import useFetch from '../components/UseFetch';
+// import useFetch from '../components/UseFetch';
 // import { projectRef } from '../utils/firebase.utils';
 
 const Projects = ({ Projects }) => {
