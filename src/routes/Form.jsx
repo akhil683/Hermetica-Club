@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { TailSpin } from 'react-loader-spinner';4
 import { addDoc } from 'firebase/firestore';
 import { membersRef } from '../utils/firebase.utils';
+import FramerReveal from '../components/FramerReveal';
 
 const Form = () => {
   const [isLoading, setIsLoading ] = useState(false);
@@ -11,15 +12,13 @@ const Form = () => {
     LinkedIn: '',
     Instagram: '',
   })
+
   const onSubmit = async (e) => {
     e.preventDefault();
-
     try {
       setIsLoading(true);
       await addDoc(membersRef, form);
-
       setIsLoading(false);
-
     } catch (e) {
       alert("Error, Please try again");
       console.log(e.message);
@@ -27,10 +26,11 @@ const Form = () => {
   }
 
   return (
+    <FramerReveal>
     <div className='mx-6 my-4'>
 
       <h2 className='text-2xl text-center mb-6'>Members <span className=' text-violet'>Form</span></h2>
-      <form className='flex flex-col max-w-[600px] m-auto gap-4 text-mainBg'>
+      <form className='flex flex-col max-sm:text-lg max-w-[600px] m-auto gap-4 text-mainBg'>
 
         <input 
         value={form.name}
@@ -60,7 +60,7 @@ const Form = () => {
           className='py-2 px-4 rounded-lg w-full' 
           onChange={(e) => setForm({...form, Position: e.target.value})}
         >
-          <option value="Your Position">Your Position</option>
+          <option value="">Select Your Position</option>
           <option value="Final Year Member">Final Year Member</option>
           <option value="Coordinator" >Coordinator</option>
           <option value="Executive Member" >Executive Member</option>
@@ -78,6 +78,7 @@ const Form = () => {
           </button>
       </form>
     </div>
+    </FramerReveal>
   )
 }
 

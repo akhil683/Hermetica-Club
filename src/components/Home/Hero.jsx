@@ -9,8 +9,8 @@ const Hero = () => {
     <FramerReveal>
       <div className='min-h-[90vh] flex mx-8 gap-2 sm:gap-6 max-sm:flex-col justify-center items-center'>
 
-        <div className='m-6 text-center text-xl font-popppins' >
-          <h1 className='text-4xl md:text-6xl mb-3'>Team <span className=' text-violet'>Hermetica</span></h1>
+        <div className='m-2 sm:m-6 text-center text-xl font-popppins' >
+          <h1 className='text-3xl md:text-6xl mb-3'>Team <span className=' text-violet'>Hermetica</span></h1>
           <p className='max-w-[300px] text-subMainText'>'We React to what matters.'</p>
           <p className='max-w-[460px] text-subMainText text-xs mt-6'>Team Hermetica, Established in 2014, Represents The Department of Chemical Engineering, In the annual Tech Fest NIMBUS at National Institite of Technology, Hamirpur.</p>
         </div>

@@ -1,12 +1,14 @@
 import React from 'react'
-import Hero from '../components/Home/Hero';
-import CcImage from '../assets/profile.jpg';
 import { motion } from 'framer-motion'
-import Nimbus from '../components/Home/Nimbus';
+
+import CcImage from '../assets/profile.jpg';
 import Domains from '../components/Home/Domains';
 import FramerReveal from '../components/FramerReveal';
+import Hero from '../components/Home/Hero';
+import Nimbus from '../components/Home/Nimbus';
 
 const Home = () => {
+  
   return (
     <>
       <Hero /> 

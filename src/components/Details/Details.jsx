@@ -14,9 +14,9 @@ const Details = ({ data }) => {
 
   return (
     <div className='mb-12 mt-4'>
-      <h3 className='text-violet text-4xl text-center mb-12'>{name}</h3>
+      <h3 className='text-violet text-3xl text-center mb-12'>{name}</h3>
       <div className='flex mx-4 flex-wrap gap-12 justify-center'>
-        <div className='relative sm:w-[350px] border border-iconbgHover bg-subMainText w-full sm:h-[400px] h-[450px] rounded-xl overflow-hidden '>
+        <div className='relative sm:w-[350px] shadow-iconBg shadow-2xl w-full sm:h-[400px] h-[450px] rounded-xl overflow-hidden '>
           <img src={Img} alt="" className=' w-full h-full object-cover rounded-lg' />
         </div>
         <div className='sm:max-w-[500px] w-full font-montserrat'>
@@ -25,11 +25,11 @@ const Details = ({ data }) => {
             count={5}
             value={0}
             color1='#ffd700'
-            size={30}
+            size={20}
             half={true}
             edit={true}
           />
-          <p className=' text-subMainText text-justify text-lg mt-4'>
+          <p className=' text-subMainText text-justify text-md mt-4'>
           {Abstract}
           </p>
         </div>
@@ -43,7 +43,7 @@ const Details = ({ data }) => {
           // onChange={}
           color1='#ffd700'
           // color2=''
-          size={50}
+          size={40}
           half={true}
           edit={true}
         />

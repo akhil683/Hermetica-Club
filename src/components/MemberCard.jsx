@@ -1,60 +1,15 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
 import Img from '../assets/profile.jpg';
-import { motion, useMotionValue, useSpring, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import FramerReveal from './FramerReveal';
 
 const MemberCard = ({ member }) => {
-
   const {name, LinkedIn, Instagram, Position} = member;
-  // const [ isHovered, setIsHovered ] = useState(false);
-
-  // const MemberInfoElement = useRef(null);
-
-//   const ref = useRef(null);
-//   const { scrollYProgress } = useScroll({
-//     target: ref,
-//     offset: ["-3 1", '1.2 1'],
-//   })
-
-//   //cursor animation
-//   const cursorSize = 20;
-//   const mouse = {
-//     x: useMotionValue(0),
-//     y: useMotionValue(0),
-//   }
-//   const smoothOptions = { damping: 50, stiffness: 200, mass: 0.2 };
-//   const smoothMouse = {
-//     x: useSpring(mouse.x, smoothOptions),
-//     y: useSpring(mouse.y, smoothOptions),
-//   }
-
-// const manageMouseOver = () => {
-//   setIsHovered(true);
-// }
-// const manageMouseLeave = () => {
-//   setIsHovered(false);
-// }
-// const manageMouseMove = (e) => {
-//   const { clientX, clientY } = e;
-//   mouse.x.set(clientX + cursorSize);
-//   mouse.y.set(clientY + cursorSize);
-// }
-
-// useEffect(() => {
-//   window.addEventListener("mousemove", manageMouseMove);
-//   ref.current.addEventListener("mousemove", manageMouseOver);
-//   ref.current.addEventListener("mousemove", manageMouseLeave);
-//   return () => {
-//     window.removeEventListener("mousemove",manageMouseMove)
-//     ref.current.removeEventListener("mousemove", manageMouseOver);
-//     ref.current.removeEventListener("mousemove", manageMouseLeave);
-// }
-// });
 
   return (
     <FramerReveal>
-    <div className='flex flex-col max-sm:w-full'>
+    <div className='flex flex-col max-sm:w-full border border-iconbgHover rounded-lg'>
           <motion.div className='relative group overflow-hidden' >
             <div className='absolute flex gap-2 left-2 top-12 z-20 group-hover:top-2 opacity-0 group-hover:opacity-100 duration-500'>
               <a href={Instagram} className='p-3 text-xl hover:bg-iconBg rounded-full bg-iconbgHover hover:text-violet hover:shadow-iconbgHover hover:shadow-md hover:scale-110 cursor-pointer duration-300' target='_blank'><FaInstagram /></a>
