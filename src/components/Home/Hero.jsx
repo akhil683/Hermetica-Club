@@ -17,20 +17,20 @@ const Hero = () => {
 
         <motion.div 
           className='m-12 sm:w-[400px] w-full h-[380px] rounded-2xl overflow-hidden'
-          drag
-          dragConstraints={{
-            right: 20,
-            left: -20,
-            top: 20,
-            bottom: 5
-          }}
-          whileHover={{
-            scale: 1.1,
-          }}
-          transition={{
-            type: 'spring',
-            duration: 0.4,
-          }}
+          // drag
+          // dragConstraints={{
+          //   right: 20,
+          //   left: -20,
+          //   top: 20,
+          //   bottom: 5
+          // }}
+          // whileHover={{
+          //   scale: 1.1,
+          // }}
+          // transition={{
+          //   type: 'spring',
+          //   duration: 0.4,
+          // }}
           >
           <img src={HeroImg} className='w-full h-full object-cover' alt="" />
         </motion.div>

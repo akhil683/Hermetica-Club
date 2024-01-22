@@ -3,7 +3,7 @@ import { getFirestore, collection } from "firebase/firestore";
 // import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCM5-dthDB7IJG8PQvk2k-OhF0_Etq4zu8",
+  apiKey: import.meta.env.VITE_APP_FIREBASE_API,
   authDomain: "hermetica-76788.firebaseapp.com",
   projectId: "hermetica-76788",
   storageBucket: "hermetica-76788.appspot.com",
