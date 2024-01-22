@@ -34,7 +34,7 @@ const Members = () => {
   return (
     <div className='mt-4 mb-12'>
 
-        <div className='flex flex-wrap mx-4 -mt-16 items-center sm:gap-4 gap-2 max-sm:text-xs font-montserrat fixed z-30'>
+        <div className='flex flex-wrap mx-4 -mt-[70px] sm:-mt-16 items-center sm:gap-4 gap-2 max-sm:text-xs font-montserrat fixed z-30'>
           <button onClick={() => handleClick("Final Year Member")} className='p-2 cursor-pointer bg-iconbgHover duration-200 hover:bg-violet focus:bg-violet rounded-full px-4'>Final Year</button>
           <button onClick={() => handleClick("Coordinator")} className='p-2 cursor-pointer bg-iconbgHover duration-200 hover:bg-violet focus:bg-violet rounded-full px-4'>3rd Year</button>
           <button onClick={() => handleClick("Executive Member")} className='p-2 cursor-pointer bg-iconbgHover duration-200 hover:bg-violet focus:bg-violet rounded-full px-4'>2nd Year</button>

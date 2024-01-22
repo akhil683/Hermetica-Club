@@ -3,6 +3,7 @@ import Img from '../../assets/profile.jpg';
 import { useParams } from 'react-router-dom';
 import ReactStars from 'react-stars';
 import Reviews from './Reviews';
+import FramerReveal from '../FramerReveal';
 // import useFetch from '../UseFetch';
 // import { projectRef } from '../../utils/firebase.utils';
 
@@ -14,6 +15,7 @@ const Details = ({ data }) => {
 
   return (
     <div className='mb-12 mt-4'>
+      <FramerReveal>
       <h3 className='text-violet text-3xl text-center mb-12'>{name}</h3>
       <div className='flex mx-4 flex-wrap gap-12 justify-center'>
         <div className='relative sm:w-[350px] shadow-iconBg shadow-2xl w-full sm:h-[400px] h-[450px] rounded-xl overflow-hidden '>
@@ -34,7 +36,9 @@ const Details = ({ data }) => {
           </p>
         </div>
       </div>
+      </FramerReveal>
 
+    <FramerReveal>
       <div className='my-12 py-6 text-center'>
       <form className='flex flex-col mx-4 sm:mx-auto max-w-[600px] gap-4 text-iconBg'>
         <ReactStars 
@@ -52,8 +56,11 @@ const Details = ({ data }) => {
         <button className='bg-violet text-mainText py-2 font-semibold duration-200 text-xl rounded-md' type='submit'>SUBMIT</button>
       </form>
       </div>
-
+    </FramerReveal>
+    
+    <FramerReveal>
       <Reviews />
+    </FramerReveal>
     </div>
   )
 }
