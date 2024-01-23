@@ -8,12 +8,12 @@ const Gallery = () => {
     <div className='m-4 sm:mb-12'>
 
       <div className='flex flex-wrap gap-4 max-sm:text-sm mb-6'>
-        <button className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet'> Nimbus</button>
-        <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet'>Pre-Nimbus</button>
-        <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet'>Hermetica Day</button>
+        <button className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200'> Nimbus</button>
+        <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200'>Pre-Nimbus</button>
+        <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200'>Hermetica Day</button>
       </div>
 
-      <div className='flex flex-wrap justify-center items-center gap-6'>
+      <div className='flex flex-wrap justify-center items-center gap-4'>
 
         <FramerReveal>
           <div className='relative w-full sm:w-[350px] sm:h-[300px] border border-iconbgHover overflow-hidden group'>

@@ -15,10 +15,9 @@ const Details = ({ data }) => {
 
   return (
     <div className='mb-12 mt-4'>
-      <FramerReveal>
       <h3 className='text-violet text-3xl text-center mb-12'>{name}</h3>
       <div className='flex mx-4 flex-wrap gap-12 justify-center'>
-        <div className='relative sm:w-[350px] shadow-iconBg shadow-2xl w-full sm:h-[400px] h-[450px] rounded-xl overflow-hidden '>
+        <div className='relative sm:w-[350px] shadow-iconBg duration-300 shadow-2xl w-full hover:opacity-90 sm:h-[400px] h-[450px] rounded-xl overflow-hidden '>
           <img src={Img} alt="" className=' w-full h-full object-cover rounded-lg' />
         </div>
         <div className='sm:max-w-[500px] w-full font-montserrat'>
@@ -36,7 +35,6 @@ const Details = ({ data }) => {
           </p>
         </div>
       </div>
-      </FramerReveal>
 
     <FramerReveal>
       <div className='my-12 py-6 text-center'>

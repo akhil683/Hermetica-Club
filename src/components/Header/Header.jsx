@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useAnimation } from 'framer-motion';
 
@@ -7,12 +7,31 @@ import { IoIosArrowForward } from "react-icons/io";
 
 import MobileMenu from './MobileMenu';
 import HermeticaImg from '../../assets/hermetica-logo.jpg';
-import FramerReveal from '../FramerReveal';
 
 const Header = () => {
 
   const control = useAnimation();
+  const [show, setShow] = useState("top");
   const [ showMenu, setShowMenu ] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if(window.scrollY > 200) {
+      if(window.scrollY > lastScrollY && !showMenu) {
+        setShow("-translate-y-full")
+      } else {
+        setShow("show");
+      }
+    }
+    setLastScrollY(window.scrollY);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar)
+    return () => {
+    window.removeEventListener("scroll", controlNavbar)
+    }
+  }, [lastScrollY])
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -35,14 +54,14 @@ const Header = () => {
 
   return (
     <>
-    <nav className='flex sm:justify-around justify-between sticky top-0 items-center bg-gradient-to-b from-mainBg to-transparent p-4 overflow-hidden z-50'>
+    <nav className={`flex sm:justify-around justify-between sticky top-0 items-center bg-gradient-to-b from-mainBg to-transparent p-4 overflow-hidden z-50 duration-200 ${show}`}>
 
       <Link to='/'  className='bg-iconBg flex items-center gap-1 px-4 py-2 rounded-full duration-200 my-auto hover:bg-iconbgHover hover:scale-110'>
         <img src={HermeticaImg} alt="" className='h-5 w-5 object-cover rounded-full' />
         <span className='sm:text-xl'>Hermetica</span>
       </Link>
 
-      <ul className='sm:flex hidden py-1 rounded-full'>
+      <ul className='sm:flex hidden py-1 text-lg rounded-full'>
         <li className='px-4 py-2 nav-hover'>
           <Link to='/'>Home</Link>
         </li>

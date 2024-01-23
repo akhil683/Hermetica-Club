@@ -25,8 +25,8 @@ const Home = () => {
       transition: { 
         duration: 1,
         type: 'spring',
-        stiffness: 200,
-        damping: 25,
+        stiffness: 520,
+        damping: 40,
       }})
   }
 
@@ -42,11 +42,11 @@ const Home = () => {
         <h2 className='text-center sm:text-5xl text-3xl my-12 font-popppins'><span className='text-violet'>Club</span> Co-ordinators</h2>
       </FramerReveal>
      
-        <div className='flex max-sm:flex-col max-sm:gap-12 justify-around'>
+        <div className='flex max-sm:flex-col gap-12 sm:gap-20 justify-center'>
          
             <FramerReveal>
               <div 
-                className='relative group mx-4'
+                className='relative group mx-4 cursor-pointer hover:-translate-y-1 duration-300'
                 onClick={toggleMenu}
               >
                 <div className='absolute left-2 bottom-4 duration-500 text-iconBg font-semibold'>
@@ -56,26 +56,25 @@ const Home = () => {
                   <img className='w-full sm:h-full object-cover' src={CcImage} alt="" />
                 </div>
               </div>
-
-              <motion.div 
-                className='h-[60vh] w-full bg-iconBg fixed z-50 -bottom-[60%] left-0 rounded-t-3xl p-4'
-                animate={control}
-              >
-                <h4 className='text-2xl font-semibold m-2 text-violet'>Aditya Saroch</h4>
-                <hr className=' bg-iconbgHover h-[1px] my-4' />
-                <p className='text-xl font-semibold my-2'>Club Coordinator</p>
-                <p className=''>Branch : <span>Chemcial Engineering</span></p>
-                <p className=' text-subMainText my-4'>Aditya Saroch Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, eos. Quam repellendus non, fugit, deleniti expedita eligendi facere adipisci nobis sunt iste ipsum omnis voluptatum et totam, rerum sit libero aut? Obcaecati quod dolor error at sequi, alias atque vitae fugiat! Eius, beatae earum. Quidem ut obcaecati eum adipisci culpa.</p>
-                <div className='my-6'>
-                  <a className='px-4 py-2 bg-mainText text-mainBg rounded-full' href="">Instagram</a>
-                  <a className='px-4 py-2 bg-mainText text-mainBg rounded-full ml-4' href="">LinkedIn</a>
-                </div>
-              </motion.div>
-
             </FramerReveal>
+            <motion.div 
+              className='h-[60vh] w-full sm:max-w-[600px] bg-iconBg fixed z-50 -bottom-[60%] left-0 rounded-t-3xl p-4'
+              animate={control}
+            >
+              <h4 className='text-2xl font-semibold m-2 text-violet'>Aditya Saroch</h4>
+              <hr className=' bg-iconbgHover h-[1px] my-4' />
+              <p className='text-xl font-semibold my-2'>Club Coordinator</p>
+              <p className=''>Branch : <span>Chemcial Engineering</span></p>
+              <p className=' text-subMainText my-4'>Aditya Saroch Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, eos. Quam repellendus non, fugit, deleniti expedita eligendi facere adipisci nobis sunt iste ipsum omnis voluptatum et totam, rerum sit libero aut? Obcaecati quod dolor error at sequi, alias atque vitae fugiat! Eius, beatae earum. Quidem ut obcaecati eum adipisci culpa.</p>
+              <div className='my-6'>
+                <a className='px-4 py-2 bg-mainText text-mainBg rounded-full' href="">Instagram</a>
+                <a className='px-4 py-2 bg-mainText text-mainBg rounded-full ml-4' href="">LinkedIn</a>
+              </div>
+            </motion.div>
+
             <FramerReveal>
               <div 
-                className='relative group mx-4'
+                className='relative group mx-4 cursor-pointer hover:-translate-y-1 duration-300'
                 onClick={toggleMenu}
               >
                 <div className='absolute left-2 bottom-4 duration-500 text-iconBg font-semibold'>
@@ -85,23 +84,22 @@ const Home = () => {
                   <img className='w-full sm:h-full object-cover' src={CcImage} alt="" />
                 </div>
               </div>
-
-              <motion.div 
-                className='h-[60vh] w-full bg-iconBg fixed z-50 -bottom-[60%] left-0 rounded-t-3xl p-4'
-                animate={control}
-              >
-                <h4 className='text-2xl font-semibold m-2 text-violet'>Nikhil Singh Jadon</h4>
-                <hr className=' bg-iconbgHover h-[1px] my-4' />
-                <p className='text-xl font-semibold my-2'>Club Coordinator</p>
-                <p className=''>Branch : <span>Chemcial Engineering</span></p>
-                <p className=' text-subMainText my-4'>Nikhil Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est dolorum aliquam asperiores quam in modi totam laudantium ducimus unde dolor placeat quo ullam quae saepe nemo amet quaerat ad aliquid iusto, cumque animi eveniet sit. Magni, incidunt pariatur earum reiciendis iure ipsam debitis maiores libero doloremque est ad nemo neque.</p>
-                <div className='my-6'>
-                  <a className='px-4 py-2 bg-mainText text-mainBg rounded-full' href="">Instagram</a>
-                  <a className='px-4 py-2 bg-mainText text-mainBg rounded-full ml-4' href="">LinkedIn</a>
-                </div>
-              </motion.div>
-
             </FramerReveal>
+            <motion.div 
+              className='h-[60vh] w-full bg-iconBg fixed z-50 -bottom-[60%] left-0 rounded-t-3xl p-4'
+              animate={control}
+            >
+              <h4 className='text-2xl font-semibold m-2 text-violet'>Nikhil Singh Jadon</h4>
+              <hr className=' bg-iconbgHover h-[1px] my-4' />
+              <p className='text-xl font-semibold my-2'>Club Coordinator</p>
+              <p className=''>Branch : <span>Chemcial Engineering</span></p>
+              <p className=' text-subMainText my-4'>Nikhil Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est dolorum aliquam asperiores quam in modi totam laudantium ducimus unde dolor placeat quo ullam quae saepe nemo amet quaerat ad aliquid iusto, cumque animi eveniet sit. Magni, incidunt pariatur earum reiciendis iure ipsam debitis maiores libero doloremque est ad nemo neque.</p>
+              <div className='my-6'>
+                <a className='px-4 py-2 bg-mainText text-mainBg rounded-full' href="">Instagram</a>
+                <a className='px-4 py-2 bg-mainText text-mainBg rounded-full ml-4' href="">LinkedIn</a>
+              </div>
+            </motion.div>
+
       </div>
       </div>
     </>
