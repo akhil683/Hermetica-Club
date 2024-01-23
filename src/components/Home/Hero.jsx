@@ -16,7 +16,7 @@ const Hero = () => {
         </div>
 
         <motion.div 
-          className='m-12 sm:w-[400px] w-full h-[380px] rounded-2xl overflow-hidden'
+          className='m-12 sm:w-[400px] max-sm:scale-90 w-full h-[380px] rounded-2xl overflow-hidden'
           // drag
           // dragConstraints={{
           //   right: 20,
