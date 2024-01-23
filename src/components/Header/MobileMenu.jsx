@@ -53,10 +53,9 @@ const MobileMenu = ({ control }) => {
         <hr className=' opacity-30 my-2' />
 
         <li className='px-4 pt-2 pb-4 flex justify-around text-xl'>
-          <span className='social-icon'><FaLinkedinIn className='text-2xl' /></span>
-          <span className='social-icon'><FaInstagram className='text-2xl' /></span>
-          {/* <span className='social-icon'><FaGithub className='text-2xl' /></span> */}
-          <span className='social-icon'><FaYoutube className='text-2xl' /></span>
+          <a href='https://www.linkedin.com/company/teamhermetica/mycompany/' className='social-icon'><FaLinkedinIn className='text-2xl' /></a>
+          <a  href='https://www.instagram.com/teamhermetica/?igshid=YmMyMTA2M2Y%3D' className='social-icon'><FaInstagram className='text-2xl' /></a>
+          <a href='https://www.youtube.com/@teamhermetica4195' className='social-icon'><FaYoutube className='text-2xl' /></a>
         </li>
       </ul>
     </motion.div>
