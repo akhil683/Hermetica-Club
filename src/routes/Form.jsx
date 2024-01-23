@@ -43,6 +43,7 @@ const Form = () => {
         onChange={(e) => setForm({...form, name: e.target.value})}
         type="text" 
         placeholder='Your Name'
+        required
         className='py-2 px-4 rounded-lg outline-none w-full'
         />
 
@@ -51,6 +52,7 @@ const Form = () => {
         onChange={(e) => setForm({...form, LinkedIn: e.target.value})}
         type="text" 
         placeholder='LinkedIn Link'
+        required
         className='py-2 px-4 rounded-lg outline-none w-full'
         />
 
@@ -58,12 +60,14 @@ const Form = () => {
         value={form.Instagram}
         onChange={(e) => setForm({...form, Instagram: e.target.value})}
         type="text" 
+        required
         placeholder='Instagram Link'
         className='py-2 px-4 rounded-lg outline-none w-full'
         />
 
         <select 
           className='py-2 px-4 rounded-lg w-full' 
+          required
           onChange={(e) => setForm({...form, Position: e.target.value})}
         >
           <option value="">Select Your Position</option>
