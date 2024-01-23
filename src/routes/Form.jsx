@@ -70,7 +70,7 @@ const Form = () => {
           <option value="Final Year Member">Final Year Member</option>
           <option value="Coordinator" >Coordinator</option>
           <option value="Executive Member" >Executive Member</option>
-          <option value="First Year">Volunteer</option>
+          <option value="Volunteer">Volunteer</option>
         </select>
 
         <button className='py-2 mt-2 h-12 text-mainText bg-violet rounded-lg text-xl' onClick={(e) => onSubmit(e)}>

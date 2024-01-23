@@ -178,11 +178,11 @@ useEffect(() => {
   return (
     <div className=' bg-mainBg'>
 
-      {isLoading && 
+      {/* {isLoading && 
             <div className='fixed z-50 bg-mainBg h-screen w-screen'>
             <iframe src="https://lottie.host/embed/ffd70ffd-82b2-4282-9a4a-184cbf67cf14/9MYlUbduoT.json" className='w-screen h-screen'></iframe>
             </div>
-          }
+          } */}
       <Header />
 
       <div className='z-30'>

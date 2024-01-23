@@ -13,6 +13,7 @@ const Members = () => {
   const [ isLoading, setIsLoading ] = useState(false);
   const [ show, setShow ] = useState('');
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [ filteredMembers, setFilteredMembers ] = useState([]);
 
   const controlNavbar = () => {
     if(window.scrollY > 200) {
@@ -44,14 +45,12 @@ const Members = () => {
     getData();
   }, [])
   const defaultMembers = data.filter(member => member.Position === "Final Year Member");
-  console.log(defaultMembers);
 
   const handleClick = (position) => {
     const filteredMembers = data.filter(member => member.Position === position);
     setFilteredMembers(filteredMembers);
   }
-  const [ filteredMembers, setFilteredMembers ] = useState(defaultMembers);
-
+  console.log(filteredMembers);
   
   return (
     <div className='mt-4 mb-12'>
