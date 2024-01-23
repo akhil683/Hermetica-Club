@@ -3,6 +3,7 @@ import { TailSpin } from 'react-loader-spinner';4
 import { addDoc } from 'firebase/firestore';
 import { membersRef } from '../utils/firebase.utils';
 import FramerReveal from '../components/FramerReveal';
+import Swal from 'sweetalert2';
 
 const Form = () => {
   const [isLoading, setIsLoading ] = useState(false);
@@ -18,6 +19,11 @@ const Form = () => {
     try {
       setIsLoading(true);
       await addDoc(membersRef, form);
+      Swal.fire({
+        title: "Submitted",
+        text: "Check members page to verify ! ",
+        icon: "success"
+      });
       setIsLoading(false);
     } catch (e) {
       alert("Error, Please try again");

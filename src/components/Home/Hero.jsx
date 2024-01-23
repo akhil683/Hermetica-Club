@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import HeroImg from '../../assets/profile.jpg';
 import FramerReveal from '../FramerReveal';
 
@@ -15,29 +14,13 @@ const Hero = () => {
           <p className='max-w-[460px] text-subMainText text-xs mt-6'>Team Hermetica, Established in 2014, Represents The Department of Chemical Engineering, In the annual Tech Fest NIMBUS at National Institite of Technology, Hamirpur.</p>
         </div>
 
-        <motion.div 
-          className='m-12 sm:w-[400px] max-sm:scale-90 w-full h-[380px] rounded-2xl overflow-hidden'
-          // drag
-          // dragConstraints={{
-          //   right: 20,
-          //   left: -20,
-          //   top: 20,
-          //   bottom: 5
-          // }}
-          // whileHover={{
-          //   scale: 1.1,
-          // }}
-          // transition={{
-          //   type: 'spring',
-          //   duration: 0.4,
-          // }}
-          >
+        <div className='m-12 sm:w-[400px] max-sm:scale-90 w-full h-[380px] rounded-2xl overflow-hidden'>
           <img src={HeroImg} className='w-full h-full object-cover' alt="" />
-        </motion.div>
+        </div>
       
       </div>
     </FramerReveal>
   )
 }
 
-export default Hero
+export default Hero;

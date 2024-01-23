@@ -11,6 +11,26 @@ const Members = () => {
   // const [ data ] = useFetch(membersRef);
   const [ data, setData ] = useState([]);
   const [ isLoading, setIsLoading ] = useState(false);
+  const [ show, setShow ] = useState('');
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if(window.scrollY > 200) {
+      if(window.scrollY > lastScrollY) {
+        setShow("-translate-y-12")
+      } else {
+        setShow("show");
+      }
+    }
+    setLastScrollY(window.scrollY);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar)
+    return () => {
+    window.removeEventListener("scroll", controlNavbar)
+    }
+  }, [lastScrollY])
 
   useEffect(() => {
     const getData = async () => {
@@ -24,17 +44,19 @@ const Members = () => {
     getData();
   }, [])
   const defaultMembers = data.filter(member => member.Position === "Final Year Member");
-  const [ filteredMembers, setFilteredMembers ] = useState(defaultMembers);
+  console.log(defaultMembers);
 
   const handleClick = (position) => {
     const filteredMembers = data.filter(member => member.Position === position);
     setFilteredMembers(filteredMembers);
   }
+  const [ filteredMembers, setFilteredMembers ] = useState(defaultMembers);
+
   
   return (
     <div className='mt-4 mb-12'>
 
-        <div className='flex flex-wrap mx-4 -mt-[70px] sm:-mt-16 items-center sm:gap-4 gap-2 max-sm:text-xs font-montserrat fixed z-30'>
+        <div className={`flex flex-wrap mx-4 -mt-[70px] sm:-mt-16 items-center sm:gap-4 gap-2 max-sm:text-xs font-montserrat fixed z-30 duration-300 ${show}`}>
           <button onClick={() => handleClick("Final Year Member")} className='p-2 cursor-pointer bg-iconbgHover duration-200 hover:bg-violet focus:bg-violet rounded-full px-4'>Final Year</button>
           <button onClick={() => handleClick("Coordinator")} className='p-2 cursor-pointer bg-iconbgHover duration-200 hover:bg-violet focus:bg-violet rounded-full px-4'>3rd Year</button>
           <button onClick={() => handleClick("Executive Member")} className='p-2 cursor-pointer bg-iconbgHover duration-200 hover:bg-violet focus:bg-violet rounded-full px-4'>2nd Year</button>
@@ -48,7 +70,7 @@ const Members = () => {
             <Skeleton />
           </div>
           : <div className='flex flex-wrap justify-center mt-16 gap-4 mx-8'>
-              {filteredMembers.map((member) => {
+              {(filteredMembers.length ? filteredMembers : defaultMembers).map((member) => {
                 return (
                   <MemberCard member={member} key={member.id} />
               )})}
