@@ -11,14 +11,15 @@ const Members = () => {
   // const [ data ] = useFetch(membersRef);
   const [ data, setData ] = useState([]);
   const [ isLoading, setIsLoading ] = useState(false);
+  const [ filteredMembers, setFilteredMembers ] = useState([]);
+
   const [ show, setShow ] = useState('');
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [ filteredMembers, setFilteredMembers ] = useState([]);
 
   const controlNavbar = () => {
     if(window.scrollY > 200) {
       if(window.scrollY > lastScrollY) {
-        setShow("-translate-y-12")
+        setShow("-translate-y-16 scale-75")
       } else {
         setShow("show");
       }
@@ -63,7 +64,7 @@ const Members = () => {
         </div>
 
         {isLoading 
-          ? <div className='flex flex-wrap justify-center nt-16 gap-4 mx-8'>
+          ? <div className='flex flex-wrap justify-center mt-16 gap-4 mx-8'>
             <Skeleton />
             <Skeleton />
             <Skeleton />
