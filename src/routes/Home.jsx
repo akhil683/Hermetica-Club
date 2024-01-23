@@ -58,7 +58,7 @@ const Home = () => {
               </div>
             </FramerReveal>
             <motion.div 
-              className='h-[60vh] w-full sm:max-w-[600px] bg-iconBg fixed z-50 -bottom-[60%] left-0 rounded-t-3xl p-4'
+              className='h-[60vh] w-full sm:max-w-[600px] bg-iconBg fixed z-50 -bottom-[68%] left-0 rounded-t-3xl p-4'
               animate={control}
             >
               <h4 className='text-2xl font-semibold m-2 text-violet'>Aditya Saroch</h4>
@@ -86,7 +86,7 @@ const Home = () => {
               </div>
             </FramerReveal>
             <motion.div 
-              className='h-[60vh] w-full bg-iconBg fixed z-50 -bottom-[60%] left-0 rounded-t-3xl p-4'
+              className='h-[60vh] w-full bg-iconBg fixed z-50 -bottom-[68%] left-0 rounded-t-3xl p-4'
               animate={control}
             >
               <h4 className='text-2xl font-semibold m-2 text-violet'>Nikhil Singh Jadon</h4>
