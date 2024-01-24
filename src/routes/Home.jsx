@@ -1,4 +1,5 @@
 import React from 'react'
+import Spline from '@splinetool/react-spline';
 
 import Domains from '../components/Home/Domains';
 import FramerReveal from '../components/FramerReveal';
@@ -6,15 +7,19 @@ import Hero from '../components/Home/Hero';
 import Nimbus from '../components/Home/Nimbus';
 import AdityaSir from '../components/Home/AdityaSir';
 import NikhilSir from '../components/Home/NikhilSir';
+import Work from '../components/Home/Work';
 
 const Home = () => {
 
   return (
     <>
+      <div className='fixed top-0 left-0'>
+        <Spline className='z-50' scene="https://prod.spline.design/QEA-bu7socWtDsrZ/scene.splinecode" />
+      </div>
       <Hero /> 
       <Nimbus />
+      <Work />
       <Domains />
-      
       <div className='p-6 pb-12 sm:h-screen bg-iconBg'>
       
       <FramerReveal>

@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from './components/ErrorFallback';
 import { TailSpin } from 'react-loader-spinner';
+import Spline from '@splinetool/react-spline';
 
 const About = lazy(() => import('./routes/About'))
 const Details = lazy(() => import('./components/Details/Details'));
@@ -177,7 +178,7 @@ useEffect(() => {
 
   return (
     <div className=' bg-mainBg'>
-
+    
       {/* {isLoading && 
             <div className='fixed z-50 bg-mainBg h-screen w-screen'>
             <iframe src="https://lottie.host/embed/ffd70ffd-82b2-4282-9a4a-184cbf67cf14/9MYlUbduoT.json" className='w-screen h-screen'></iframe>
@@ -186,6 +187,11 @@ useEffect(() => {
       <Header />
 
       <div className='z-30'>
+
+      {/* <div className='z-50'>
+        <Spline className='z-50' scene="https://prod.spline.design/QEA-bu7socWtDsrZ/scene.splinecode" />
+      </div> */}
+
       <Routes>
       
           <Route path='/' element={

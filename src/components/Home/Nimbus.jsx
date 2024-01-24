@@ -29,7 +29,7 @@ const Nimbus = () => {
       <FramerReveal>
       <div className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-iconBg hover:-translate-y-1 duration-200 hover:shadow-2xl hover:shadow-iconBg'>
         <div className='w-[120px] h-[120px]'>
-          <img src={HermeticaImg} alt="" className='w-full h-full object-cover rounded-full' />
+          <img src="https://img.freepik.com/premium-vector/target-icon-mission-icon-about-business-strategies-concept_122317-81.jpg" alt="" className='w-full h-full object-cover rounded-full' />
         </div>
         <h3 className='text-2xl text-violet font-semibold mt-3 mb-6'>Our Mission</h3>
         <p className='text-sm sm:h-[220px] text-subMainText text-justify'>

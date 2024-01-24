@@ -1,19 +1,33 @@
 import React, { useState, useEffect} from 'react';
 
+import { getDocs } from 'firebase/firestore';
+import { projectRef } from '../utils/firebase.utils';
+
 import Searchbar from '../components/Searchbar';
 import Card from '../components/Card';
 import Skeleton from '../components/Skeleton';
-// import useFetch from '../components/UseFetch';
-// import { projectRef } from '../utils/firebase.utils';
 
-const Projects = ({ Projects }) => {
+const Projects = () => {
 
-  // const [ data ] = useFetch(projectRef);
+  const [ data, setData ] = useState([]);
+  const [ isLoading, setIsLoading ] = useState(false);
   const [searchField, setSearchField] = useState("");
   const [searchFilterData, setSearchFilterData] = useState([]);
 
   useEffect(() => {
-    const SearchFilterData = Projects.filter((data) => {
+    const getData = async () => {
+      setIsLoading(true);
+      const _data = await getDocs(projectRef);
+      _data.forEach((doc) => {
+        setData((prev) => [...prev, {...(doc.data())}]);
+      })
+      setIsLoading(false);
+    }
+    getData();
+  }, [])
+
+  useEffect(() => {
+    const SearchFilterData = data.filter((data) => {
       return data.name.toLowerCase().includes(searchField);
     })
     setSearchFilterData(SearchFilterData);
@@ -23,6 +37,7 @@ const Projects = ({ Projects }) => {
     const searchFieldValue = e.target.value.toLowerCase();
     setSearchField(searchFieldValue);
   }
+console.log(data);
 
   return (
       <div className='mb-12 mt-2'>
@@ -30,19 +45,22 @@ const Projects = ({ Projects }) => {
           onSearchChange={onSearchChange} 
           Placeholder="Project" 
         />
-        {/* <h2 className='text-center text-5xl mb-12'><span className='text-violet'>Team</span> Projects</h2> */}
-        <div className='flex flex-wrap justify-center gap-6 mt-6'>
-          {searchFilterData.map((project) => {
-            return (
-            <Card data={project} name="projects" key={project.id} />
-            )})}
-        </div>
-        <div className='flex flex-wrap justify-center gap-6'>
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-        </div>
+        {isLoading 
+        ? (
+          <div className='flex flex-wrap justify-center gap-6 mt-6'>
+            {(searchFilterData.length ? searchFilterData : data).map((project) => {
+              return (
+              <Card data={project} name="projects" key={project.id} />
+              )})}
+          </div>
+        ) : (
+          <div className='flex flex-wrap mt-6 justify-center gap-6'>
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+          </div>
+        )}
       </div>
   )
 }

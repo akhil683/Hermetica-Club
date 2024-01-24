@@ -11,7 +11,7 @@ const Details = ({ data }) => {
   const { url } = useParams();
   // const [ data ] = useFetch(projectRef);
   const dataDetail = data.find(data => data.url === url);
-  const { name, proposedBy, Abstract, image } = dataDetail;
+  const { name, proposedBy, Abstract } = dataDetail;
 
   return (
     <div className='mb-12 mt-4'>

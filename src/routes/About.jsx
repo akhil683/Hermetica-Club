@@ -1,10 +1,11 @@
 import React from 'react'
-import FramerReveal from '../components/FramerReveal'
+import FramerReveal from '../components/FramerReveal';
 
 const About = () => {
 
   return (
     <div className='m-4 max-sm:mx-8'>
+      
       <FramerReveal>
         <h1 className='mb-6 text-4xl text-center'>
           Team <span className='text-violet'>Hermetica</span>
@@ -21,6 +22,8 @@ const About = () => {
         <iframe className='m-auto max-sm:w-full border border-iconbgHover max-sm:h-[250px]' width="560" height="315" src="https://www.youtube.com/embed/UzC3rqu9Ysg?si=3OVjG3JlqZgzdZO1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; 
         " allowFullScreen></iframe>
         </div>
+        
+
       </FramerReveal>
     </div>
   )
