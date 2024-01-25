@@ -4,11 +4,9 @@ import { membersRef } from '../utils/firebase.utils';
 
 import MemberCard from '../components/MemberCard';
 import Skeleton from '../components/Skeleton';
-// import useFetch from '../components/UseFetch';
 
 const Members = () => {
-  // const [data, setData ] = useState([]);
-  // const [ data ] = useFetch(membersRef);
+
   const [ data, setData ] = useState([]);
   const [ isLoading, setIsLoading ] = useState(false);
   const [ filteredMembers, setFilteredMembers ] = useState([]);
@@ -51,7 +49,6 @@ const Members = () => {
     const filteredMembers = data.filter(member => member.Position === position);
     setFilteredMembers(filteredMembers);
   }
-  console.log(filteredMembers);
   
   return (
     <div className='mt-4 mb-12'>

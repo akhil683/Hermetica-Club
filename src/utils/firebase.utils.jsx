@@ -21,6 +21,6 @@ export const galleryRef = collection(db, 'Gallery');
 export const membersRef = collection(db, 'members');
 export const ReviewsRef = collection(db, 'Reviews');
 export const projectRef  = collection(db, 'Projects');
-
+export const workshopRef = collection(db, 'Workshops'); 
 // export const PEdataRef = collection(db, 'pedata');
 export default app;

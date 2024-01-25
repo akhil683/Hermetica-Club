@@ -1,27 +1,51 @@
-import React from 'react';
-import Img from '../../assets/profile.jpg';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { getDocs } from 'firebase/firestore';
+
+import FramerReveal from '../FramerReveal';
+import Img from '../../assets/profile.jpg';
 import ReactStars from 'react-stars';
 import Reviews from './Reviews';
-import FramerReveal from '../FramerReveal';
-// import useFetch from '../UseFetch';
-// import { projectRef } from '../../utils/firebase.utils';
+import Skeleton from '../Skeleton';
+import { projectRef } from '../../utils/firebase.utils';
 
-const Details = ({ data }) => {
+const Details = ({ dataRef }) => {
+  
   const { url } = useParams();
-  // const [ data ] = useFetch(projectRef);
+
+  const [ data, setData ] = useState([]);
+  const [ isLoading, setIsLoading ] = useState(false);
+
+  useEffect(() => {
+    const getData = async () => {
+      setIsLoading(true);
+      const _data = await getDocs(dataRef);
+      _data.forEach((doc) => {
+        setData((prev) => [...prev, {...(doc.data())}]);
+      })
+      setIsLoading(false);
+    }
+    getData();
+  }, [])
+
   const dataDetail = data.find(data => data.url === url);
-  const { name, proposedBy, Abstract } = dataDetail;
+  console.log(data);
+  // console.log(dataDetail)
+  const { name, ProposedBy, Abstract } = dataDetail;
 
   return (
     <div className='mb-12 mt-4'>
-      <h3 className='text-violet text-3xl text-center mb-12'>{name}</h3>
+      {isLoading 
+      ? <Skeleton />
+      :
+      <>
+        <h3 className='text-violet text-3xl text-center mb-12'>{name}</h3>
       <div className='flex mx-4 flex-wrap gap-12 justify-center'>
         <div className='relative sm:w-[350px] shadow-iconBg duration-300 shadow-2xl w-full hover:opacity-90 sm:h-[400px] h-[450px] rounded-xl overflow-hidden '>
           <img src={Img} alt="" className=' w-full h-full object-cover rounded-lg' />
         </div>
         <div className='sm:max-w-[500px] w-full font-montserrat'>
-          <p className='text-xl'>Proposed By: <a href='#' className=''>{proposedBy}</a> </p>
+          <p className='text-xl'>Proposed By: <a href='#' className=''>{ProposedBy}</a> </p>
           <ReactStars 
             count={5}
             value={0}
@@ -59,6 +83,9 @@ const Details = ({ data }) => {
     <FramerReveal>
       <Reviews />
     </FramerReveal>
+      </>
+      }
+      
     </div>
   )
 }

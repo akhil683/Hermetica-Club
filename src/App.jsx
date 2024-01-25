@@ -3,7 +3,8 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from './components/ErrorFallback';
 import { TailSpin } from 'react-loader-spinner';
-import Spline from '@splinetool/react-spline';
+
+import { eventsRef, projectRef, workshopRef } from './utils/firebase.utils';
 
 const About = lazy(() => import('./routes/About'))
 const Details = lazy(() => import('./components/Details/Details'));
@@ -14,6 +15,7 @@ const Members = lazy(() => import('./routes/Members'))
 const NoPage = lazy(() => import('./routes/NoPage'))
 const Projects = lazy(() => import('./routes/Projects'))
 const Form = lazy(() => import('./routes/Form'))
+const Workshops = lazy(() => import('./routes/Workshops'))
 
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header'
@@ -32,12 +34,12 @@ const Loader = () => {
       wrapperClass=""
       />
     </div>
-  )
-}
+  )}
 
 const App = () => {
 
   const [ isLoading, setIsLoading ] = useState(true);
+  const navigate = useNavigate();
 
 useEffect(() => {
   const timer = setTimeout(() => {
@@ -46,135 +48,6 @@ useEffect(() => {
   return () => clearTimeout(timer);
 })
 
-  const navigate = useNavigate();
-  const Data = {
-    "Project": [
-      {
-        id: 1,
-        name: "Ink from carbon soot",
-        url: "paper_from_baggase",
-        proposedBy: "Akhil",
-        Abstract: "ajdsfl asdjf lkasdn lkasd nlkvnasd k",
-        Image: 'image',
-      },
-      {
-        id: 2,
-        name: "Noise proofing by agro waste",
-        url: "paper_from_baggase",
-        proposedBy: "Akhil",
-        Abstract: "ajdsfl asdjf lkasdn lkasd nlkvnasd k",
-        Image: 'image',
-      },
-      {
-        id: 3,
-        name: "Electricity generating tiles",
-        url: "paper_from_baggase",
-        proposedBy: "Akhil",
-        Abstract: "ajdsfl asdjf lkasdn lkasd nlkvnasd k",
-        Image: 'image',
-      },
-      {
-        id: 4,
-        name: "Solar Tracker",
-        url: "paper_from_baggase",
-        proposedBy: "Akhil",
-        Abstract: "ajdsfl asdjf lkasdn lkasd nlkvnasd k",
-        Image: 'image',
-      },
-    ],
-    "Event": [
-      {
-        id: 1,
-        name: "asdsome fun Event",
-        url: "some_fun_event",
-        proposedBy: "Priyanshu",
-        Abstract: "somlkasdf alnd flkasndf lkasdn lakdfj",
-        Image: "something",
-      },
-      {
-        id: 2,
-        name: "sdsome fun Event",
-        url: "some_fun_event",
-        proposedBy: "Priyanshu",
-        Abstract: "somlkasdf alnd flkasndf lkasdn lakdfj",
-        Image: "something",
-      },
-      {
-        id: 3,
-        name: "some fun Event",
-        url: "some_fun_event",
-        proposedBy: "Priyanshu",
-        Abstract: "somlkasdf alnd flkasndf lkasdn lakdfj",
-        Image: "something",
-      },
-      {
-        id: 4,
-        name: "some fun Event",
-        url: "some_fun_event",
-        proposedBy: "Priyanshu",
-        Abstract: "somlkasdf alnd flkasndf lkasdn lakdfj",
-        Image: "something",
-      },
-
-    ],
-    "Member": [
-        {
-          id: 1,
-          name: "Abhinav",
-          year: "Final Year",
-          Position: "Something",
-          Instagram: "Instagram",
-          LinkedIn: "linked in",
-          Image: "Something",
-        },
-        {
-          id: 5,
-          name: "Abhinav",
-          year: "Final Year",
-          Position: "Something",
-          Instagram: "Instagram",
-          LinkedIn: "linked in",
-          Image: "Something",
-        },
-        {
-          id: 6,
-          name: "Abhinav",
-          year: "Final Year",
-          Position: "Something",
-          Instagram: "Instagram",
-          LinkedIn: "linked in",
-          Image: "Something",
-        },
-        {
-          id: 2,
-          name: "Akhil",
-          year: "Second Year",
-          Position: "Executive Member",
-          Instagram: "Instagram",
-          LinkedIn: "linked in",
-          Image: "Something",
-        },
-        {
-          id: 3,
-          name: "Aditya",
-          year: "Third Year",
-          Position: "Club Coordinator",
-          Instagram: "Instagram",
-          LinkedIn: "linked in",
-          Image: "Something",
-        },
-        {
-          id: 4,
-          name: "Volunteer",
-          year: "First Year",
-          Position: "Volunteer",
-          Instagram: "Instagram",
-          LinkedIn: "linked in",
-          Image: "Something",
-        }
-    ]
-  }
-  const { Project, Event, Member } = Data;
 
   return (
     <div className=' bg-mainBg'>
@@ -187,10 +60,6 @@ useEffect(() => {
       <Header />
 
       <div className='z-30'>
-
-      {/* <div className='z-50'>
-        <Spline className='z-50' scene="https://prod.spline.design/QEA-bu7socWtDsrZ/scene.splinecode" />
-      </div> */}
 
       <Routes>
       
@@ -222,7 +91,18 @@ useEffect(() => {
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <Projects Projects={Project} />
+              <Projects />
+            </Suspense>
+          </ErrorBoundary>} 
+          />
+
+          <Route path='/workshops' element={
+            <ErrorBoundary
+            FallbackComponent={ErrorFallback}
+            onReset={() => navigate('/')}
+            >
+            <Suspense fallback={<Loader />}>
+              <Workshops />
             </Suspense>
           </ErrorBoundary>} 
           />
@@ -233,7 +113,7 @@ useEffect(() => {
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <Events Events={Event} />
+              <Events />
             </Suspense>
           </ErrorBoundary>} 
           />
@@ -244,17 +124,29 @@ useEffect(() => {
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <Details data={Project} />
+              <Details dataRef={projectRef} />
             </Suspense>
           </ErrorBoundary>} 
           />
+          
+          <Route path='/workshops/:url' element={
+            <ErrorBoundary
+            FallbackComponent={ErrorFallback}
+            onReset={() => navigate('/')}
+            >
+            <Suspense fallback={<Loader />}>
+              <Details dataRef={workshopRef} />
+            </Suspense>
+          </ErrorBoundary>} 
+          />
+
           <Route path='/events/:url' element={
             <ErrorBoundary
             FallbackComponent={ErrorFallback}
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <Details data={Event} />
+              <Details dataRef={eventsRef} />
             </Suspense>
           </ErrorBoundary>} 
           />
@@ -265,7 +157,7 @@ useEffect(() => {
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <Members Members={Member} />
+              <Members />
             </Suspense>
           </ErrorBoundary>} 
           />

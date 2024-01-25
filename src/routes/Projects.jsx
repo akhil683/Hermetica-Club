@@ -37,7 +37,6 @@ const Projects = () => {
     const searchFieldValue = e.target.value.toLowerCase();
     setSearchField(searchFieldValue);
   }
-console.log(data);
 
   return (
       <div className='mb-12 mt-2'>
@@ -47,18 +46,18 @@ console.log(data);
         />
         {isLoading 
         ? (
-          <div className='flex flex-wrap justify-center gap-6 mt-6'>
-            {(searchFilterData.length ? searchFilterData : data).map((project) => {
-              return (
-              <Card data={project} name="projects" key={project.id} />
-              )})}
-          </div>
-        ) : (
           <div className='flex flex-wrap mt-6 justify-center gap-6'>
             <Skeleton />
             <Skeleton />
             <Skeleton />
             <Skeleton />
+          </div>
+        ) : (
+          <div className='flex flex-wrap justify-center gap-6 mt-6'>
+            {(searchFilterData.length ? searchFilterData : data).map((project) => {
+              return (
+              <Card data={project} name="projects" key={project.id} />
+              )})}
           </div>
         )}
       </div>

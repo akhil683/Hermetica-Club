@@ -61,7 +61,7 @@ const Header = () => {
         <span className='sm:text-xl'>Hermetica</span>
       </Link>
 
-      <ul className='sm:flex hidden py-1 text-lg rounded-full'>
+      <ul className='sm:flex hidden py-1 rounded-full'>
         <li className='px-4 py-2 nav-hover'>
           <Link to='/'>Home</Link>
         </li>
@@ -70,6 +70,9 @@ const Header = () => {
         </li>
         <li className='px-4 py-2 nav-hover'>
           <Link to='/events'>Events</Link>
+        </li>
+        <li className='px-4 py-2 nav-hover'>
+          <Link to='/workshops'>Workshops</Link>
         </li>
         <li className='px-4 py-2 nav-hover'>
           <Link to='/members'>Members</Link>

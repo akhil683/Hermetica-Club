@@ -26,6 +26,11 @@ const MobileMenu = ({ control }) => {
           </Link>
         </li>
         <li className='px-4 py-3 duration-150 hover:text-mainText hover:bg-iconbgHover'>
+          <Link to='/workshops' className='flex gap-2 items-center'>
+            <FaProjectDiagram />Workshops
+          </Link>
+        </li>
+        <li className='px-4 py-3 duration-150 hover:text-mainText hover:bg-iconbgHover'>
           <Link to='/events' className='flex gap-2 items-center'>
             <MdEmojiEvents />Events
           </Link>
