@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <>
       <div className='fixed top-0 left-0'>
-        <Spline className='z-50' scene="https://prod.spline.design/QEA-bu7socWtDsrZ/scene.splinecode" />
+      //  <Spline className='z-50' scene="https://prod.spline.design/QEA-bu7socWtDsrZ/scene.splinecode" />
       </div>
       <Hero /> 
       <Nimbus />
