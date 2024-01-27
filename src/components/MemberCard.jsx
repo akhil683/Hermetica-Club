@@ -23,7 +23,7 @@ const MemberCard = ({ member }) => {
               <p className='px-4 py-2 mt-6 group-hover:mt-4 rounded-full bg-mainText duration-500 opacity-100 group-hover:opacity-100'>{Position}</p>
             </div>
 
-            <div className='sm:w-64 h-[350px] w-full sm:h-[300px] rounded-lg overflow-hidden'>
+            <div className='sm:w-64 h-[320px] w-full sm:h-[300px] rounded-lg overflow-hidden'>
               <img 
                 className='w-full h-full object-cover group-hover:scale-125 opacity-80 hover:opacity-100 duration-500' 
                 src={Img} 

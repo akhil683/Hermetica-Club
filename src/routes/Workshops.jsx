@@ -54,7 +54,7 @@ const Workshops = () => {
           </div>
         ) : (
           <div className='flex flex-wrap justify-center gap-6 mt-6'>
-            {(searchFilterData.length ? searchFilterData : data).map((workshop) => {
+            {(searchFilterData.length ? searchFilterData : data)?.map((workshop) => {
               return (
               <Card data={workshop} name="workshops" key={workshop.id} />
               )})}

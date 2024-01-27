@@ -7,7 +7,7 @@ import Img from '../../assets/profile.jpg';
 import ReactStars from 'react-stars';
 import Reviews from './Reviews';
 import Skeleton from '../Skeleton';
-import { projectRef } from '../../utils/firebase.utils';
+// import { projectRef } from '../../utils/firebase.utils';
 
 const Details = ({ dataRef }) => {
   
@@ -30,7 +30,7 @@ const Details = ({ dataRef }) => {
 
   const dataDetail = data.find(data => data.url === url);
   console.log(data);
-  // console.log(dataDetail)
+  console.log(dataDetail)
   const { name, ProposedBy, Abstract } = dataDetail;
 
   return (

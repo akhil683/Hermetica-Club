@@ -54,7 +54,7 @@ const Events = () => {
               <Skeleton />
             </div>
           ) : (
-            (searchFilterData.length ? searchFilterData : data).map((event) => {
+            (searchFilterData.length ? searchFilterData : data)?.map((event) => {
               return (
                 <Card data={event} name="events" key={event.id} />
                 )})

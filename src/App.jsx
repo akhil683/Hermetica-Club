@@ -1,8 +1,9 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom'
+
 import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from './components/ErrorFallback';
-import { TailSpin } from 'react-loader-spinner';
+import { DNA } from 'react-loader-spinner';
 
 import { eventsRef, projectRef, workshopRef } from './utils/firebase.utils';
 
@@ -19,11 +20,13 @@ const Workshops = lazy(() => import('./routes/Workshops'))
 
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header'
+import LoaderImg from './assets/loading.png';
 
 const Loader = () => {
   return (
-    <div className='h-[90vh] flex justify-center items-center'>
-      <TailSpin
+    <div className='h-[90vh] flex gap-6 flex-col justify-center items-center'>
+      <img src={LoaderImg} className=' animate-bounce' alt="Loader Image" width={200} height={200} />
+      <DNA
       visible={true}
       height="80"
       width="80"
@@ -52,11 +55,13 @@ useEffect(() => {
   return (
     <div className=' bg-mainBg'>
     
-      {/* {isLoading && 
-            <div className='fixed z-50 bg-mainBg h-screen w-screen'>
-            <iframe src="https://lottie.host/embed/ffd70ffd-82b2-4282-9a4a-184cbf67cf14/9MYlUbduoT.json" className='w-screen h-screen'></iframe>
+      {isLoading && 
+            <div className='fixed flexfflex-col gap-6 justify-center items-center z-50 bg-mainBg h-screen w-screen'>
+              <Loader />
             </div>
-          } */}
+            // <iframe src="https://lottie.host/embed/ffd70ffd-82b2-4282-9a4a-184cbf67cf14/9MYlUbduoT.json" className='w-screen h-screen'></iframe>
+            // <img src={LoaderImg} width={170} height={170} alt="loader image" />
+          }
       <Header />
 
       <div className='z-30'>
