@@ -24,7 +24,7 @@ import LoaderImg from './assets/loading.png';
 import Eventdetails from './components/Details/Eventdetails';
 import WorkshopDetials from './components/Details/WorkshopDetials';
 import ProjectDetails from './components/Details/ProjectDetails';
-import bgAnimation from './assets/Animation-3.json';
+import bgAnimation from './assets/Animation-5.json';
 import bgAnimationMobile from './assets/bgAnimation.json';
 
 const Loader = () => {
@@ -58,7 +58,7 @@ useEffect(() => {
 
 
   return (
-    <div className=' bg-bg'>
+    <div className=' bg-bgOpacity'>
       {isLoading && 
             <div className='fixed flexfflex-col gap-6 justify-center items-center z-50 bg-mainBg h-screen w-screen'>
               <Loader />
