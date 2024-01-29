@@ -10,14 +10,15 @@ const Card = ({ data, name }) => {
   return (
     <FramerReveal>
     <Link to={`/${name}/${data.url}`} className='group hover:-translate-y-1 duration-200'>
-      <div className='w-[320px] h-[320px] relative overflow-hidden duration-300 rounded-xl group-hover:shadow-2xl group-hover:shadow-iconBg max-sm:shadow-2xl max-sm:shadow-iconBg'>
+      <div className='w-[300px] border h-[280px] relative overflow-hidden duration-300 rounded-xl group-hover:shadow-2xl group-hover:shadow-iconBg max-sm:shadow-2xl max-sm:shadow-iconBg'>
         <img 
           src={ProjectImg} 
           alt={data.name}
-          className='relative h-full w-full object-cover rounded-lg duration-500' 
+          className='h-full w-full object-cover rounded-lg duration-500' 
           loading='lazy'
         />
         <ReactStars 
+          className='absolute'
           count={5}
           value={0}
           color1='#ffd700'
@@ -34,7 +35,7 @@ const Card = ({ data, name }) => {
         half={true}
         edit={false}
       />
-      <h4 className='text-center mt-4 py-2 bg-mainText text-mainBg rounded-full mx-2 duration-200'>
+      <h4 className='text-center text-sm mt-2 py-2 bg-subMainText text-mainBg rounded-full mx-2 duration-200'>
         {data.name.length <= 35 
           ? data.name
           : `${data.name.slice(0,35)}...`

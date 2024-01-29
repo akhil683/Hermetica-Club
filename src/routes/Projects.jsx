@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from 'react';
-
 import { getDocs } from 'firebase/firestore';
 import { projectRef } from '../utils/firebase.utils';
 
@@ -37,7 +36,7 @@ const Projects = () => {
     const searchFieldValue = e.target.value.toLowerCase();
     setSearchField(searchFieldValue);
   }
-
+console.log(data);
   return (
       <div className='mb-12 mt-2'>
         <Searchbar 

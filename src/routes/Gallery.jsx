@@ -43,18 +43,21 @@ const Gallery = () => {
             <img src={Img} alt="" className='w-full h-full object-cover' />
           </div>
         </FramerReveal>
+
         <FramerReveal>
           <div className='relative w-full sm:w-[330px] sm:h-[260px] border border-iconbgHover overflow-hidden group'>
             <a href={Img} className='absolute px-4 py-2 bg-mainText text-mainBg rounded-full bottom-2 right-4 translate-y-16 opacity-0 group-hover:opacity-90 font-semibold group-hover:translate-y-0 duration-300'>Download</a>
             <img src={Img} alt="" className='w-full h-full object-cover' />
           </div>
         </FramerReveal>
+        
         <FramerReveal>
           <div className='relative w-full sm:w-[330px] sm:h-[260px] border border-iconbgHover overflow-hidden group'>
             <a href={Img} className='absolute px-4 py-2 bg-mainText text-mainBg rounded-full bottom-2 right-4 translate-y-16 opacity-0 group-hover:opacity-90 font-semibold group-hover:translate-y-0 duration-300'>Download</a>
             <img src={Img} alt="" className='w-full h-full object-cover' />
           </div>
         </FramerReveal>
+        
         <FramerReveal>
           <div className='relative w-full sm:w-[330px] sm:h-[260px] border border-iconbgHover overflow-hidden group'>
             <a href={Img} className='absolute px-4 py-2 bg-mainText text-mainBg rounded-full bottom-2 right-4 translate-y-16 opacity-0 group-hover:opacity-90 font-semibold group-hover:translate-y-0 duration-300'>Download</a>

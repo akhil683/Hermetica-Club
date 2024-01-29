@@ -21,6 +21,9 @@ const Workshops = lazy(() => import('./routes/Workshops'))
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header'
 import LoaderImg from './assets/loading.png';
+import Eventdetails from './components/Details/Eventdetails';
+import WorkshopDetials from './components/Details/WorkshopDetials';
+import ProjectDetails from './components/Details/ProjectDetails';
 
 const Loader = () => {
   return (
@@ -129,7 +132,7 @@ useEffect(() => {
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <Details dataRef={projectRef} />
+              <ProjectDetails dataRef={projectRef} />
             </Suspense>
           </ErrorBoundary>} 
           />
@@ -140,7 +143,7 @@ useEffect(() => {
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <Details dataRef={workshopRef} />
+              <WorkshopDetials />
             </Suspense>
           </ErrorBoundary>} 
           />
@@ -151,7 +154,7 @@ useEffect(() => {
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <Details dataRef={eventsRef} />
+              <Eventdetails />
             </Suspense>
           </ErrorBoundary>} 
           />

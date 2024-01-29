@@ -61,7 +61,7 @@ const Header = () => {
         <span className='sm:text-xl'>Hermetica</span>
       </Link>
 
-      <ul className='sm:flex hidden py-1 rounded-full'>
+      <ul className='lg:flex hidden py-1 rounded-full'>
         <li className='px-4 py-2 nav-hover'>
           <Link to='/'>Home</Link>
         </li>
@@ -85,13 +85,13 @@ const Header = () => {
         </li>
       </ul>
 
-      <div onClick={toggleMenu} className='sm:hidden flex gap-2 px-4 py-3 group text-subMainText bg-iconBg duration-200 hover:bg-iconbgHover hover:scale-105 rounded-full cursor-pointer'>
+      <div onClick={toggleMenu} className='lg:hidden flex gap-2 px-4 py-3 group text-subMainText bg-iconBg duration-200 hover:bg-iconbgHover hover:scale-105 rounded-full cursor-pointer'>
         <CiMenuFries />
         <IoIosArrowForward className={`group-hover:text-mainText transition duration-200 ${showMenu ? 'rotate-180' : ''}`}/>
       </div>
 
     </nav>
-    <div onClick={toggleMenu} className='sm:hidden fixed top-18 right-0 text-lg z-40'>
+    <div onClick={toggleMenu} className='lg:hidden fixed top-18 right-0 text-lg z-40'>
       <MobileMenu control={control} />
     </div>
     </>

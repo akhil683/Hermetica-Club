@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 // import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
@@ -15,7 +16,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
+export const imgDb = getStorage(app);
 export const db = getFirestore(app);
+
 export const eventsRef = collection(db, 'events');
 export const galleryRef = collection(db, 'Gallery');
 export const membersRef = collection(db, 'members');

@@ -67,7 +67,7 @@ const Members = () => {
             <Skeleton />
           </div>
           : <div className='flex flex-wrap justify-center mt-16 gap-4 mx-10'>
-              {(filteredMembers.length ? filteredMembers : defaultMembers).map((member) => {
+              {(filteredMembers.length ? filteredMembers : defaultMembers)?.map((member) => {
                 return (
                   <MemberCard member={member} key={member.id} />
               )})}
