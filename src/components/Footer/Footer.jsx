@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import FooterImg from '../../assets/footer.webp';
 
 import FooterSocials from './FooterSocials'
 import FramerReveal from '../FramerReveal';
 
 const Footer = () => {
   return (
-    <footer className='relative py-12 px-12 overflow-hidden group'>
+    <footer className='relative py-12 px-12 overflow-hidden group bg-iconBg'>
       <div className='flex z-50 flex-wrap gap-6 sm:justify-around justify-center'>
         <FramerReveal>
           <FooterSocials />

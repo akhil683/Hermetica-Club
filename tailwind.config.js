@@ -20,6 +20,7 @@ export default {
     //   'violet': '#e2b714',
     // },
     colors: {
+      'bg': 'rgba(0, 0, 0, 0.8)',
       'mainBg': '#000',
       // 1e1e32
       'mainText': '#ffff',

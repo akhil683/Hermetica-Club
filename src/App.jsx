@@ -4,11 +4,11 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from './components/ErrorFallback';
 import { DNA } from 'react-loader-spinner';
-
+import Lottie from 'lottie-react';
 import { eventsRef, projectRef, workshopRef } from './utils/firebase.utils';
 
 const About = lazy(() => import('./routes/About'))
-const Details = lazy(() => import('./components/Details/Details'));
+// const Details = lazy(() => import('./components/Details/Details'));
 const Events = lazy(() => import('./routes/Events'));
 const Gallery = lazy(() => import('./routes/Gallery'));
 const Home = lazy(() => import('./routes/Home'))
@@ -24,6 +24,8 @@ import LoaderImg from './assets/loading.png';
 import Eventdetails from './components/Details/Eventdetails';
 import WorkshopDetials from './components/Details/WorkshopDetials';
 import ProjectDetails from './components/Details/ProjectDetails';
+import bgAnimation from './assets/Animation-3.json';
+import bgAnimationMobile from './assets/bgAnimation.json';
 
 const Loader = () => {
   return (
@@ -56,17 +58,18 @@ useEffect(() => {
 
 
   return (
-    <div className=' bg-mainBg'>
-    
+    <div className=' bg-bg'>
       {isLoading && 
             <div className='fixed flexfflex-col gap-6 justify-center items-center z-50 bg-mainBg h-screen w-screen'>
               <Loader />
             </div>
-            // <iframe src="https://lottie.host/embed/ffd70ffd-82b2-4282-9a4a-184cbf67cf14/9MYlUbduoT.json" className='w-screen h-screen'></iframe>
-            // <img src={LoaderImg} width={170} height={170} alt="loader image" />
           }
       <Header />
-
+      <div className='h-screen fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>
+        <Lottie animationData={bgAnimation} className='scale-110 max-sm:hidden -translate-y-48 object-cover' />
+        <Lottie animationData={bgAnimationMobile} className='scale-150 sm:hidden -translate-x-12 object-cover' />
+      </div>
+      
       <div className='z-30'>
 
       <Routes>

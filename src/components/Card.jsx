@@ -10,7 +10,7 @@ const Card = ({ data, name }) => {
   return (
     <FramerReveal>
     <Link to={`/${name}/${data.url}`} className='group hover:-translate-y-1 duration-200'>
-      <div className='w-[300px] border h-[280px] relative overflow-hidden duration-300 rounded-xl group-hover:shadow-2xl group-hover:shadow-iconBg max-sm:shadow-2xl max-sm:shadow-iconBg'>
+      <div className='w-[300px] h-[280px] relative overflow-hidden duration-300 rounded-xl group-hover:shadow-2xl group-hover:shadow-iconBg max-sm:shadow-2xl max-sm:shadow-iconBg'>
         <img 
           src={ProjectImg} 
           alt={data.name}

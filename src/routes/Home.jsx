@@ -20,7 +20,7 @@ const Home = () => {
       <Nimbus />
       <Work />
       <Domains />
-      <div className='p-6 pb-12 sm:h-screen bg-iconBg'>
+      <div className='p-6 pb-12 sm:h-screen'>
       
       <FramerReveal>
         <h2 className='text-center sm:text-5xl text-3xl my-12 font-popppins'><span className='text-violet'>Club</span> Co-ordinators</h2>

@@ -38,7 +38,7 @@ const Projects = () => {
   }
 console.log(data);
   return (
-      <div className='mb-12 mt-2'>
+      <div className='mb-12 mt-2 z-50'>
         <Searchbar 
           onSearchChange={onSearchChange} 
           Placeholder="Project" 
