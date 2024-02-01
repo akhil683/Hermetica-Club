@@ -4,11 +4,11 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from './components/ErrorFallback';
 import { DNA } from 'react-loader-spinner';
-import Lottie from 'lottie-react';
+// import Lottie from 'lottie-react';
 import { eventsRef, projectRef, workshopRef } from './utils/firebase.utils';
 
 const About = lazy(() => import('./routes/About'))
-// const Details = lazy(() => import('./components/Details/Details'));
+const Details = lazy(() => import('./components/Details/Details'));
 const Events = lazy(() => import('./routes/Events'));
 const Gallery = lazy(() => import('./routes/Gallery'));
 const Home = lazy(() => import('./routes/Home'))
@@ -21,13 +21,8 @@ const Workshops = lazy(() => import('./routes/Workshops'))
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header'
 import LoaderImg from './assets/loading.png';
-import Eventdetails from './components/Details/Eventdetails';
-import WorkshopDetials from './components/Details/WorkshopDetials';
-import ProjectDetails from './components/Details/ProjectDetails';
 import bgAnimation from './assets/Animation-5.json';
 import bgAnimationMobile from './assets/bgAnimation.json';
-// import { Detailed } from '@react-three/drei';
-import Details from './components/Details/Details';
 
 const Loader = () => {
   return (
