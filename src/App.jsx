@@ -26,6 +26,8 @@ import WorkshopDetials from './components/Details/WorkshopDetials';
 import ProjectDetails from './components/Details/ProjectDetails';
 import bgAnimation from './assets/Animation-5.json';
 import bgAnimationMobile from './assets/bgAnimation.json';
+// import { Detailed } from '@react-three/drei';
+import Details from './components/Details/Details';
 
 const Loader = () => {
   return (
@@ -65,10 +67,10 @@ useEffect(() => {
             </div>
           }
       <Header />
-      <div className='h-screen fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>
+      {/* <div className='h-screen fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>
         <Lottie animationData={bgAnimation} className='scale-110 max-sm:hidden -translate-y-48 object-cover' />
         <Lottie animationData={bgAnimationMobile} className='scale-150 sm:hidden -translate-x-12 object-cover' />
-      </div>
+      </div> */}
       
       <div className='z-30'>
 
@@ -128,25 +130,26 @@ useEffect(() => {
             </Suspense>
           </ErrorBoundary>} 
           />
-
+          
           <Route path='/projects/:url' element={
             <ErrorBoundary
-            FallbackComponent={ErrorFallback}
-            onReset={() => navigate('/')}
+              FallbackComponent={ErrorFallback}
+              onReset={() => navigate('/')}
             >
-            <Suspense fallback={<Loader />}>
-              <ProjectDetails dataRef={projectRef} />
-            </Suspense>
-          </ErrorBoundary>} 
+              <Suspense fallback={<Loader />}>
+                <Details dataRef={projectRef}/>
+              </Suspense>
+            </ErrorBoundary>
+          }
           />
-          
+
           <Route path='/workshops/:url' element={
             <ErrorBoundary
             FallbackComponent={ErrorFallback}
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <WorkshopDetials />
+              <Details dataRef={workshopRef} />
             </Suspense>
           </ErrorBoundary>} 
           />
@@ -157,7 +160,7 @@ useEffect(() => {
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <Eventdetails />
+              <Details dataRef={eventsRef} />
             </Suspense>
           </ErrorBoundary>} 
           />

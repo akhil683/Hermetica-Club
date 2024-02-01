@@ -7,7 +7,6 @@ import Img from '../../assets/profile.jpg';
 import ReactStars from 'react-stars';
 import Reviews from './Reviews';
 import Skeleton from '../Skeleton';
-// import { projectRef } from '../../utils/firebase.utils';
 
 const Details = ({ dataRef }) => {
   
@@ -27,25 +26,21 @@ const Details = ({ dataRef }) => {
     }
     getData();
   }, [])
-
-  const dataDetail = data.find(data => data.url === url);
-  console.log(data);
-  console.log(dataDetail)
-  const { name, ProposedBy, Abstract } = dataDetail;
+  const dataDetail = data?.find(data => data.url == url);
 
   return (
-    <div className='mb-12 mt-4'>
+    <div className='mb-12 mt-4 font-popppins'>
       {isLoading 
       ? <Skeleton />
       :
       <>
-        <h3 className='text-violet text-3xl text-center mb-12'>{name}</h3>
+        <h3 className='text-violet text-3xl text-center mb-12'>{dataDetail?.name}</h3>
       <div className='flex mx-4 flex-wrap gap-12 justify-center'>
         <div className='relative sm:w-[350px] shadow-iconBg duration-300 shadow-2xl w-full hover:opacity-90 sm:h-[400px] h-[450px] rounded-xl overflow-hidden '>
           <img src={Img} alt="" className=' w-full h-full object-cover rounded-lg' />
         </div>
-        <div className='sm:max-w-[500px] w-full font-montserrat'>
-          <p className='text-xl'>Proposed By: <a href='#' className=''>{ProposedBy}</a> </p>
+        <div className='sm:max-w-[700px] w-full font-montserrat'>
+          <p className='text-xl'>Proposed By: <a href='#' className=''>{dataDetail?.ProposedBy}</a> </p>
           <ReactStars 
             count={5}
             value={0}
@@ -55,8 +50,16 @@ const Details = ({ dataRef }) => {
             edit={true}
           />
           <p className=' text-subMainText text-justify text-md mt-4'>
-          {Abstract}
+            {dataDetail?.Abstract.length < 800 
+            ? dataDetail?.Abstract
+            : <div>
+                {`${dataDetail?.Abstract.slice(0,800)}...`}
+                <span className=' underline text-violet cursor-pointer opacity-90 hover:opacity-100'>Read more</span>
+             </div>
+          } 
           </p>
+          <p className='mt-6 mb-2 text-lg'>ConstructedBy : {dataDetail?.constructedBy}</p>
+          <p className='text-lg'>Volunteer : {dataDetail?.Volunteer}</p>
         </div>
       </div>
 
