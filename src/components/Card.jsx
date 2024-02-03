@@ -6,6 +6,7 @@ import ReactStars from 'react-stars';
 import FramerReveal from './FramerReveal';
 
 const Card = ({ data, name }) => {
+  console.log(data);
 
   return (
     <FramerReveal>
@@ -36,9 +37,9 @@ const Card = ({ data, name }) => {
         edit={false}
       />
       <h4 className='text-center text-sm mt-2 py-2 bg-subMainText text-mainBg rounded-full mx-2 duration-200'>
-        {data.name.length <= 35 
+        {data?.name?.length <= 35 
           ? data.name
-          : `${data.name.slice(0,35)}...`
+          : `${data?.name?.slice(0,35)}...`
         }
       </h4>
     </Link>

@@ -1,12 +1,11 @@
 import React, { useState, useEffect} from 'react';
 import { getDocs } from 'firebase/firestore';
-import { projectRef } from '../utils/firebase.utils';
 
 import Searchbar from '../components/Searchbar';
 import Card from '../components/Card';
 import Skeleton from '../components/Skeleton';
 
-const Projects = () => {
+const Works = ({ dataRef, name }) => {
 
   const [ data, setData ] = useState([]);
   const [ isLoading, setIsLoading ] = useState(false);
@@ -16,17 +15,17 @@ const Projects = () => {
   useEffect(() => {
     const getData = async () => {
       setIsLoading(true);
-      const _data = await getDocs(projectRef);
+      const _data = await getDocs(dataRef);
       _data.forEach((doc) => {
         setData((prev) => [...prev, {...(doc.data())}]);
       })
       setIsLoading(false);
     }
     getData();
-  }, [])
+  }, [name])
 
   useEffect(() => {
-    const SearchFilterData = data.filter((data) => {
+    const SearchFilterData = data?.filter((data) => {
       return data.name.toLowerCase().includes(searchField);
     })
     setSearchFilterData(SearchFilterData);
@@ -36,12 +35,13 @@ const Projects = () => {
     const searchFieldValue = e.target.value.toLowerCase();
     setSearchField(searchFieldValue);
   }
-console.log(data);
+// console.log(data);
+
   return (
       <div className='mb-12 mt-2 z-50'>
         <Searchbar 
           onSearchChange={onSearchChange} 
-          Placeholder="Project" 
+          Placeholder={name} 
         />
         {isLoading 
         ? (
@@ -55,7 +55,7 @@ console.log(data);
           <div className='flex flex-wrap justify-center gap-6 mt-6'>
             {(searchFilterData.length ? searchFilterData : data)?.map((project) => {
               return (
-              <Card data={project} name="projects" key={project.id} />
+              <Card data={project} name={name} key={project.name} />
               )})}
           </div>
         )}
@@ -63,4 +63,4 @@ console.log(data);
   )
 }
 
-export default Projects
+export default Works;

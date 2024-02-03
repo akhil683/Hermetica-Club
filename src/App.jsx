@@ -4,25 +4,22 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from './components/ErrorFallback';
 import { DNA } from 'react-loader-spinner';
-// import Lottie from 'lottie-react';
 import { eventsRef, projectRef, workshopRef } from './utils/firebase.utils';
 
 const About = lazy(() => import('./routes/About'))
 const Details = lazy(() => import('./components/Details/Details'));
-const Events = lazy(() => import('./routes/Events'));
 const Gallery = lazy(() => import('./routes/Gallery'));
 const Home = lazy(() => import('./routes/Home'))
 const Members = lazy(() => import('./routes/Members'))
 const NoPage = lazy(() => import('./routes/NoPage'))
-const Projects = lazy(() => import('./routes/Projects'))
+const Works = lazy(() => import('./routes/Works'))
 const Form = lazy(() => import('./routes/Form'))
-const Workshops = lazy(() => import('./routes/Workshops'))
 
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header'
 import LoaderImg from './assets/loading.png';
-import bgAnimation from './assets/Animation-5.json';
-import bgAnimationMobile from './assets/bgAnimation.json';
+// import bgAnimation from './assets/Animation-5.json';
+// import bgAnimationMobile from './assets/bgAnimation.json';
 
 const Loader = () => {
   return (
@@ -99,7 +96,7 @@ useEffect(() => {
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <Projects />
+              <Works dataRef={projectRef} name="projects" />
             </Suspense>
           </ErrorBoundary>} 
           />
@@ -110,7 +107,7 @@ useEffect(() => {
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <Workshops />
+              <Works dataRef={workshopRef} name="workshops" />
             </Suspense>
           </ErrorBoundary>} 
           />
@@ -121,7 +118,7 @@ useEffect(() => {
             onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
-              <Events />
+              <Works dataRef={eventsRef} name="events" />
             </Suspense>
           </ErrorBoundary>} 
           />
@@ -140,8 +137,8 @@ useEffect(() => {
 
           <Route path='/workshops/:url' element={
             <ErrorBoundary
-            FallbackComponent={ErrorFallback}
-            onReset={() => navigate('/')}
+              FallbackComponent={ErrorFallback}
+              onReset={() => navigate('/')}
             >
             <Suspense fallback={<Loader />}>
               <Details dataRef={workshopRef} />

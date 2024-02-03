@@ -31,7 +31,10 @@ const Details = ({ dataRef }) => {
   return (
     <div className='mb-12 mt-4 font-popppins'>
       {isLoading 
-      ? <Skeleton />
+      ?
+        <div className='w-screen flex justify-center'>
+          <Skeleton />
+        </div>
       :
       <>
         <h3 className='text-violet text-3xl text-center mb-12'>{dataDetail?.name}</h3>
@@ -52,10 +55,10 @@ const Details = ({ dataRef }) => {
           <p className=' text-subMainText text-justify text-md mt-4'>
             {dataDetail?.Abstract.length < 800 
             ? dataDetail?.Abstract
-            : <div>
+            : <>
                 {`${dataDetail?.Abstract.slice(0,800)}...`}
                 <span className=' underline text-violet cursor-pointer opacity-90 hover:opacity-100'>Read more</span>
-             </div>
+             </>
           } 
           </p>
           <p className='mt-6 mb-2 text-lg'>ConstructedBy : {dataDetail?.constructedBy}</p>
