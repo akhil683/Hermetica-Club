@@ -53,7 +53,7 @@ const Works = ({ dataRef, name }) => {
           </div>
         ) : (
           <div className='flex flex-wrap justify-center gap-6 mt-6'>
-            {(searchFilterData.length ? searchFilterData : data)?.map((project) => {
+            {(searchFilterData?.length ? searchFilterData : data)?.map((project) => {
               return (
               <Card data={project} name={name} key={project.name} />
               )})}
