@@ -8,7 +8,7 @@ const Nimbus = () => {
   return (
     <>
       <FramerReveal>
-        <h2 className='text-4xl text-center sm:text-5xl'>Our <span className='text-violet'>Work</span></h2>
+        <h2 className='text-4xl text-center sm:text-5xl'>Our <span className=' text-iconBg'>Work</span></h2>
       </FramerReveal>
     <section className='min-h-screen mt-6 max-sm:mb-16 max-sm:mx-12 flex flex-wrap justify-center items-center gap-6'>
       <FramerReveal>

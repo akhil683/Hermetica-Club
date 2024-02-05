@@ -6,14 +6,14 @@ import FramerReveal from '../FramerReveal';
 
 const Footer = () => {
   return (
-    <footer className='relative py-12 px-12 overflow-hidden group bg-iconBg'>
+    <footer className='relative py-12 px-12 overflow-hidden group bg-bg'>
       <div className='flex z-50 flex-wrap gap-6 sm:justify-around justify-center'>
         <FramerReveal>
           <FooterSocials />
         </FramerReveal>
         <FramerReveal>
         <div>
-          <h4 className='text-lg my-4'>Projects</h4>
+          <h4 className='text-lg my-4 text-mainBg'>Projects</h4>
           <ul className=' text-iconbgHover flex flex-col gap-3'>
             <li className='hover:text-subMainText duration-150'><Link to="">Something</Link></li>
             <li className='hover:text-subMainText duration-150'><Link to="">something Else</Link></li>
@@ -25,7 +25,7 @@ const Footer = () => {
         </FramerReveal>
         <FramerReveal>
         <div>
-          <h4 className='text-lg my-4'>Events</h4>
+          <h4 className='text-lg my-4 text-mainBg'>Events</h4>
           <ul className='text-iconbgHover flex flex-col gap-3'>
             <li className='hover:text-subMainText duration-150'><Link to="">Something</Link></li>
             <li className='hover:text-subMainText duration-150'><Link to="">something Else</Link></li>
@@ -39,7 +39,7 @@ const Footer = () => {
       <FramerReveal>
       <hr className='my-12' />
       <div className='text-center'>
-          <span className='text-subMainText'>A Chemical Engineering Club</span>
+          <span className=' text-mainBg'>A Chemical Engineering Club</span>
           <div className='text-sm text-center text-iconbgHover my-2 flex justify-between'>
               <p>Developed by Akhil</p>
               <p>Copyright2023</p>
