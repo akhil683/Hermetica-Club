@@ -13,6 +13,7 @@ const Works = ({ dataRef, name }) => {
   const [searchFilterData, setSearchFilterData] = useState([]);
 
   useEffect(() => {
+    setData([]);
     const getData = async () => {
       setIsLoading(true);
       const _data = await getDocs(dataRef);

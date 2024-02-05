@@ -6,7 +6,6 @@ import ReactStars from 'react-stars';
 import FramerReveal from './FramerReveal';
 
 const Card = ({ data, name }) => {
-  console.log(data);
 
   return (
     <FramerReveal>

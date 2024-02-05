@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import { Route, useNavigate, Routes } from 'react-router-dom'
 
 import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from './components/ErrorFallback';
@@ -46,9 +46,9 @@ const App = () => {
 useEffect(() => {
   const timer = setTimeout(() => {
     setIsLoading(false);
-  }, 4000);
+  }, 3000);
   return () => clearTimeout(timer);
-})
+}, []);
 
 
   return (
@@ -65,7 +65,6 @@ useEffect(() => {
       </div> */}
       
       <div className='z-30'>
-
       <Routes>
       
           <Route path='/' element={

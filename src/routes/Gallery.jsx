@@ -35,7 +35,7 @@ const Gallery = () => {
         <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200'>Hermetica Day</button>
       </div>
 
-      <div className='flex flex-wrap justify-center mt-16 gap-8 mx-4'>
+      <div className='flex flex-wrap justify-center mt-16 gap-4 mx-4'>
 
         <FramerReveal>
           <div className='relative w-full sm:w-[330px] sm:h-[260px] border border-iconbgHover overflow-hidden group'>
