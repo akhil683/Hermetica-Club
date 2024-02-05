@@ -25,7 +25,7 @@ const Domains = () => {
   return (
     <div className='min-h-screen flex max-md:my-12 flex-col gap-6 justify-center'>
       <FramerReveal>
-        <h3 className='text-4xl sm:text-5xl text-center mb-12'>Our <span className='text-violet'>Domains</span></h3>
+        <h3 className='text-4xl sm:text-5xl text-center mb-12'>Our <span className=' text-iconBg'>Domains</span></h3>
       </FramerReveal>
 
       <div className='flex max-sm:flex-col gap-6 flex-wrap justify-center items-center'>

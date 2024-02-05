@@ -19,7 +19,7 @@
 }
 body {
   background-color: #111;
-  color: #ffffff;
+  /* color: #ffffff; */
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {

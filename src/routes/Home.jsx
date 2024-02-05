@@ -23,7 +23,7 @@ const Home = () => {
       <div className='p-6 pb-12 sm:h-screen'>
       
       <FramerReveal>
-        <h2 className='text-center sm:text-5xl text-3xl my-12 font-popppins'><span className='text-violet'>Club</span> Co-ordinators</h2>
+        <h2 className='text-center sm:text-5xl text-3xl my-12 font-popppins'><span className=' text-iconBg'>Club</span> Co-ordinators</h2>
       </FramerReveal>
      
         <div className='flex max-sm:flex-col gap-12 sm:gap-20 justify-center'>

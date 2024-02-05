@@ -8,7 +8,7 @@ const About = () => {
       
       <FramerReveal>
         <h1 className='mb-6 text-4xl text-center'>
-          Team <span className='text-violet'>Hermetica</span>
+          Team <span className=' text-iconBg'>Hermetica</span>
         </h1>
         <p className='text-justify text-subMainText max-w-[800px] m-auto'>
         Team Hermetica, was established as the departmental team of Chemical Engineering, at the National Institute of Technology, Hamirpur in the year 2014. <br /> <br />
