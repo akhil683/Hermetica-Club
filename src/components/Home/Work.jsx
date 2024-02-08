@@ -14,7 +14,7 @@ const Nimbus = () => {
       <FramerReveal>
       <Link to="/projects" className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-iconBg hover:-translate-y-1 duration-200 hover:shadow-2xl hover:shadow-iconBg'>
         <div className='w-[120px] h-[120px]'>
-          <img src={NimbusImg} alt="" className='w-full h-full object-cover rounded-full' />
+          <img src="https://firebasestorage.googleapis.com/v0/b/hermetica-76788.appspot.com/o/Home%2FProjects.png?alt=media&token=9b01e516-abb2-49a7-9f07-762ac0828f0f" alt="" className='w-full h-full object-cover rounded-full' />
         </div>
         <h3 className='text-2xl text-violet font-semibold mt-3 mb-6'>Projects</h3>
         <p className='text-sm sm:h-[260px] text-subMainText text-justify'>Team Hermetica provides you with the chance to acquire a taste of technical projects in the field of chemical engineering and inspire participants to recreate and reinvent pervasive innovation in the college itself, at the highest levels imaginable. <br />  <br />
@@ -25,7 +25,7 @@ const Nimbus = () => {
       <FramerReveal>
       <div className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-iconBg hover:-translate-y-1 duration-200 hover:shadow-2xl hover:shadow-iconBg'>
         <div className='w-[120px] h-[120px]'>
-          <img src={HermeticaImg} alt="" className='w-full h-full object-cover rounded-full' />
+          <img src="https://firebasestorage.googleapis.com/v0/b/hermetica-76788.appspot.com/o/Home%2FEvents.svg?alt=media&token=f1e9ca4b-6026-449b-b7fb-9c12f3433c1e" alt="" className='w-full h-full object-cover rounded-full' />
         </div>
         <h3 className='text-2xl text-violet font-semibold mt-3 mb-6'>Events</h3>
         <p className='text-sm sm:h-[260px] text-subMainText text-justify'>
@@ -36,7 +36,7 @@ const Nimbus = () => {
       <FramerReveal>
       <div className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-iconBg hover:-translate-y-1 duration-200 hover:shadow-2xl hover:shadow-iconBg'>
         <div className='w-[120px] h-[120px]'>
-          <img src={HermeticaImg} alt="" className='w-full h-full object-cover rounded-full' />
+          <img src="https://firebasestorage.googleapis.com/v0/b/hermetica-76788.appspot.com/o/Home%2Fworkshops.png?alt=media&token=4c3b5ddc-1926-40b3-8c45-8a90cc74460d" alt="" className='w-full h-full object-cover rounded-full' />
         </div>
         <h3 className='text-2xl text-violet font-semibold mt-3 mb-6'>Workshops</h3>
         <p className='text-sm sm:h-[260px] text-subMainText text-justify'>

@@ -11,7 +11,7 @@ const FooterSocials = () => {
         <Link to="/">
           <h2 className='text-2xl bg-iconBg hover:bg-violet duration-200 px-4 py-3 rounded-full text-center mb-2'>Hermetica</h2>
         </Link>
-        <p className='text-subMainText text-center'>The heart of Tech</p>
+        <p className=' text-mainBg text-center'>The heart of Tech</p>
       </div>
         <div className='flex sm:gap-4 gap-6'>
           <a href='https://www.instagram.com/teamhermetica/?igshid=YmMyMTA2M2Y%3D' className='p-4 text-xl hover:bg-iconBg rounded-full bg-iconbgHover hover:text-violet hover:shadow-iconbgHover hover:shadow-md hover:scale-125 cursor-pointer duration-100'><FaInstagram /></a>

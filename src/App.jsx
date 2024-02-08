@@ -53,11 +53,11 @@ useEffect(() => {
 
   return (
     <div className=' bg-bgOpacity'>
-      {isLoading && 
+      {/* {isLoading && 
             <div className='fixed flexfflex-col gap-6 justify-center items-center z-50 bg-mainBg h-screen w-screen'>
               <Loader />
             </div>
-          }
+          } */}
       <Header />
       {/* <div className='h-screen fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>
         <Lottie animationData={bgAnimation} className='scale-110 max-sm:hidden -translate-y-48 object-cover' />
