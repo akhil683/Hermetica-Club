@@ -1,11 +1,30 @@
 import React, {useState, useEffect} from 'react'
 import Img from '../assets/profile.jpg'
 import FramerReveal from '../components/FramerReveal'
+import { galleryRef } from '../utils/firebase.utils';
+import { getDocs } from 'firebase/firestore';
+import Skeleton from '../components/Skeleton';
 
 const Gallery = () => {
   
+  const [ data, setData ] = useState([]);
   const [ show, setShow ] = useState('');
+  const [ isLoading, setIsLoading ] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    setData([]);
+    const getData = async () => {
+      setIsLoading(true);
+      const _data = await getDocs(galleryRef);
+      _data.forEach((doc) => {
+        setData((prev) => [...prev, {...(doc.data())}]);
+      })
+      setIsLoading(false);
+    }
+    getData();
+  }, [])
+
 
   const controlNavbar = () => {
     if(window.scrollY > 200) {
@@ -35,38 +54,27 @@ const Gallery = () => {
         <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200'>Hermetica Day</button>
       </div>
 
-      <div className='flex flex-wrap justify-center mt-16 gap-4 mx-4'>
-
-        <FramerReveal>
-          <div className='relative w-full sm:w-[330px] sm:h-[260px] border border-iconbgHover overflow-hidden group'>
-            <a href={Img} className='absolute px-4 py-2 bg-mainText text-mainBg rounded-full bottom-2 right-4 translate-y-16 opacity-0 group-hover:opacity-90 font-semibold group-hover:translate-y-0 duration-300'>Download</a>
-            <img src={Img} alt="" className='w-full h-full object-cover' />
-          </div>
-        </FramerReveal>
-
-        <FramerReveal>
-          <div className='relative w-full sm:w-[330px] sm:h-[260px] border border-iconbgHover overflow-hidden group'>
-            <a href={Img} className='absolute px-4 py-2 bg-mainText text-mainBg rounded-full bottom-2 right-4 translate-y-16 opacity-0 group-hover:opacity-90 font-semibold group-hover:translate-y-0 duration-300'>Download</a>
-            <img src={Img} alt="" className='w-full h-full object-cover' />
-          </div>
-        </FramerReveal>
-        
-        <FramerReveal>
-          <div className='relative w-full sm:w-[330px] sm:h-[260px] border border-iconbgHover overflow-hidden group'>
-            <a href={Img} className='absolute px-4 py-2 bg-mainText text-mainBg rounded-full bottom-2 right-4 translate-y-16 opacity-0 group-hover:opacity-90 font-semibold group-hover:translate-y-0 duration-300'>Download</a>
-            <img src={Img} alt="" className='w-full h-full object-cover' />
-          </div>
-        </FramerReveal>
-        
-        <FramerReveal>
-          <div className='relative w-full sm:w-[330px] sm:h-[260px] border border-iconbgHover overflow-hidden group'>
-            <a href={Img} className='absolute px-4 py-2 bg-mainText text-mainBg rounded-full bottom-2 right-4 translate-y-16 opacity-0 group-hover:opacity-90 font-semibold group-hover:translate-y-0 duration-300'>Download</a>
-            <img src={Img} alt="" className='w-full h-full object-cover' />
-          </div>
-        </FramerReveal>
-        
+        {isLoading 
+          ? 
+            <div className='flex flex-wrap justify-center mt-16 gap-4 mx-4'>
+              <Skeleton/>
+              <Skeleton/>
+              <Skeleton/>
+            </div>
+          :
+            <div className='flex flex-wrap justify-center mt-16 gap-4 mx-4'>
+              {data.map(image => {
+                return (
+                  <FramerReveal key={image.ImageLink}>
+                    <div className='relative w-full sm:w-[330px] sm:h-[260px] border border-iconbgHover overflow-hidden group'>
+                      <a href={image.ImageLink} className='absolute px-4 py-2 bg-mainText text-mainBg rounded-full bottom-2 right-4 translate-y-16 opacity-0 group-hover:opacity-90 font-semibold group-hover:translate-y-0 duration-300' target='_blank'>Download</a>
+                      <img src={image.ImageLink} alt="" className='w-full h-full object-cover' />
+                    </div>
+                  </FramerReveal>
+                )})}
+              </div>
+        }
       </div>
-    </div>
   )
 }
 

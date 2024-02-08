@@ -18,8 +18,7 @@ const Form = lazy(() => import('./routes/Form'))
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header'
 import LoaderImg from './assets/loading.png';
-// import bgAnimation from './assets/Animation-5.json';
-// import bgAnimationMobile from './assets/bgAnimation.json';
+import BgSvg from './components/Svg';
 
 const Loader = () => {
   return (
@@ -46,7 +45,7 @@ const App = () => {
 useEffect(() => {
   const timer = setTimeout(() => {
     setIsLoading(false);
-  }, 3000);
+  }, 2000);
   return () => clearTimeout(timer);
 }, []);
 
@@ -54,15 +53,25 @@ useEffect(() => {
   return (
     <div className=' bg-bgOpacity'>
       {isLoading && 
-            <div className='fixed flexfflex-col gap-6 justify-center items-center z-50 bg-mainBg h-screen w-screen'>
-              <Loader />
+            <div className='fixed flex flex-col gap-6 justify-center items-center z-50 bg-mainBg h-screen w-screen'>
+              {/* <Loader /> */}
+              <div className='flex gap-4 text-7xl group'>
+                <span className=' group-hover:-translate-y-40 group-hover:translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>H</span>
+                <span  className=' group-hover:translate-y-40 group-hover:-translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>E</span>
+                <span className=' group-hover:-translate-y-40 group-hover:translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>R</span>
+                <span  className=' group-hover:translate-y-40 group-hover:-translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>M</span>
+                <span  className=' group-hover:-translate-y-40 group-hover:translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>E</span>
+                <span className=' group-hover:translate-y-40 group-hover:-translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>T</span>
+                <span className=' group-hover:-translate-y-40 group-hover:translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>I</span>
+                <span className=' group-hover:translate-y-40 group-hover:-translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>C</span>
+                <span className=' group-hover:-translate-y-40 group-hover:translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>A</span>
+              </div>
             </div>
           }
       <Header />
-      {/* <div className='h-screen fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>
-        <Lottie animationData={bgAnimation} className='scale-110 max-sm:hidden -translate-y-48 object-cover' />
-        <Lottie animationData={bgAnimationMobile} className='scale-150 sm:hidden -translate-x-12 object-cover' />
-      </div> */}
+      <div className='h-screen fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>
+        <BgSvg />
+      </div>
       
       <div className='z-30'>
       <Routes>
