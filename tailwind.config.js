@@ -1,3 +1,4 @@
+import { rotate, translate } from 'maath/dist/declarations/src/buffer';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -35,8 +36,8 @@ export default {
     },
     extend: {
       animation: {
-        'pulse-fast': 'pulse 1.5s linear infinite',
-      }
+        'pulse-fast': 'pulse 1.5s ease-in infinite',
+      },
     },
   },
   plugins: [],

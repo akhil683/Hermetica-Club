@@ -24,17 +24,18 @@ const Loader = () => {
   return (
     <div className='h-[90vh] flex gap-6 flex-col justify-center items-center'>
       <img src={LoaderImg} className=' animate-bounce' alt="Loader Image" width={200} height={200} />
-      <DNA
-      visible={true}
-      height="80"
-      width="80"
-      color="#c082ff"
-      ariaLabel="tail-spin-loading"
-      radius="2"
-      wrapperStyle={{}}
-      wrapperClass=""
-      />
+      <div className='flex gap-4 text-4xl sm:text-7xl mt-8 text-violet'>
+      <span className=' loader-animate'>H</span>
+      <span  className='loader-animate'>E</span>
+      <span className='loader-animate'>R</span>
+      <span  className='loader-animate'>M</span>
+      <span  className='loader-animate'>E</span>
+      <span className='loader-animate'>T</span>
+      <span className='loader-animate'>I</span>
+      <span className='loader-animate'>C</span>
+      <span className='loader-animate'>A</span>
     </div>
+  </div>
   )}
 
 const App = () => {
@@ -45,7 +46,7 @@ const App = () => {
 useEffect(() => {
   const timer = setTimeout(() => {
     setIsLoading(false);
-  }, 2000);
+  }, 3200);
   return () => clearTimeout(timer);
 }, []);
 
@@ -54,19 +55,8 @@ useEffect(() => {
     <div className=' bg-bgOpacity'>
       {isLoading && 
             <div className='fixed flex flex-col gap-6 justify-center items-center z-50 bg-mainBg h-screen w-screen'>
-              {/* <Loader /> */}
-              <div className='flex gap-4 text-7xl group'>
-                <span className=' group-hover:-translate-y-40 group-hover:translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>H</span>
-                <span  className=' group-hover:translate-y-40 group-hover:-translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>E</span>
-                <span className=' group-hover:-translate-y-40 group-hover:translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>R</span>
-                <span  className=' group-hover:translate-y-40 group-hover:-translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>M</span>
-                <span  className=' group-hover:-translate-y-40 group-hover:translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>E</span>
-                <span className=' group-hover:translate-y-40 group-hover:-translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>T</span>
-                <span className=' group-hover:-translate-y-40 group-hover:translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>I</span>
-                <span className=' group-hover:translate-y-40 group-hover:-translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>C</span>
-                <span className=' group-hover:-translate-y-40 group-hover:translate-x-40 group-hover:opacity-0 group-hover:rotate-45 group-hover:blur-xl duration-1000'>A</span>
+              <Loader />
               </div>
-            </div>
           }
       <Header />
       <div className='h-screen fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>

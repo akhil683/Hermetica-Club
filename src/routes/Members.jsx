@@ -43,10 +43,10 @@ const Members = () => {
     }
     getData();
   }, [])
-  const defaultMembers = data.filter(member => member.Position === "Final Year Member");
+  const defaultMembers = data?.filter(member => member.Position === "Final Year Member");
 
   const handleClick = (position) => {
-    const filteredMembers = data.filter(member => member.Position === position);
+    const filteredMembers = data?.filter(member => member.Position === position);
     setFilteredMembers(filteredMembers);
   }
   

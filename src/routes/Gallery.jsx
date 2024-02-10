@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import Img from '../assets/profile.jpg'
 import FramerReveal from '../components/FramerReveal'
 import { galleryRef } from '../utils/firebase.utils';
 import { getDocs } from 'firebase/firestore';
@@ -10,6 +9,7 @@ const Gallery = () => {
   const [ data, setData ] = useState([]);
   const [ show, setShow ] = useState('');
   const [ isLoading, setIsLoading ] = useState(false);
+  const [ filterData, setFilterData ] = useState([]);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
@@ -25,6 +25,10 @@ const Gallery = () => {
     getData();
   }, [])
 
+  const filterHandler = (event) => {
+    const filteredData = data?.filter(data => data.Event === event)
+    setFilterData(filteredData);
+  }
 
   const controlNavbar = () => {
     if(window.scrollY > 200) {
@@ -44,14 +48,12 @@ const Gallery = () => {
     }
   }, [lastScrollY])
 
-
   return (
     <div className='sm:mb-12'>
-
       <div className={`flex flex-wrap mx-4 -mt-[60px] sm:-mt-16 items-center sm:gap-4 gap-2 text-xs sm:text-sm font-montserrat fixed z-30 duration-300 ${show}`}>
-        <button className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200'> Nimbus</button>
-        <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200'>Pre-Nimbus</button>
-        <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200'>Hermetica Day</button>
+        <button className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200' onClick={() => filterHandler("Nimbus")}> Nimbus</button>
+        <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200' onClick={() => filterHandler("Hday")}>Hermetica Day</button>
+        <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200' onClick={() => filterHandler("Workshop")}>Workshops</button>
       </div>
 
         {isLoading 
@@ -63,7 +65,7 @@ const Gallery = () => {
             </div>
           :
             <div className='flex flex-wrap justify-center mt-16 gap-4 mx-4'>
-              {data.map(image => {
+              {(filterData.length ? filterData : data)?.map(image => {
                 return (
                   <FramerReveal key={image.ImageLink}>
                     <div className='relative w-full sm:w-[330px] sm:h-[260px] border border-iconbgHover overflow-hidden group'>
