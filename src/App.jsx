@@ -59,8 +59,8 @@ useEffect(() => {
               </div>
           }
       <Header />
-      <div className='h-screen fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>
-        <BgSvg />
+      <div className='h-screen scale-125 blur-md fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>
+          <BgSvg />
       </div>
       
       <div className='z-30'>
