@@ -11,6 +11,8 @@ const Gallery = () => {
   const [ isLoading, setIsLoading ] = useState(false);
   const [ filterData, setFilterData ] = useState([]);
   const [lastScrollY, setLastScrollY] = useState(0);
+  
+  const defaultGallery = data.filter(data => data.Event == 'Default');
 
   useEffect(() => {
     setData([]);
@@ -65,10 +67,10 @@ const Gallery = () => {
             </div>
           :
             <div className='flex flex-wrap justify-center mt-16 gap-4 mx-4'>
-              {(filterData.length ? filterData : data)?.map(image => {
+              {(filterData.length ? filterData : defaultGallery)?.map(image => {
                 return (
                   <FramerReveal key={image.ImageLink}>
-                    <div className='relative w-full sm:w-[330px] sm:h-[260px] border border-iconbgHover overflow-hidden group'>
+                    <div className='relative w-[400px] sm:w-[330px] min-h-[200px] sm:h-[260px] border border-iconbgHover overflow-hidden group'>
                       <a href={image.ImageLink} className='absolute px-4 py-2 bg-mainText text-mainBg rounded-full bottom-2 right-4 translate-y-16 opacity-0 group-hover:opacity-90 font-semibold group-hover:translate-y-0 duration-300' target='_blank'>Download</a>
                       <img src={image.ImageLink} alt="" className='w-full h-full object-cover' />
                     </div>
