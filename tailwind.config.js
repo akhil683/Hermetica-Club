@@ -37,7 +37,14 @@ export default {
     extend: {
       animation: {
         'pulse-fast': 'pulse 1.5s ease-in infinite',
+        'abstract': 'abstract 0.2s ease-in 1'
       },
+      keyframes: {
+        'abstract': {
+          '0%': {opacity: 0, translate: (50)},
+          '100%': {opacity: 1, translate: (0)},
+        }
+      }
     },
   },
   plugins: [],

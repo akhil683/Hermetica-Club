@@ -14,6 +14,7 @@ const Details = ({ dataRef }) => {
 
   const [ data, setData ] = useState([]);
   const [ isLoading, setIsLoading ] = useState(false);
+  const [ showAbstract, setShowAbstract ] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
@@ -37,7 +38,23 @@ const Details = ({ dataRef }) => {
         </div>
       :
       <>
-        <h3 className='text-violet text-3xl text-center mb-12'>{dataDetail?.name}</h3>
+
+      {/* Abstract Details  */}
+      {showAbstract&&
+        <div className='w-screen h-screen top-0 flex fixed z-50 justify-center sm:items-center items-end animate-abstract'>
+          <div className='w-full h-full absolute bg-bgOpacity opacity-70' onClick={() => setShowAbstract(!showAbstract)}></div>
+        <div className=' max-w-[900px] p-2 rounded-2xl h-[60vh] z-50 bg-mainText bottom-0 text-mainBg'>
+          <div className='relative'>
+            <span className='text-violet font-semibold text-3xl'>Abstract</span>
+            <span className=' absolute right-4 text-mainBg opacity-50 hover:opacity-100 text-2xl cursor-pointer' onClick={() => setShowAbstract(!showAbstract)}>&#x2716;</span>
+          </div>
+            <p className=' h-[85%] overflow-y-scroll mt-4 text-justify pr-2 font-popppins'>{dataDetail?.Abstract}</p>
+        </div>
+      </div>
+      }
+
+      {/* Details page  */}
+      <h3 className='text-violet text-3xl text-center mb-12'>{dataDetail?.name}</h3>
       <div className='flex mx-4 flex-wrap gap-12 justify-center'>
         <div className='relative sm:w-[350px] shadow-iconBg duration-300 shadow-2xl w-full hover:opacity-90 sm:h-[400px] h-[450px] rounded-xl overflow-hidden '>
           <img src={Img} alt="" className=' w-full h-full object-cover rounded-lg' />
@@ -57,7 +74,11 @@ const Details = ({ dataRef }) => {
             ? dataDetail?.Abstract
             : <>
                 {`${dataDetail?.Abstract.slice(0,800)}...`}
-                <span className=' underline text-violet cursor-pointer opacity-90 hover:opacity-100'>Read more</span>
+                <span 
+                  onClick={() => setShowAbstract(!showAbstract)}
+                  className=' underline text-violet cursor-pointer opacity-90 hover:opacity-100' >
+                  Read more
+                </span>
              </>
           } 
           </p>
