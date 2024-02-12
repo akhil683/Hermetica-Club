@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const MemberCard = ({ member }) => {
-  const {name, LinkedIn, Instagram, Position} = member;
+  const {name, LinkedIn, Instagram, Position, Image} = member;
 
   return (
     <FramerReveal>
@@ -26,7 +26,7 @@ const MemberCard = ({ member }) => {
           <div className='sm:w-64 h-[320px] w-full sm:h-[300px] rounded-lg overflow-hidden'>
             <img 
               className='w-full h-full object-cover group-hover:scale-125 opacity-80 hover:opacity-100 duration-500' 
-              src={Img} 
+              src={Image ? Image : Img} 
               alt={name} 
               loading='lazy'
             />
