@@ -24,12 +24,10 @@ const Loader = () => {
   return (
     <div className='h-[40vh] flex gap-6 flex-col justify-center items-center'>
       <img src={LoaderImg} className=' animate-bounce' alt="Loader Image" width={200} height={200} />
-      
   </div>
   )}
 
 const App = () => {
-
   const [ isLoading, setIsLoading ] = useState(true);
   const navigate = useNavigate();
 
@@ -40,18 +38,17 @@ useEffect(() => {
   return () => clearTimeout(timer);
 }, []);
 
-
   return (
     <div className=' bg-bgOpacity'>
       {isLoading && 
             <div className='fixed flex flex-col justify-center items-center z-50 bg-mainBg h-screen w-screen'>
               <Loader />
               <div className='flex gap-4 text-4xl sm:text-7xl text-violet'>
-                <span className=' loader-animate'>H</span>
-                <span  className='loader-animate'>E</span>
+                <span className='loader-animate'>H</span>
+                <span className='loader-animate'>E</span>
                 <span className='loader-animate'>R</span>
-                <span  className='loader-animate'>M</span>
-                <span  className='loader-animate'>E</span>
+                <span className='loader-animate'>M</span>
+                <span className='loader-animate'>E</span>
                 <span className='loader-animate'>T</span>
                 <span className='loader-animate'>I</span>
                 <span className='loader-animate'>C</span>
@@ -59,7 +56,9 @@ useEffect(() => {
               </div>
             </div>
           }
+
       <Header />
+
       <div className='h-screen scale-125 blur-md fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>
           <BgSvg />
       </div>

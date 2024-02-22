@@ -106,9 +106,9 @@ const Details = ({ dataRef }) => {
       </form>
       </div>
     </FramerReveal>
-    
+
     <FramerReveal>
-      <Reviews />
+      <Reviews dataDetail={dataDetail?.name} />
     </FramerReveal>
       </>
       }
