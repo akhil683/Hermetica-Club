@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getDocs } from 'firebase/firestore';
+
+import { getDocs, setDoc } from 'firebase/firestore';
 
 import FramerReveal from '../FramerReveal';
 import Img from '../../assets/profile.jpg';
@@ -16,6 +17,16 @@ const Details = ({ dataRef }) => {
   const [ isLoading, setIsLoading ] = useState(false);
   const [ showAbstract, setShowAbstract ] = useState(false);
 
+  const dataDetail = data?.find(data => data.url == url);
+
+  const [ formData, setFormData ] = useState({
+    Reviewer: "",
+    Suggestions: "",
+    name: dataDetail?.name,
+    rating: 4,
+    timestamp: '12:00PM',
+  })
+
   useEffect(() => {
     const getData = async () => {
       setIsLoading(true);
@@ -27,7 +38,11 @@ const Details = ({ dataRef }) => {
     }
     getData();
   }, [])
-  const dataDetail = data?.find(data => data.url == url);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+  }
 
   return (
     <div className='mb-12 mt-4 font-popppins'>
@@ -89,7 +104,7 @@ const Details = ({ dataRef }) => {
 
     <FramerReveal>
       <div className='my-12 py-6 text-center'>
-      <form className='flex flex-col mx-4 sm:mx-auto max-w-[600px] gap-4 text-iconBg'>
+      <form className='flex flex-col mx-4 sm:mx-auto max-w-[600px] gap-4 text-iconBg' onSubmit={handleSubmit}>
         <ReactStars 
           count={5}
           value={0}
@@ -100,8 +115,18 @@ const Details = ({ dataRef }) => {
           half={true}
           edit={true}
         />
-        <input className=' rounded-md w-full py-2 px-4 outline-none' type="text" placeholder='Your Name' />
-        <input className=' rounded-md w-full py-2 px-4 outline-none' type="text" placeholder='Suggestions' />
+        <input 
+        onChange={(e) => setFormData({...formData, Reviewer: e.target.value})}
+          className=' rounded-md w-full py-2 px-4 outline-none' 
+          type="text" 
+          placeholder='Your Name' 
+        />
+        <input 
+          onChange={(e) => setFormData({...formData, Suggestions: e.target.value})}
+          className=' rounded-md w-full py-2 px-4 outline-none' 
+          type="text" 
+          placeholder='Suggestions' 
+        />
         <button className='bg-violet text-mainText py-2 font-semibold duration-200 text-xl rounded-md' type='submit'>SUBMIT</button>
       </form>
       </div>
