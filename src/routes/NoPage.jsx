@@ -2,8 +2,8 @@ import React from 'react'
 
 const NoPage = () => {
   return (
-    <div>
-      NoPage
+    <div className="flex-1 justify-center item-center">
+      <h2>No Page Found !!</h2>
     </div>
   )
 }

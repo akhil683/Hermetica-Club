@@ -1,24 +1,28 @@
 import React from 'react';
 import DomainImg from '../../assets/profile.jpg';
 import FramerReveal from '../FramerReveal';
+import webImage from '../../assets/webd.png'
+import graphicImage from '../../assets/graphic.jpg'
+import videoImage from '../../assets/video.jpg'
+import contentImage from '../../assets/content.png'
 
 const Domains = () => {
   const Domains = [
     {
       name: 'Web Development',
-      image: '',
+      image: webImage,
     },
     {
       name: 'Video Editing',
-      image: '',
+      image: videoImage,
     },
     {
       name: 'Graphic Design',
-      image: '',
+      image: graphicImage,
     },
     {
       name: 'Content Writing',
-      image: '',
+      image: contentImage,
     },
   ]
 
@@ -33,7 +37,7 @@ const Domains = () => {
           <FramerReveal  key={domain.name} >
           <div className='flex flex-col justify-center items-center group'>
             <div className='w-72 h-72 rounded-full overflow-hidden'>
-              <img id='clip-path' src={DomainImg} alt="" className=' group-hover:scale-125 w-full h-full object-cover group-hover:rotate-6 duration-300' />
+              <img id='clip-path' src={domain.image} alt={domain.name} className=' group-hover:scale-125 w-full h-full object-cover group-hover:rotate-6 duration-300' />
             </div>
             <p className='px-4 py-2 bg-mainText text-mainBg mt-4 rounded-full w-[70%] text-center'>{domain.name}</p>
           </div>

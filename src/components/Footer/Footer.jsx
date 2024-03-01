@@ -10,20 +10,8 @@ const Footer = () => {
       <div className='flex max-sm:flex-col  z-50 flex-wrap sm:ap-6 gap-12 sm:justify-around justify-center'>
 
         <FramerReveal>
-          <div className='sm:max-w-[350px]'>
-            <h3 className='text-3xl mb-4'>Contact <span className=' text-violet'>Us</span></h3>
-            <div className='flex flex-wrap gap-4 text-bg'>
-              <div className='flex justify-between'>
-              <input type="text" placeholder='First Name' className='w-[48%] outline-none p-2 rounded-lg' />
-              <input type="text" placeholder='Last Name' className='w-[48%] outline-none p-2 rounded-lg' />
-              </div>
-              {/* <input type="email" placeholder='Email Address' className='w-full p-2 outline-none rounded-lg' /> */}
-              <textarea className='w-full h-28 rounded-lg p-2 outline-none' placeholder='Suggestions' />
-            </div>
-            <button className='w-full text-xl mt-4 py-2 bg-violet rounded-lg'>SEND</button>
-          </div>
+          <FooterSocials />
         </FramerReveal>
-
 
         <FramerReveal>
         <div>
@@ -52,8 +40,22 @@ const Footer = () => {
         </FramerReveal> */}
 
         <FramerReveal>
-          <FooterSocials />
+          <div className='sm:max-w-[350px]'>
+            <h3 className='text-xl mb-4'>Contact <span className=' text-violet'>Us</span></h3>
+            <div className='flex flex-wrap gap-4 text-bg'>
+              <div className='flex justify-between'>
+              <input type="text" placeholder='First Name' className='w-[48%] bg-subMainText placeholder:text-bg outline-none p-2 rounded-lg' />
+              <input type="text" placeholder='Last Name' className='w-[48%] outline-none p-2 bg-subMainText rounded-lg placeholder:text-bg' />
+              </div>
+              <input type="email" placeholder='Email Address' className='w-full p-2 outline-none rounded-lg placeholder:text-bg bg-subMainText' />
+              <textarea className='w-full h-28 rounded-lg p-2 bg-subMainText placeholder:text-mainBg outline-none' placeholder='Suggestions' />
+            </div>
+            <div className='flex justify-end'>
+              <button className='px-6 inline-block text-lg mt-4 py-2 bg-violet rounded-lg'>SEND</button>
+            </div>
+          </div>
         </FramerReveal>
+
       </div>
 
       <FramerReveal>

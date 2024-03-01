@@ -17,6 +17,59 @@ const Home = () => {
       <Nimbus />
       <Work />
       <Domains />
+
+      <FramerReveal>
+        <div className='flex flex-col justify-center items-center gap-8'>
+          <h3 className='text-3xl sm:text-5xl'>Past <span className='text-violet'>Achievement</span></h3>
+            <div className="carousel carousel-center w-full px-6 md:max-w-[900px] p-4 space-x-4 rounded-box">
+            <div className="carousel-item">
+              <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg flex flex-col justify-center items-center'>
+                <h4 className='mb-4 text-xl text-violet'>Nimbux 2k16</h4>
+                <p className='text-center'>Best Publicity Team in Nimbus</p>
+              </div>
+            </div> 
+            <div className="carousel-item">
+              <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg flex flex-col justify-center items-center'>
+                <h4 className='mb-4 text-xl text-violet'>Nimbux 2k17</h4>
+                <p className='text-center'>Best Event in Nimbus 2k17</p>
+              </div>
+            </div> 
+            <div className="carousel-item">
+              <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg flex flex-col justify-center items-center'>
+                <h4 className='mb-4 text-xl text-violet'>Nimbux 2k18</h4>
+                <p className='text-center'>Best Innovative Team in Nimbus</p>
+              </div>
+            </div> 
+            <div className="carousel-item">
+              <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg flex flex-col justify-center items-center'>
+                <h4 className='mb-4 text-xl text-violet'>Nimbux 2k19</h4>
+                <p className='text-center'>Best Innovative in Nimbus</p>
+              </div>
+            </div> 
+            <div className="carousel-item">
+              <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg flex flex-col justify-center items-center'>
+                <h4 className='mb-4 text-xl text-violet'>Nimbux 2k21</h4>
+                <p className='text-center'>Best ManagementTeam in Nimbus</p>
+              </div>
+            </div> 
+            <div className="carousel-item">
+              <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg flex flex-col justify-center items-center'>
+                <h4 className='mb-4 text-xl text-violet'>Nimbux 2k23</h4>
+                <p className='text-center'>Best Events in Nimbus 2k23</p>
+              </div>
+            </div> 
+            <div className="carousel-item">
+              <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg flex flex-col justify-center items-center'>
+                <h4 className='mb-4 text-xl text-violet'>Nimbux 2k14</h4>
+                <p className='text-center'>All set to achieve new milestones !</p>
+              </div>
+            </div> 
+
+          </div>
+        </div>
+      </FramerReveal>
+
+
       <div className='p-6 pb-12 sm:h-screen'>
       
       <FramerReveal>
