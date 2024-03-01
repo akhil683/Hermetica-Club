@@ -10,7 +10,7 @@ const Nimbus = () => {
       <FramerReveal>
         <h2 className='text-4xl text-center sm:text-5xl'>Our <span className='text-violet'>Work</span></h2>
       </FramerReveal>
-    <section className='min-h-screen mt-6 max-sm:mb-16 max-sm:mx-12 flex flex-wrap justify-center items-center gap-6'>
+    <section className='min-h-screen max-sm:mt-6 max-sm:mb-16 max-sm:mx-12 flex flex-wrap justify-center items-center gap-6'>
       <FramerReveal>
       <Link to="/projects" className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-iconBg hover:-translate-y-1 duration-200 hover:shadow-2xl hover:shadow-iconBg'>
         <div className='w-[120px] h-[120px]'>
