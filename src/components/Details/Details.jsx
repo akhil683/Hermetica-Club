@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { getDocs, setDoc } from 'firebase/firestore';
+import { getDocs, addDoc } from 'firebase/firestore';
 
 import FramerReveal from '../FramerReveal';
 import Img from '../../assets/profile.jpg';
 import ReactStars from 'react-stars';
 import Reviews from './Reviews';
 import Skeleton from '../Skeleton';
+import Swal from 'sweetalert2';
+import AbstractDetails from './AbstractDetails';
+import { ReviewsRef } from '../../utils/firebase.utils';
 
 const Details = ({ dataRef }) => {
   
@@ -19,13 +22,16 @@ const Details = ({ dataRef }) => {
 
   const dataDetail = data?.find(data => data.url == url);
 
+
+
   const [ formData, setFormData ] = useState({
     Reviewer: "",
     Suggestions: "",
     name: dataDetail?.name,
     rating: 4,
-    timestamp: '12:00PM',
+    timestamp: new Date().getTime(),
   })
+  console.log(formData)
 
   useEffect(() => {
     const getData = async () => {
@@ -39,9 +45,24 @@ const Details = ({ dataRef }) => {
     getData();
   }, [])
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
+  const handleSubmit = async () => {
+    try {
+      setIsLoading(true)
+      await addDoc(ReviewsRef, formData)
+      Swal.fire({
+        title: 'Review sent',
+        icon: 'success',
+        buttons: false,
+        timer: 2000
+      })
+    } catch (e) {
+      Swal.fire({
+        title: e,
+        icon: 'error',
+        buttons: false,
+        timer: 6000
+      })
+    } 
   }
 
   return (
@@ -53,21 +74,9 @@ const Details = ({ dataRef }) => {
         </div>
       :
       <>
-
-      {/* Abstract Details  */}
       {showAbstract&&
-        <div className='w-screen h-screen top-0 flex fixed z-50 justify-center sm:items-center items-end animate-abstract'>
-          <div className='w-full h-full absolute bg-bgOpacity opacity-70' onClick={() => setShowAbstract(!showAbstract)}></div>
-        <div className=' max-w-[900px] p-2 rounded-2xl h-[60vh] z-50 bg-mainText bottom-0 text-mainBg'>
-          <div className='relative'>
-            <span className='text-violet font-semibold text-3xl'>Abstract</span>
-            <span className=' absolute right-4 text-mainBg opacity-50 hover:opacity-100 text-2xl cursor-pointer' onClick={() => setShowAbstract(!showAbstract)}>&#x2716;</span>
-          </div>
-            <p className=' h-[85%] overflow-y-scroll mt-4 text-justify pr-2 font-popppins'>{dataDetail?.Abstract}</p>
-        </div>
-      </div>
+        <AbstractDetails showAbstract={showAbstract} setShowAbstract={setShowAbstract} dataDetail={dataDetail} />
       }
-
       {/* Details page  */}
       <h3 className='text-violet text-2xl sm:text-3xl px-6 text-center mb-12'>{dataDetail?.name}</h3>
       <div className='flex mx-4 flex-wrap gap-12 justify-center'>
@@ -104,7 +113,7 @@ const Details = ({ dataRef }) => {
 
     <FramerReveal>
       <div className='my-12 py-6 text-center'>
-      <form className='flex flex-col mx-4 sm:mx-auto max-w-[600px] gap-4 text-iconBg' onSubmit={handleSubmit}>
+      <form className='flex flex-col mx-4 sm:mx-auto max-w-[600px] gap-4 text-iconBg'>
         <ReactStars 
           count={5}
           value={0}
@@ -116,7 +125,7 @@ const Details = ({ dataRef }) => {
           edit={true}
         />
         <input 
-        onChange={(e) => setFormData({...formData, Reviewer: e.target.value})}
+        onChange={(e) => setFormData({...formData, Reviewer: e.target.value, name: dataDetail?.name})}
           className=' rounded-md w-full py-2 px-4 outline-none' 
           type="text" 
           placeholder='Your Name' 
@@ -127,7 +136,7 @@ const Details = ({ dataRef }) => {
           type="text" 
           placeholder='Suggestions' 
         />
-        <button className='bg-violet text-mainText py-2 font-semibold duration-200 text-xl rounded-md' type='submit'>SUBMIT</button>
+        <button onClick={() => handleSubmit()} className='bg-violet text-mainText py-2 font-semibold duration-200 text-xl rounded-md' type='submit'>SUBMIT</button>
       </form>
       </div>
     </FramerReveal>

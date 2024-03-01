@@ -30,9 +30,9 @@ const Reviews = ({ dataDetail }) => {
     ? (
         <h1> Loading...</h1>
     ): (
-    data.map((review) => {
+    reviewData.map((review) => {
         return (
-    <div className='p-4 bg-iconbgHover rounded-xl mb-4 mx-auto max-w-[600px]' key={review.name}>
+    <div className='p-4 bg-iconbgHover rounded-xl mb-4 mx-auto max-w-[600px]' key={review.timestamp}>
       <div className='flex justify-between items-center'>
         <ReactStars 
           count={5}
@@ -42,12 +42,17 @@ const Reviews = ({ dataDetail }) => {
           half={true}
           edit={false}
           />
-        <p className='mr-4 text-sm text-subMainText'> {review?.timestamp} </p>
+        <p className='mr-4 text-sm text-subMainText'> {new Date(review?.timestamp).toDateString()} </p>
       </div>
       <h4 className='text-lg mb-2'> {review.Reviewer} </h4>
       <p className='text-subMainText text-sm'> {review.Suggestions} </p>
     </div>
     )}))}
+    {reviewData.length < 1 && (
+      <div className='w-full h-36 flex justify-center items-center'>
+          <p className='text-xl text-subMainText'>No reviews yet...</p>
+      </div>
+    )}
 </div>
    )}
 

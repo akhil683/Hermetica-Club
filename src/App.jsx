@@ -3,7 +3,6 @@ import { Route, useNavigate, Routes } from 'react-router-dom'
 
 import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from './components/ErrorFallback';
-import { DNA } from 'react-loader-spinner';
 import { eventsRef, projectRef, workshopRef } from './utils/firebase.utils';
 
 const About = lazy(() => import('./routes/About'))
@@ -28,15 +27,15 @@ const Loader = () => {
   )}
 
 const App = () => {
-  const [ isLoading, setIsLoading ] = useState(true);
+  const [ isLoading, setIsLoading ] = useState(false);
   const navigate = useNavigate();
 
-useEffect(() => {
-  const timer = setTimeout(() => {
-    setIsLoading(false);
-  }, 3200);
-  return () => clearTimeout(timer);
-}, []);
+// useEffect(() => {
+//   const timer = setTimeout(() => {
+//     setIsLoading(false);
+//   }, 3200);
+//   return () => clearTimeout(timer);
+// }, []);
 
   return (
     <div className=' bg-bgOpacity'>
