@@ -61,7 +61,7 @@ const Header = () => {
         <span className='sm:text-xl'>Hermetica</span>
       </Link>
 
-      <ul className='lg:flex hidden py-1 rounded-full font-opensans'>
+      <ul className='lg:flex hidden py-1 rounded-full font-popppins'>
         <li className='px-4 py-2 nav-hover'>
           <Link to='/'>Home</Link>
         </li>

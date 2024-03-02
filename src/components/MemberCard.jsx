@@ -10,7 +10,7 @@ const MemberCard = ({ member }) => {
 
   return (
     <FramerReveal>
-      <div className='flex flex-col max-sm:w-full border border-iconbgHover rounded-lg'>
+      <div className='flex flex-col w-[340px]  border border-iconbgHover rounded-lg'>
         <motion.div className='relative group overflow-hidden' >
 
           <div className='absolute flex gap-2 left-2 top-12 z-20 group-hover:top-2 opacity-0 group-hover:opacity-100 duration-500'>

@@ -51,7 +51,7 @@ const Gallery = () => {
   }, [lastScrollY])
 
   return (
-    <div className='sm:mb-12'>
+    <div className='sm:mb-12 pb-16'>
       <div className={`flex flex-wrap mx-4 -mt-[60px] sm:-mt-16 items-center sm:gap-4 gap-2 text-xs sm:text-sm font-montserrat fixed z-30 duration-300 ${show}`}>
         <button className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200' onClick={() => filterHandler("Nimbus")}> Nimbus</button>
         <button  className='py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200' onClick={() => filterHandler("Hday")}>Hermetica Day</button>
