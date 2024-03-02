@@ -1,10 +1,12 @@
 import React from 'react';
-import NimbusImg from '../../assets/nimbus-logo.jpg';
-import HermeticaImg from '../../assets/hermetica-logo.jpg';
-import FramerReveal from '../FramerReveal';
 import { Link } from 'react-router-dom';
 
+import FramerReveal from '../FramerReveal';
+import NimbusImg from '../../assets/nimbus-logo.jpg';
+import HermeticaImg from '../../assets/hermetica-logo.jpg';
+
 const Nimbus = () => {
+  
   return (
     <>
       <FramerReveal>

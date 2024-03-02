@@ -121,7 +121,7 @@ useEffect(() => {
           </ErrorBoundary>} 
           />
           
-          <Route path='/projects/:url' element={
+          <Route path='/projects/:id' element={
             <ErrorBoundary
               FallbackComponent={ErrorFallback}
               onReset={() => navigate('/')}
@@ -133,7 +133,7 @@ useEffect(() => {
           }
           />
 
-          <Route path='/workshops/:url' element={
+          <Route path='/workshops/:id' element={
             <ErrorBoundary
               FallbackComponent={ErrorFallback}
               onReset={() => navigate('/')}
@@ -144,7 +144,7 @@ useEffect(() => {
           </ErrorBoundary>} 
           />
 
-          <Route path='/events/:url' element={
+          <Route path='/events/:id' element={
             <ErrorBoundary
             FallbackComponent={ErrorFallback}
             onReset={() => navigate('/')}

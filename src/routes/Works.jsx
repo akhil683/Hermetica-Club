@@ -18,7 +18,7 @@ const Works = ({ dataRef, name }) => {
       setIsLoading(true);
       const _data = await getDocs(dataRef);
       _data.forEach((doc) => {
-        setData((prev) => [...prev, {...(doc.data())}]);
+        setData((prev) => [...prev, {...(doc.data()), id: doc.id}]);
       })
       setIsLoading(false);
     }
@@ -36,7 +36,6 @@ const Works = ({ dataRef, name }) => {
     const searchFieldValue = e.target.value.toLowerCase();
     setSearchField(searchFieldValue);
   }
-// console.log(data);
 
   return (
       <div className='mb-12 mt-2 z-50'>
@@ -54,9 +53,9 @@ const Works = ({ dataRef, name }) => {
           </div>
         ) : (
           <div className='flex flex-wrap justify-center gap-6 mt-6'>
-            {(searchFilterData?.length ? searchFilterData : data)?.map((project) => {
+            {(searchFilterData?.length ? searchFilterData : data)?.map((data) => {
               return (
-              <Card data={project} name={name} key={project.name}/>
+              <Card data={data} name={name} key={data.name}/>
               )})}
           </div>
         )}

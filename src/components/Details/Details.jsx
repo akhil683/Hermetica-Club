@@ -1,47 +1,52 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 
-import { getDocs, addDoc } from 'firebase/firestore';
+import { doc, getDoc, addDoc, updateDoc } from 'firebase/firestore';
+import { ReviewsRef } from '../../utils/firebase.utils';
+
+import ReactStars from 'react-rating-stars-component';
+import Swal from 'sweetalert2';
 
 import FramerReveal from '../FramerReveal';
 import Img from '../../assets/profile.jpg';
-import ReactStars from 'react-stars';
 import Reviews from './Reviews';
 import Skeleton from '../Skeleton';
-import Swal from 'sweetalert2';
 import AbstractDetails from './AbstractDetails';
-import { ReviewsRef } from '../../utils/firebase.utils';
 
 const Details = ({ dataRef }) => {
-  
-  const { url } = useParams();
 
-  const [ data, setData ] = useState([]);
+  const { id } = useParams();
+
+  const [ dataDetail, setData ] = useState([]);
   const [ isLoading, setIsLoading ] = useState(false);
   const [ showAbstract, setShowAbstract ] = useState(false);
-
-  const dataDetail = data?.find(data => data.url == url);
 
   useEffect(() => {
     const getData = async () => {
       setIsLoading(true);
-      const _data = await getDocs(dataRef);
-      _data.forEach((doc) => {
-        setData((prev) => [...prev, {...(doc.data())}]);
-      })
+      const _doc = doc(dataRef, id)
+      const _data = await getDoc(_doc)
+      setData(_data.data())
+      // const _data = await getDocs(dataRef);
+      // _data.forEach((doc) => {
+      //   setData((prev) => [...prev, {...(doc.data())}]);
+      // })
       setIsLoading(false);
     }
     getData();
   }, [])
+console.log(dataDetail)
+  // const dataDetail = data?.find(data => data.url == url);
 
   const initialForm = {
     Reviewer: "",
     Suggestions: "",
-    name: dataDetail?.name,
-    rating: 4,
+    name: "",
+    rating: 0,
     timestamp: new Date().getTime(),
   }
   const [ formData, setFormData ] = useState(initialForm)
+  console.log(formData)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -52,13 +57,17 @@ const Details = ({ dataRef }) => {
         title: 'Done',
         text: 'Review sent successfully !',
         icon: 'success',
-        buttons: false,
         timer: 2000
+      })
+      const ref = doc(dataRef, id)
+      await updateDoc(ref, {
+        rating: (formData.rating + dataDetail?.rating)/(dataDetail?.rated ? dataDetail?.rated : 1),
+        rated: dataDetail?.rated + 1
       })
       setFormData(initialForm)
     } catch (e) {
       alert("Error, Please try again");
-      console.log(e.message);
+      console.log(e)
     } 
   }
 
@@ -84,17 +93,16 @@ const Details = ({ dataRef }) => {
           <p className='text-xl'>Proposed By: <a href='#' className=''>{dataDetail?.ProposedBy}</a> </p>
           <ReactStars 
             count={5}
-            value={0}
             color1='#ffd700'
+            value={dataDetail?.rating/dataDetail.rated}
             size={20}
             half={true}
-            edit={true}
           />
           <p className=' text-subMainText text-justify text-md mt-4'>
-            {dataDetail?.Abstract.length < 800 
+            {dataDetail?.Abstract?.length < 800 
             ? dataDetail?.Abstract
             : <>
-                {`${dataDetail?.Abstract.slice(0,800)}...`}
+                {`${dataDetail?.Abstract?.slice(0,800)}...`}
                 <span 
                   onClick={() => setShowAbstract(!showAbstract)}
                   className=' underline text-violet cursor-pointer opacity-90 hover:opacity-100' >
@@ -114,7 +122,7 @@ const Details = ({ dataRef }) => {
         <ReactStars 
           count={5}
           value={0}
-          // onChange={}
+          onChange={r => setFormData({...formData, rating: r})}
           color1='#ffd700'
           // color2=''
           size={40}

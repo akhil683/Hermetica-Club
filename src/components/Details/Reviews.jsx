@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ReactStars from 'react-stars';
+import ReactStars from 'react-rating-stars-component';
 import { ReviewsRef } from '../../utils/firebase.utils';
 
 import { getDocs } from 'firebase/firestore';
