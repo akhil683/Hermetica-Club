@@ -56,12 +56,11 @@ useEffect(() => {
               </div>
             </div>
           }
-
       <Header />
-
+{/* 
       <div className='h-screen scale:125 blur-md fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>
           <BgSvg />
-      </div>
+      </div> */}
       
       <div className='z-30'>
       <Routes>

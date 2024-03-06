@@ -44,7 +44,7 @@ const Form = () => {
         type="text" 
         placeholder='Your Name'
         required
-        className='py-2 px-4 rounded-lg outline-none w-full'
+        className='py-2 bg-subMainText placeholder:text-bg px-4 rounded-lg outline-none w-full'
         />
 
         <input 
@@ -53,7 +53,7 @@ const Form = () => {
         type="text" 
         placeholder='LinkedIn Link'
         required
-        className='py-2 px-4 rounded-lg outline-none w-full'
+        className='py-2 px-4 bg-subMainText placeholder:text-bg rounded-lg outline-none w-full'
         />
 
         <input 
@@ -62,11 +62,11 @@ const Form = () => {
         type="text" 
         required
         placeholder='Instagram Link'
-        className='py-2 px-4 rounded-lg outline-none w-full'
+        className='py-2 px-4 rounded-lg outline-none w-full bg-subMainText placeholder:text-bg'
         />
 
         <select 
-          className='py-2 px-4 rounded-lg w-full' 
+          className='py-2 px-4 rounded-lg w-full bg-subMainText placeholder:text-bg' 
           required
           onChange={(e) => setForm({...form, Position: e.target.value})}
         >
