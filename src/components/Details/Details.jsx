@@ -90,7 +90,9 @@ console.log(dataDetail)
           <img src={Img} alt="" className=' w-full h-full object-cover rounded-lg' />
         </div>
         <div className='sm:max-w-[700px] w-full font-montserrat'>
+          { dataDetail.ProposedBy && 
           <p className='text-xl'>Proposed By: <a href='#' className=''>{dataDetail?.ProposedBy}</a> </p>
+          }
           <ReactStars 
             count={5}
             color1='#ffd700'
@@ -111,8 +113,12 @@ console.log(dataDetail)
              </>
           } 
           </p>
-          <p className='mt-6 mb-2 text-lg'>ConstructedBy : {dataDetail?.constructedBy}</p>
-          <p className='text-lg'>Volunteer : {dataDetail?.Volunteer}</p>
+          { dataDetail.constructedBy &&
+            <p className='mt-6 mb-2 text-lg'>ConstructedBy : {dataDetail?.constructedBy}</p>
+          }
+          { dataDetail?.Volunteer &&
+            <p className='text-lg'>Volunteer : {dataDetail?.Volunteer}</p>
+          }
         </div>
       </div>
 

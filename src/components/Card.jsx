@@ -12,7 +12,7 @@ const Card = ({ data, name }) => {
     <Link to={`/${name}/${data.id}`} className='group hover:-translate-y-1 duration-200'>
       <div className='w-[300px] h-[280px] relative overflow-hidden duration-300 rounded-xl group-hover:shadow-2xl group-hover:shadow-iconBg max-sm:shadow-2xl max-sm:shadow-iconBg'>
         <img 
-          src={ProjectImg} 
+          src={data.Image ? data.Image : ProjectImg} 
           alt={data.name}
           className='h-full w-full object-cover rounded-lg duration-500' 
           loading='lazy'

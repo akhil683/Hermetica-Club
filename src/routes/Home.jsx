@@ -1,5 +1,4 @@
 import React from 'react'
-import Spline from '@splinetool/react-spline';
 
 import Domains from '../components/Home/Domains';
 import FramerReveal from '../components/FramerReveal';
