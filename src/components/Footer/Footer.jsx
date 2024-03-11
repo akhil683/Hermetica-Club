@@ -44,12 +44,12 @@ const Footer = () => {
         <div>
           <h4 className='text-xl mb-4'>Team <span className='text-violet'>Work</span></h4>
           <ul className=' text-subMainText flex flex-col max-sm:pl-2 gap-3'>
-            <li className='hover:text-subMainText duration-150'><Link to="">Projects</Link></li>
-            <li className='hover:text-subMainText duration-150'><Link to="">Events</Link></li>
-            <li className='hover:text-subMainText duration-150'><Link to="">Workshops</Link></li>
-            <li className='hover:text-subMainText duration-150'><Link to="">Members</Link></li>
-            <li className='hover:text-subMainText duration-150'><Link to="">Gallery</Link></li>
-            <li className='hover:text-subMainText duration-150'><Link to="">About Us</Link></li>
+            <li className='hover:text-subMainText duration-150'><Link to="/projects">Projects</Link></li>
+            <li className='hover:text-subMainText duration-150'><Link to="/events">Events</Link></li>
+            <li className='hover:text-subMainText duration-150'><Link to="/workshops">Workshops</Link></li>
+            <li className='hover:text-subMainText duration-150'><Link to="/members">Members</Link></li>
+            <li className='hover:text-subMainText duration-150'><Link to="/gallery">Gallery</Link></li>
+            <li className='hover:text-subMainText duration-150'><Link to="/about">About Us</Link></li>
           </ul>
         </div>
         </FramerReveal>
