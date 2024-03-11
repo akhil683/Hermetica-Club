@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import FramerReveal from '../FramerReveal';
-import NimbusImg from '../../assets/nimbus-logo.jpg';
-import HermeticaImg from '../../assets/hermetica-logo.jpg';
+
+import ProjectImg from '../../assets/ProjectIcon.png'
+import WorkshopImg from '../../assets/WorkshopIcon.png'
+import EventIcon from '../../assets/EventIcon.png'
 
 const Nimbus = () => {
   
@@ -16,7 +18,7 @@ const Nimbus = () => {
       <FramerReveal>
       <Link to="/projects" className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-footerBg hover:scale-105 duration-200 shadow-inner shadow-iconbgHover hover:shadow-violet'>
         <div className='w-[120px] h-[120px]'>
-          <img src={NimbusImg} alt="" className='w-full h-full object-cover rounded-full' />
+          <img src={ProjectImg} alt="Project Icon" className='w-full h-full object-cover' />
         </div>
         <h3 className='text-2xl text-violet font-semibold mt-3 mb-6'>Projects</h3>
         <p className='text-sm sm:h-[260px] text-subMainText text-justify'>Team Hermetica provides you with the chance to acquire a taste of technical projects in the field of chemical engineering and inspire participants to recreate and reinvent pervasive innovation in the college itself, at the highest levels imaginable. <br />  <br />
@@ -27,7 +29,7 @@ const Nimbus = () => {
       <FramerReveal>
       <div className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-footerBg hover:scale-105 hover:shadow-violet duration-200 shadow-inner shadow-iconbgHover'>
         <div className='w-[120px] h-[120px]'>
-          <img src={HermeticaImg} alt="" className='w-full h-full object-cover rounded-full' />
+          <img src={EventIcon} alt="Event Icon" className='w-full h-full object-cover' />
         </div>
         <h3 className='text-2xl text-violet font-semibold mt-3 mb-6'>Events</h3>
         <p className='text-sm sm:h-[260px] text-subMainText text-justify'>
@@ -38,7 +40,7 @@ const Nimbus = () => {
       <FramerReveal>
       <div className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-footerBg hover:scale-105 hover:shadow-violet duration-200 shadow-inner shadow-iconbgHover'>
         <div className='w-[120px] h-[120px]'>
-          <img src={HermeticaImg} alt="" className='w-full h-full object-cover rounded-full' />
+          <img src={WorkshopImg} alt="Workshop Icon" className='w-full h-full object-cover' />
         </div>
         <h3 className='text-2xl text-violet font-semibold mt-3 mb-6'>Workshops</h3>
         <p className='text-sm sm:h-[260px] text-subMainText text-justify'>

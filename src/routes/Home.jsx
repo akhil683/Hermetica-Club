@@ -15,7 +15,7 @@ const Home = () => {
       <Hero /> 
       <Nimbus />
       <FramerReveal>
-        <div className='relative flex flex-col justify-center items-center gap-8 overflow-hidden'>
+        <div className='relative flex mb-16 flex-col justify-center items-center gap-8 overflow-hidden'>
           <h3 className='text-3xl sm:text-5xl'>Past <span className='text-violet'>Achievement</span></h3>
             <div className="carousel carousel-center w-full px-6 md:max-w-[900px] p-4 space-x-4 rounded-box">
 

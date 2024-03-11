@@ -17,7 +17,6 @@ const Form = lazy(() => import('./routes/Form'))
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header'
 import LoaderImg from './assets/loading.png';
-import BgSvg from './components/Svg';
 
 const Loader = () => {
   return (

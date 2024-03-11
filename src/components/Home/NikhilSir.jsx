@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import FramerReveal from '../FramerReveal';
 import { motion, useAnimation } from 'framer-motion'
 
-import CcImage from '../../assets/profile.jpg';
+import NikhilImg from '../../assets/CC/Nikhil.jpeg'
 
 const NikhilSir = () => {
   const [ showCC, setShowCC ] = useState(false);
@@ -39,7 +39,7 @@ const NikhilSir = () => {
             <span className='px-4 py-2 rounded-full bg-mainText opacity-80'>Nikhil Jadon</span>
           </div>
           <div className='sm:w-[300px] w-full sm:h-[350px] bg-violet rounded-2xl overflow-hidden'>
-            <img className='w-full sm:h-full object-cover' src={CcImage} alt="" />
+            <img className='w-full sm:h-full object-cover' src={NikhilImg} alt="" />
           </div>
         </div>
       </FramerReveal>
@@ -51,7 +51,7 @@ const NikhilSir = () => {
         <hr className=' bg-iconbgHover h-[1px] my-4' />
         <p className='text-xl font-semibold my-2'>Club Coordinator</p>
         <p className=''>Branch : <span>Chemcial Engineering</span></p>
-        <p className=' text-subMainText my-4'>Nikhil Jadon Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, eos. Quam repellendus non, fugit, deleniti expedita eligendi facere adipisci nobis sunt iste ipsum omnis voluptatum et totam, rerum sit libero aut? Obcaecati quod dolor error at sequi, alias atque vitae fugiat! Eius, beatae earum. Quidem ut obcaecati eum adipisci culpa.</p>
+        <p className=' text-subMainText my-4'>Nikhil Singh Jadon is the Club Coordinator of Team Hermetica along with Aditya Saroch for this year's technical fest. He is pre-final year student of chemical engineering. He has also done an internship from Indian Institute of Technology, Ropar.</p>
         <div className='my-6'>
           <a className='px-4 py-2 bg-mainText text-mainBg rounded-full' href="">Instagram</a>
           <a className='px-4 py-2 bg-mainText text-mainBg rounded-full ml-4' href="">LinkedIn</a>
