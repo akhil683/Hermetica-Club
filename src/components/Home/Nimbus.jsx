@@ -7,7 +7,7 @@ const Nimbus = () => {
   return (
     <section className='min-h-screen mt-6 max-sm:mb-16 max-sm:mx-12 flex flex-wrap justify-center items-center gap-6'>
       <FramerReveal>
-      <div className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-footerBg hover:scale-105 hover:shadow-violet duration-200 shadow-iconbgHover shadow-inner'>
+      <div className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-footerBg hover:scale-105 shadow-violet duration-200 shadow-inner'>
         <div className='w-[120px] h-[120px]'>
           <img src={NimbusImg} alt="" className='w-full h-full object-cover rounded-full' />
         </div>
@@ -16,7 +16,7 @@ const Nimbus = () => {
       </div>
       </FramerReveal>
       <FramerReveal>
-      <div className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-footerBg hover:scale-105 hover:shadow-violet duration-200 shadow-inner shadow-iconbgHover'>
+      <div className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-footerBg hover:scale-105 shadow-violet duration-200 shadow-inner'>
         <div className='w-[120px] h-[120px]'>
           <img src={HermeticaImg} alt="" className='w-full h-full object-cover rounded-full' />
         </div>
@@ -27,7 +27,7 @@ const Nimbus = () => {
       </div>
       </FramerReveal>
       <FramerReveal>
-      <div className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-footerBg shadow-iconbgHover hover:scale-105 hover:shadow-violet duration-200 shadow-inner'>
+      <div className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-footerBg hover:scale-105 shadow-violet duration-200 shadow-inner'>
         <div className='w-[120px] h-[120px]'>
           <img src="https://img.freepik.com/premium-vector/target-icon-mission-icon-about-business-strategies-concept_122317-81.jpg" alt="" className='w-full h-full object-cover rounded-full' />
         </div>

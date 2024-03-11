@@ -79,7 +79,7 @@ const Footer = () => {
                 placeholder='Suggestions' 
               />
             <div className='flex justify-end w-full'>
-              <button className='px-6 inline-block text-lg py-2 bg-violet rounded-lg' type='submit'>SEND</button>
+              <button className='px-6 inline-block text-lg text-mainText font-semibold py-2 bg-violet rounded-lg' type='submit'>SEND</button>
             </div>
             </form>
           </div>
