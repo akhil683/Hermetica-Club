@@ -51,10 +51,11 @@ const Header = () => {
         damping: 30,
       }})
   }
+  // from-mainBg to-transparent p bg-gradient-to-b
 
   return (
     <>
-    <nav className={`flex sm:justify-around justify-between sticky top-0 items-center bg-gradient-to-b from-mainBg to-transparent p-4 overflow-hidden z-50 duration-200 ${show}`}>
+    <nav className={`flex sm:justify-around justify-between sticky top-0 items-center  p-4 bg-bgOpacity overflow-hidden z-50 duration-200 ${show}`}>
 
       <Link to='/'  className='bg-iconBg flex items-center gap-1 px-4 py-2 rounded-full duration-200 my-auto hover:bg-iconbgHover hover:scale-110'>
         <img src={HermeticaImg} alt="" className='h-5 w-5 object-cover rounded-full' />

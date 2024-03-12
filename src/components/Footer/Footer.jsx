@@ -33,7 +33,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className='relative py-12 px-12 overflow-hidden group bg-footerBg'>
+    <footer className='relative sm:py-12 py-24 px-12 overflow-hidden group bg-footerBg'>
       <div className='flex max-sm:flex-col  z-50 flex-wrap sm:ap-6 gap-12 sm:justify-around justify-center'>
 
         <FramerReveal>

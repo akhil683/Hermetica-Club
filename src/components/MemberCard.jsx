@@ -19,7 +19,7 @@ const MemberCard = ({ member }) => {
           </div>
 
           <div className='absolute text-xs left-4 -bottom-10 text-iconBg font-semibold group-hover:bottom-2 duration-500 z-20'>
-            <span className='px-4 py-2 rounded-full bg-mainText duration-200 opacity-50 group-hover:opacity-100'>{name}</span>
+            <span className='px-4 py-2 rounded-full bg-mainText duration-200 opacity-70 group-hover:opacity-100'>{name}</span>
             <p className='px-4 py-2 mt-6 group-hover:mt-4 rounded-full bg-mainText duration-500 opacity-100 group-hover:opacity-100'>{Position}</p>
           </div>
 

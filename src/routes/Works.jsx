@@ -38,7 +38,7 @@ const Works = ({ dataRef, name }) => {
   }
 
   return (
-      <div className='mb-12 mt-2 z-50'>
+      <div className='sm:mb-12 mb-24 mt-2 z-50'>
         <Searchbar 
           onSearchChange={onSearchChange} 
           Placeholder={name} 

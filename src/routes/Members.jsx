@@ -17,7 +17,7 @@ const Members = () => {
   const controlNavbar = () => {
     if(window.scrollY > 200) {
       if(window.scrollY > lastScrollY) {
-        setShow("-translate-y-16 scale-75")
+        setShow("-translate-y-20 scale-75")
       } else {
         setShow("show");
       }
@@ -53,7 +53,7 @@ const Members = () => {
   return (
     <div className='mt-4 mb-12'>
 
-        <div className={`flex flex-wrap mx-4 -mt-[70px] sm:-mt-16 items-center sm:gap-4 gap-2 text-xs sm:text-sm font-montserrat fixed z-30 duration-300 ${show}`}>
+        <div className={`flex flex-wrap mx-4 -mt-[50px] sm:-mt-16 items-center sm:gap-4 gap-2 text-xs sm:text-sm font-montserrat fixed z-30 duration-300 ${show}`}>
           <button onClick={() => handleClick("Final Year Member")} className='p-2 cursor-pointer bg-iconbgHover duration-200 hover:bg-violet focus:bg-violet rounded-full px-4'>Final Year</button>
           <button onClick={() => handleClick("Coordinator")} className='p-2 cursor-pointer bg-iconbgHover duration-200 hover:bg-violet focus:bg-violet rounded-full px-4'>3rd Year</button>
           <button onClick={() => handleClick("Executive Member")} className='p-2 cursor-pointer bg-iconbgHover duration-200 hover:bg-violet focus:bg-violet rounded-full px-4'>2nd Year</button>
