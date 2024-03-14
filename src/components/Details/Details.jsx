@@ -72,7 +72,7 @@ console.log(dataDetail)
   }
 
   return (
-    <div className='mb-12 mt-4 font-popppins'>
+    <div className='mb-12 mt-4 font-popppins z-20'>
       {isLoading 
       ?
         <div className='w-screen flex justify-center'>
@@ -84,12 +84,12 @@ console.log(dataDetail)
         <AbstractDetails showAbstract={showAbstract} setShowAbstract={setShowAbstract} dataDetail={dataDetail} />
       }
       {/* Details page  */}
-      <h3 className='text-violet text-2xl sm:text-3xl px-6 text-center mb-12'>{dataDetail?.name}</h3>
+      <h3 className='text-violet text-2xl z-20 sm:text-3xl relative px-6 text-center mb-12'>{dataDetail?.name}</h3>
       <div className='flex mx-4 flex-wrap gap-12 justify-center'>
         <div className='relative sm:w-[350px] shadow-iconBg duration-300 shadow-2xl w-full hover:opacity-90 sm:h-[400px] h-[450px] rounded-xl overflow-hidden '>
           <img src={Img} alt="" className=' w-full h-full object-cover rounded-lg' />
         </div>
-        <div className='sm:max-w-[700px] w-full font-montserrat'>
+        <div className='sm:max-w-[700px] w-full relative font-montserrat'>
           { dataDetail.ProposedBy && 
           <p className='text-xl'>Proposed By: <a href='#' className=''>{dataDetail?.ProposedBy}</a> </p>
           }
@@ -100,7 +100,7 @@ console.log(dataDetail)
             size={20}
             half={true}
           />
-          <p className=' text-subMainText text-justify text-md mt-4'>
+          <p className='text-subMainText text-justify text-md mt-4'>
             {dataDetail?.Abstract?.length < 800 
             ? dataDetail?.Abstract
             : <>

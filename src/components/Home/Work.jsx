@@ -16,7 +16,7 @@ const Nimbus = () => {
       </FramerReveal>
     <section className='min-h-screen max-sm:mt-12 max-sm:mb-16 max-sm:mx-12 flex flex-wrap justify-center items-center gap-6'>
       <FramerReveal>
-      <Link to="/projects" className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-footerBg hover:scale-105 duration-200 shadow-inner shadow-violet'>
+      <Link to="/projects" className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] hover:bg-footerBg bg-bgOpacity hover:scale-105 duration-200 shadow-inner shadow-violet'>
         <div className='w-[120px] h-[120px]'>
           <img src={ProjectImg} alt="Project Icon" className='w-full h-full object-cover' />
         </div>
@@ -27,7 +27,7 @@ const Nimbus = () => {
       </Link>
       </FramerReveal>
       <FramerReveal>
-      <Link to="/events" className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-footerBg hover:scale-105 shadow-violet duration-200 shadow-inner'>
+      <Link to="/events" className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] hover:bg-footerBg bg-bgOpacity hover:scale-105 shadow-violet duration-200 shadow-inner'>
         <div className='w-[120px] h-[120px]'>
           <img src={EventIcon} alt="Event Icon" className='w-full h-full object-cover' />
         </div>
@@ -38,7 +38,7 @@ const Nimbus = () => {
       </Link>
       </FramerReveal>
       <FramerReveal>
-      <Link to="/workshops" className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] bg-footerBg hover:scale-105 shadow-violet duration-200 shadow-inner'>
+      <Link to="/workshops" className='text-center p-6 px-12 flex flex-col items-center justify-center w-full sm:w-[350px] hover:bg-footerBg bg-bgOpacity hover:scale-105 shadow-violet duration-200 shadow-inner'>
         <div className='w-[120px] h-[120px]'>
           <img src={WorkshopImg} alt="Workshop Icon" className='w-full h-full object-cover' />
         </div>
