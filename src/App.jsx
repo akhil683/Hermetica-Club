@@ -33,7 +33,7 @@ useEffect(() => {
   setIsLoading(true)
   const timer = setTimeout(() => {
     setIsLoading(false);
-  }, 3000);
+  }, 1500);
   return () => clearTimeout(timer);
 }, []);
 
@@ -42,7 +42,7 @@ useEffect(() => {
       {isLoading && 
             <div className='fixed flex flex-col justify-center items-center z-50 bg-mainBg h-screen w-screen'>
               <Loader />
-              <div className='flex absolute top-[60%] gap-4 text-4xl sm:text-7xl text-violet'>
+              <div className='flex absolute top-[65%] gap-4 text-4xl sm:text-7xl text-violet'>
                 <span className='loader-animate'>H</span>
                 <span className='loader-animate'>E</span>
                 <span className='loader-animate'>R</span>
@@ -56,6 +56,7 @@ useEffect(() => {
             </div>
           }
       <Header />
+      
 {/* 
       <div className='h-screen scale:125 blur-md fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>
           <BgSvg />

@@ -11,10 +11,10 @@
 #clip-path {
   clip-path: ellipse(41% 48% at 48% 51%);
 }
-
 .loader-animate {
-  animation: loading 0.7s ease-in 1 forwards;
+  animation: loading 0.2s ease-in 1 forwards;
 }
+
 @keyframes loading {
   0% {
     opacity: 1;
@@ -38,28 +38,28 @@
   animation-delay: 0;
 }
 .loader-animate:nth-child(2) {
-  animation-delay: 0.3s;
+  animation-delay: 0.15s;
 }
 .loader-animate:nth-child(3) {
-  animation-delay: 0.6s;
+  animation-delay: 0.3s;
 }
 .loader-animate:nth-child(4) {
-  animation-delay: 0.9s;
+  animation-delay: 0.45s;
 }
 .loader-animate:nth-child(5) {
-  animation-delay: 1.2s;
+  animation-delay: 0.6s;
 }
 .loader-animate:nth-child(6) {
-  animation-delay: 1.5s;
+  animation-delay: 0.75s;
 }
 .loader-animate:nth-child(7) {
-  animation-delay: 1.8s;
+  animation-delay: 0.9s;
 }
 .loader-animate:nth-child(8) {
-  animation-delay: 2.1s;
+  animation-delay: 1.05s;
 }
 .loader-animate:nth-child(9) {
-  animation-delay: 2.4s;
+  animation-delay: 1.3s;
 }
 
 * {
