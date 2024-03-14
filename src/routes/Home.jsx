@@ -15,7 +15,7 @@ const Home = () => {
     <>
       <Hero /> 
       <Nimbus />
-      <Achievements />
+     <Achievements />
       <Work />
       <Domains />
 

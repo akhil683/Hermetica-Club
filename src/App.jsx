@@ -4,6 +4,7 @@ import { Route, useNavigate, Routes } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from './components/ErrorFallback';
 import { eventsRef, projectRef, workshopRef } from './utils/firebase.utils';
+import BgSvg from './assets/bg/bg.svg'
 
 const About = lazy(() => import('./routes/About'))
 const Details = lazy(() => import('./components/Details/Details'));
@@ -57,10 +58,10 @@ useEffect(() => {
           }
       <Header />
       
-{/* 
-      <div className='h-screen scale:125 blur-md fixed top-0 w-screen opacity-90 -z-10 overflow-hidden'>
-          <BgSvg />
-      </div> */}
+
+      <div className='h-screen scale:125 blur-sm fixed top-0 w-screen opacity-90 overflow-hidden'>
+        <img src={BgSvg} alt="bg image" className=' opacity-60' />
+      </div>
       
       <div className='z-30'>
       <Routes>

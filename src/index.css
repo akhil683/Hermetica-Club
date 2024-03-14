@@ -8,9 +8,9 @@
 .social-icon {
   @apply p-3 bg-mainBg rounded-full;
 }
-#clip-path {
-  clip-path: ellipse(41% 48% at 48% 51%);
-}
+/* #clip-path {
+  clip-path: ellipse(49% 48% at 48% 51%);
+} */
 .loader-animate {
   animation: loading 0.2s ease-in 1 forwards;
 }

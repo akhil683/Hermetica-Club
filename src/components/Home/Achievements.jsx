@@ -9,8 +9,8 @@ const Achievements = () => {
           <h3 className='text-4xl sm:text-5xl'>Past <span className='text-violet'>Achievement</span></h3>
             <div className="carousel carousel-center w-full px-6 md:max-w-[900px] p-4 space-x-4 rounded-box">
 
-            <div className="carousel-item relative">
-              <div className='absolute top-0 left-0 w-full opacity-50 h-full rounded-2xl overflow-hidden'>
+            <div className="carousel-item relative bg-bg rounded-2xl">
+              <div className='absolute top-0 left-0 w-full opacity-70 rounded-2xl h-full overflow-hidden'>
                 <img className='w-full h-full object-cover' src="https://firebasestorage.googleapis.com/v0/b/hermetica-76788.appspot.com/o/Gallery%2Fnimbux%2FIMG_7675.jpg?alt=media&token=ec511c06-bf5f-4ddd-8971-f5d0841afcd9" alt="" />
               </div>
               <div className='w-[300px] z-20 h-[400px] p-8 rounded-2xl bg-iconBg bg-opacity-50 flex flex-col justify-center items-center'>
@@ -19,8 +19,8 @@ const Achievements = () => {
               </div>
             </div> 
 
-            <div className="carousel-item relative">
-              <div className='absolute top-0 left-0 w-full opacity-50 h-full rounded-2xl overflow-hidden'>
+            <div className="carousel-item relative bg-bg rounded-2xl">
+              <div className='absolute top-0 left-0 w-full opacity-70 h-full rounded-2xl overflow-hidden'>
                 <img className='w-full h-full object-cover' src="https://firebasestorage.googleapis.com/v0/b/hermetica-76788.appspot.com/o/Gallery%2Fnimbux%2FIMG_7657.jpg?alt=media&token=a27fda5e-4b1c-4990-a862-c69ad2251962" alt="" />
               </div>
               <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg z-20 bg-opacity-50 flex flex-col justify-center items-center'>
@@ -29,8 +29,8 @@ const Achievements = () => {
               </div>
             </div> 
 
-            <div className="carousel-item relative">
-              <div className='absolute top-0 left-0 w-full opacity-50 h-full rounded-2xl overflow-hidden'>
+            <div className="carousel-item relative bg-bg rounded-2xl">
+              <div className='absolute top-0 left-0 w-full opacity-70 h-full rounded-2xl overflow-hidden'>
                 <img className='w-full h-full object-cover' src="https://firebasestorage.googleapis.com/v0/b/hermetica-76788.appspot.com/o/Gallery%2Fnimbux%2FIMG_7679.jpg?alt=media&token=f1fe96b4-cc9e-48d8-8971-52372030d98e" alt="" />
               </div>
               <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg z-20 bg-opacity-50 flex flex-col justify-center items-center'>
@@ -39,8 +39,8 @@ const Achievements = () => {
               </div>
             </div> 
 
-            <div className="carousel-item relative">
-              <div className='absolute top-0 left-0 w-full opacity-50 h-full rounded-2xl overflow-hidden'>
+            <div className="carousel-item relative bg-bg rounded-2xl">
+              <div className='absolute top-0 left-0 w-full opacity-70 h-full rounded-2xl overflow-hidden'>
                 <img className='w-full h-full object-cover' src="https://firebasestorage.googleapis.com/v0/b/hermetica-76788.appspot.com/o/Gallery%2Fnimbux%2FIMG_7657.jpg?alt=media&token=a27fda5e-4b1c-4990-a862-c69ad2251962" alt="" />
               </div>
               <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg z-20 bg-opacity-50 flex flex-col justify-center items-center'>
@@ -49,8 +49,8 @@ const Achievements = () => {
               </div>
             </div> 
 
-            <div className="carousel-item relative">
-              <div className='absolute top-0 left-0 w-full opacity-50 h-full rounded-2xl overflow-hidden'>
+            <div className="carousel-item relative bg-bg rounded-2xl">
+              <div className='absolute top-0 left-0 w-full opacity-7k0 h-full rounded-2xl overflow-hidden'>
                 <img className='w-full h-full object-cover' src="https://firebasestorage.googleapis.com/v0/b/hermetica-76788.appspot.com/o/Gallery%2Fnimbux%2FIMG_7679.jpg?alt=media&token=f1fe96b4-cc9e-48d8-8971-52372030d98e" alt="" />
               </div>
               <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg z-20 bg-opacity-50 flex flex-col justify-center items-center'>
@@ -59,8 +59,8 @@ const Achievements = () => {
               </div>
             </div> 
 
-            <div className="carousel-item relative">
-              <div className='absolute top-0 left-0 w-full opacity-50 h-full rounded-2xl overflow-hidden'>
+            <div className="carousel-item relative bg-bg rounded-2xl">
+              <div className='absolute top-0 left-0 w-full opacity-70 h-full rounded-2xl overflow-hidden'>
                 <img className='w-full h-full object-cover' src="https://firebasestorage.googleapis.com/v0/b/hermetica-76788.appspot.com/o/Gallery%2Fnimbux%2FIMG_7675.jpg?alt=media&token=ec511c06-bf5f-4ddd-8971-f5d0841afcd9" alt="" />
               </div>
               <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg z-20 bg-opacity-50 flex flex-col justify-center items-center'>
@@ -69,8 +69,8 @@ const Achievements = () => {
               </div>
             </div> 
 
-            <div className="carousel-item relative">
-              <div className='absolute top-0 left-0 w-full opacity-50 h-full rounded-2xl overflow-hidden'>
+            <div className="carousel-item relative bg-bg rounded-2xl">
+              <div className='absolute top-0 left-0 w-full opacity-70 h-full rounded-2xl overflow-hidden'>
                 <img className='w-full h-full object-cover' src="https://firebasestorage.googleapis.com/v0/b/hermetica-76788.appspot.com/o/Gallery%2Fnimbux%2FIMG_7679.jpg?alt=media&token=f1fe96b4-cc9e-48d8-8971-52372030d98e" alt="" />
               </div>
               <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg z-20 bg-opacity-50 flex flex-col justify-center items-center'>

@@ -1,10 +1,11 @@
 import React from 'react';
-import DomainImg from '../../assets/profile.jpg';
+
 import FramerReveal from '../FramerReveal';
-import webImage from '../../assets/webd.png'
-import graphicImage from '../../assets/graphic.jpg'
-import videoImage from '../../assets/video.jpg'
-import contentImage from '../../assets/content.png'
+
+import webImage from '../../assets/domain/web.png'
+import graphicImage from '../../assets/domain/graphic.png'
+import videoImage from '../../assets/domain/video.png'
+import contentImage from '../../assets/domain/content.webp'
 
 const Domains = () => {
   const Domains = [
@@ -36,8 +37,8 @@ const Domains = () => {
         {Domains.map(domain => (
           <FramerReveal  key={domain.name} >
           <div className='flex flex-col justify-center items-center group'>
-            <div className='w-72 h-72 rounded-full overflow-hidden'>
-              <img id='clip-path' src={domain.image} alt={domain.name} className=' group-hover:scale-125 w-full h-full object-cover group-hover:rotate-6 duration-300' />
+            <div className='w-72 h-72  rounded-3xl bg-mainText overflow-hidden'>
+              <img src={domain.image} alt={domain.name} className=' group-hover:scale-110 w-full h-full object-cover group-hover:rotate-6 duration-300' />
             </div>
             <p className='px-4 py-2 bg-mainText text-mainBg mt-4 rounded-full w-[70%] text-center'>{domain.name}</p>
           </div>

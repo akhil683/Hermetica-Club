@@ -22,7 +22,7 @@ export default {
     // },
     colors: {
       'bg': 'rgba(0, 0, 0, 0.8)',
-      'bgOpacity': 'rgba(0, 0, 0, 0.5)',
+      'bgOpacity': 'rgba(0, 0, 0, 0.3)',
       'mainBg': '#000',
       'footerBg': '#111',
       // 1e1e32
