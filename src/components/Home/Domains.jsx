@@ -33,11 +33,11 @@ const Domains = () => {
         <h3 className='text-4xl sm:text-5xl text-center mb-12'>Our <span className='text-violet'>Domains</span></h3>
       </FramerReveal>
 
-      <div className='flex max-sm:flex-col gap-6 flex-wrap justify-center items-center'>
+      <div className='flex max-sm:flex-col gap-12 flex-wrap justify-center items-center'>
         {Domains.map(domain => (
           <FramerReveal  key={domain.name} >
           <div className='flex flex-col justify-center items-center group'>
-            <div className='w-72 h-72  rounded-3xl bg-mainText overflow-hidden'>
+            <div className='w-56 h-56 rounded-3xl bg-bgOpacity border border-subMainText shadow-xl shadow-neutral-800 hover:shadow-neutral-700  overflow-hidden'>
               <img src={domain.image} alt={domain.name} className=' group-hover:scale-110 w-full h-full object-cover group-hover:rotate-6 duration-300' />
             </div>
             <p className='px-4 py-2 bg-mainText text-mainBg mt-4 rounded-full w-[70%] text-center'>{domain.name}</p>

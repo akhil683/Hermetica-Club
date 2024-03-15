@@ -59,7 +59,7 @@ useEffect(() => {
       <Header />
       
 
-      <div className='h-screen scale:125 blur-sm fixed top-0 w-screen opacity-90 overflow-hidden'>
+      <div className='h-screen scale:125 blur-xs fixed top-0 w-screen opacity-90 overflow-hidden'>
         <img src={BgSvg} alt="bg image" className=' opacity-60 w-full h-full object-cover ' />
       </div>
       

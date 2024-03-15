@@ -25,12 +25,12 @@ const Header = () => {
       }
     }
     setLastScrollY(window.scrollY);
-    if(window.screenY === 0) {
-      setNavBg("bg-opacity-0")      
-    } else {
-      setNavBg("")
-    }
   }
+    // if(window.screenY === 0) {
+    //   setNavBg("bg-opacity-0")      
+    // } else {
+    //   setNavBg("")
+    // }
 
   useEffect(() => {
     window.addEventListener("scroll", controlNavbar)

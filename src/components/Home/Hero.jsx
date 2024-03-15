@@ -1,7 +1,8 @@
-import React from 'react';
-// import HeroImg from '../../assets/profile.jpg';
+import React, { Suspense } from 'react';
+import HeroImg from '../../assets/profile.jpg';
 import FramerReveal from '../FramerReveal';
 import RoomModal from '../hermetica-room/RoomModal';
+import Skeleton from '../Skeleton';
 
 const Hero = () => {
 
@@ -15,8 +16,10 @@ const Hero = () => {
           <p className='max-w-[460px] text-subMainText text-xs mt-6 font-popppins'>Team Hermetica, established in 2014, represents the Department of Chemical Engineering, in the annual tech fest NIMBUS at National Institite of Technology, Hamirpur.</p>
         </div>
 
-        <div className='sm:m-12 sm:w-[500px] mt-16 w-full h-[450px] sm:h-[500px] rounded-2xl overflow-hidden'>
-          <RoomModal />
+        <div className='sm:m-12 sm:w-[550px] mt-16 w-full h-[450px] sm:h-[550px] rounded-2xl overflow-hidden'>
+          <Suspense fallback={<Skeleton />}>
+            <RoomModal />
+          </Suspense>
           {/* <img src={HeroImg} className='w-full h-full object-cover' alt="" /> */}
         </div>
       
