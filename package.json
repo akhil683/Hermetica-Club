@@ -12,6 +12,8 @@
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "@material-tailwind/react": "^2.1.8",
+    "@react-three/drei": "^9.102.3",
+    "@react-three/fiber": "^8.15.19",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.34",
     "firebase": "^10.7.1",
@@ -24,7 +26,8 @@
     "react-loader-spinner": "^6.1.6",
     "react-rating-stars-component": "^2.2.0",
     "react-stars": "^2.2.5",
-    "sweetalert2": "^11.10.3"
+    "sweetalert2": "^11.10.3",
+    "three": "^0.162.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

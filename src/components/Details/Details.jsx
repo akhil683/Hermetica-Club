@@ -27,16 +27,10 @@ const Details = ({ dataRef }) => {
       const _doc = doc(dataRef, id)
       const _data = await getDoc(_doc)
       setData(_data.data())
-      // const _data = await getDocs(dataRef);
-      // _data.forEach((doc) => {
-      //   setData((prev) => [...prev, {...(doc.data())}]);
-      // })
       setIsLoading(false);
     }
     getData();
   }, [])
-console.log(dataDetail)
-  // const dataDetail = data?.find(data => data.url == url);
 
   const initialForm = {
     Reviewer: "",
@@ -46,7 +40,6 @@ console.log(dataDetail)
     timestamp: new Date().getTime(),
   }
   const [ formData, setFormData ] = useState(initialForm)
-  console.log(formData)
 
   const handleSubmit = async (e) => {
     e.preventDefault()

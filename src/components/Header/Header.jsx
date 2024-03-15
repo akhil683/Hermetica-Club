@@ -14,6 +14,7 @@ const Header = () => {
   const [show, setShow] = useState("top");
   const [ showMenu, setShowMenu ] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [ navBg, setNavBg ] = useState("")
 
   const controlNavbar = () => {
     if(window.scrollY > 200) {
@@ -24,6 +25,11 @@ const Header = () => {
       }
     }
     setLastScrollY(window.scrollY);
+    if(window.screenY === 0) {
+      setNavBg("bg-opacity-0")      
+    } else {
+      setNavBg("")
+    }
   }
 
   useEffect(() => {
@@ -55,7 +61,7 @@ const Header = () => {
 
   return (
     <>
-    <nav className={`flex sm:justify-around justify-between sticky top-0 items-center  p-4 bg-bgOpacity overflow-hidden z-50 duration-200 ${show}`}>
+    <nav className={`flex sm:justify-around justify-between sticky top-0 items-center  p-4 bg-bgOpacity ${navBg} overflow-hidden z-50 duration-200 ${show}`}>
 
       <Link to='/'  className='bg-iconBg flex items-center gap-1 px-4 py-2 rounded-full duration-200 my-auto hover:bg-iconbgHover hover:scale-110'>
         <img src={HermeticaImg} alt="" className='h-5 w-5 object-cover rounded-full' />
