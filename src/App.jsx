@@ -39,7 +39,9 @@ useEffect(() => {
 }, []);
 
   return (
+
     <div className=' bg-bgOpacity'>
+
       {isLoading && 
             <div className='fixed flex flex-col justify-center items-center z-50 bg-mainBg h-screen w-screen'>
               <Loader />
@@ -56,8 +58,8 @@ useEffect(() => {
               </div>
             </div>
           }
+
       <Header />
-      
 
       <div className='h-screen scale:125 blur-xs fixed top-0 w-screen opacity-90 overflow-hidden'>
         <img src={BgSvg} alt="bg image" className=' opacity-60 w-full h-full object-cover ' />

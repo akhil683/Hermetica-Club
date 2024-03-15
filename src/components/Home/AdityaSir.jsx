@@ -53,7 +53,7 @@ const AdityaSir = () => {
         <p className='text-xl font-semibold my-2'>Club Coordinator</p>
         <p className=''>Branch : <span>Chemcial Engineering</span></p>
         <p className=' text-subMainText my-4'>
-          Aditya Saroch is the Club Coordinator of Team Hermetica. Aditya Saroch has also build a project named "Bladeless wind turbine" for Hermetica in Nimbus 2k23. He is pre-final year student of chemical engineering. He has been actively participating in Club's activities.
+          Aditya Saroch is the Club Coordinator of Team Hermetica. He is pre-final year student of chemical engineering. He has been actively participating in the club's activities. He had built various projects namely "Bio-Brick" and conducted various events. He has given his crucial insights and also has shown great enthusiasm to make the club reach new heights.
         </p>
         <div className='my-6'>
           <a className='px-4 py-2 bg-mainText text-mainBg rounded-full' href="">Instagram</a>

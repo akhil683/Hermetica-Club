@@ -51,7 +51,7 @@ const NikhilSir = () => {
         <hr className=' bg-iconbgHover h-[1px] my-4' />
         <p className='text-xl font-semibold my-2'>Club Coordinator</p>
         <p className=''>Branch : <span>Chemcial Engineering</span></p>
-        <p className=' text-subMainText my-4'>Nikhil Singh Jadon is the Club Coordinator of Team Hermetica along with Aditya Saroch for this year's technical fest. He is pre-final year student of chemical engineering. He has also done an internship from Indian Institute of Technology, Ropar.</p>
+        <p className=' text-subMainText my-4'>Nikhil Singh Jadon is the Club Coordinator of Team Hermetica for this year's technical fest. He has been in frontend representing his club in various activities. He has given his inputs on various projects like "Bladeless wind turbine" and contributed to active growth of the club.k</p>
         <div className='my-6'>
           <a className='px-4 py-2 bg-mainText text-mainBg rounded-full' href="">Instagram</a>
           <a className='px-4 py-2 bg-mainText text-mainBg rounded-full ml-4' href="">LinkedIn</a>

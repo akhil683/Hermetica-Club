@@ -65,7 +65,7 @@ const Achievements = () => {
               </div>
               <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg z-20 bg-opacity-50 flex flex-col justify-center items-center'>
                 <h4 className='mb-8 text-2xl text-violet'>Nimbus 2k23</h4>
-                <p className='text-center text-xl'>Best Events in Nimbus 2k23</p>
+                <p className='text-center text-xl'>Best Event Execution Team in Nimbus 2k23</p>
               </div>
             </div> 
 
@@ -75,7 +75,7 @@ const Achievements = () => {
               </div>
               <div className='w-[300px] h-[400px] p-8 rounded-2xl bg-iconBg z-20 bg-opacity-50 flex flex-col justify-center items-center'>
                 <h4 className='mb-8 text-2xl text-violet'>Nimbus 2k24</h4>
-                <p className='text-center text-xl'>All set to achieve new milestones !</p>
+                <p className='text-center text-xl'>All set to achieve new milestones!</p>
               </div>
             </div> 
 

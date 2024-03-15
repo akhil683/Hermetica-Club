@@ -21,8 +21,9 @@ const Nimbus = () => {
           <img src={ProjectImg} alt="Project Icon" className='w-full h-full object-cover' />
         </div>
         <h3 className='text-2xl text-violet font-semibold mt-3 mb-6'>Projects</h3>
-        <p className='text-sm sm:h-[260px] text-subMainText'>Team Hermetica provides you with the chance to acquire a taste of technical projects in the field of chemical engineering and inspire participants to recreate and reinvent pervasive innovation in the college itself, at the highest levels imaginable. <br />  <br />
-        Projects allow us to put technological and scientific concepts into practise, boosting our creativity and thinking in several dimensions
+        <p className='text-sm sm:h-[260px] text-subMainText'>
+          Team Hermetica provides you with the chance to acquire a taste of technical projects in the field of chemical engineering and inspire participants to recreate and reinvent pervasive innovation in the college itself, at the highest levels imaginable. <br />  <br />
+          Projects allow us to put technical and scientific concepts into practise, boosting our creativity and thinking across several dimensions.
         </p>
       </Link>
       </FramerReveal>
@@ -33,7 +34,7 @@ const Nimbus = () => {
         </div>
         <h3 className='text-2xl text-violet font-semibold mt-3 mb-6'>Events</h3>
         <p className='text-sm sm:h-[260px] text-subMainText'>
-        Our activities give a forum for young minds to demonstrate their abilities and compete with their peers, from solving mysteries to demonstrating your academic knowledge. <br /><br /> Organizing activities such as Mind Hunt, an institute-level event, and Chem-e-car, which allow you to rediscover your curiosity and sense of adventure.All you have to consider is that "Curiosity is the wick in the candle of learning."
+          Our activities give a forum for young minds to demonstrate their abilities and compete with their peers, from solving mysteries to demonstrating your academic knowledge. <br /><br /> Organizing activities such as Mind Hunt, an institute-level event, and Chem-e-car, which allow you to rediscover your curiosity and sense of adventure. All you have to consider is that "Curiosity is the wick in the candle of learning."
         </p>
       </Link>
       </FramerReveal>
@@ -44,7 +45,7 @@ const Nimbus = () => {
         </div>
         <h3 className='text-2xl text-violet font-semibold mt-3 mb-6'>Workshops</h3>
         <p className='text-sm sm:h-[260px] text-subMainText'>
-        A workshop is where mysteries are unveiled and a student must take it into consideration to learn and achieve more. We provide MATLAB, ANSYS, and other programming workshops. <br /> <br /> It is an excellent method for teaching hands-on skills since it allows pupils to experience new concepts. Students are clearly concerned about the fundamental use of the aforementioned programme.
+          A workshop is where mysteries are unveiled and a student must take it into consideration to learn and achieve more. We provide DWSIM, Open FOAM, and other programming workshops. <br /> <br /> It is an excellent method for teaching hands-on skills since it allows pupils to experience new concepts. Students are clearly involved  in these workshops  due to the fundamental use of the aforementioned programme.
         </p>
       </Link>
       </FramerReveal>
