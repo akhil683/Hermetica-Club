@@ -18,10 +18,10 @@ const Hero = () => {
 
         <div className='sm:w-[650px] max:mt-16 w-full h-[450px] sm:h-[500px] rounded-2xl overflow-hidden'>
 
-          <Suspense fallback={<Skeleton />}>
+          {/* <Suspense fallback={<Skeleton />}>
             <RoomModal /> 
-          </Suspense>
-          {/* <img src={HeroImg} className='w-full h-full object-cover' alt="" /> */}
+          </Suspense> */}
+          <img src={HeroImg} className='w-full h-full object-cover' alt="" />
         </div>
       
       </div>

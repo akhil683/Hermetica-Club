@@ -11,9 +11,9 @@ import Work from '../components/Home/Work';
 
 
 const Home = () => {
+
   return (
     <>
-    
       <Hero /> 
       <Nimbus />
      <Achievements />
