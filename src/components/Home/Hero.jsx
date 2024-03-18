@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-// import HeroImg from '../../assets/profile.jpg';
+import HeroImg from '../../assets/profile.jpg';
 import FramerReveal from '../FramerReveal';
 import RoomModal from '../hermetica-room/RoomModal';
 import Skeleton from '../Skeleton';
@@ -22,6 +22,7 @@ const Hero = () => {
             <RoomModal /> 
           </Suspense> */}
           <img src={HeroImg} className='w-full h-full object-cover' alt="" />
+          
         </div>
       
       </div>
