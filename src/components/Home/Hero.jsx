@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import HeroImg from '../../assets/profile.jpg';
 import FramerReveal from '../FramerReveal';
-import RoomModal from '../hermetica-room/RoomModal';
+// import RoomModal from '../hermetica-room/RoomModal';
 import Skeleton from '../Skeleton';
 
 const Hero = () => {
