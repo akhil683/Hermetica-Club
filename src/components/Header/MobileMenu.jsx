@@ -41,11 +41,6 @@ const MobileMenu = ({ control }) => {
           </Link>
         </li>
         <li className='px-4 py-3 duration-150 hover:text-mainText hover:bg-iconbgHover'>
-          <Link to='/form' className='flex gap-2 items-center'>
-            <MdOutlineSupervisorAccount />Members Form
-          </Link>
-        </li>
-        <li className='px-4 py-3 duration-150 hover:text-mainText hover:bg-iconbgHover'>
           <Link to='/gallery' className='flex gap-2 items-center'>
             <MdPhotoSizeSelectActual /> Gallery
           </Link>

@@ -8,6 +8,7 @@ import WorkshopImg from "../../assets/WorkshopIcon.png";
 import EventIcon from "../../assets/EventIcon.png";
 
 const Nimbus = () => {
+  
   return (
     <>
       <FramerReveal>
