@@ -123,7 +123,6 @@ const Details = ({ dataRef }) => {
           value={0}
           onChange={r => setFormData({...formData, rating: r})}
           color1='#ffd700'
-          // color2=''
           size={40}
           half={true}
           edit={true}
@@ -144,13 +143,11 @@ const Details = ({ dataRef }) => {
       </form>
       </div>
     </FramerReveal>
-
     <FramerReveal>
       <Reviews dataDetail={dataDetail?.name} />
     </FramerReveal>
       </>
       }
-      
     </div>
   )
 }

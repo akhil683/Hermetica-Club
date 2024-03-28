@@ -2,7 +2,6 @@ import React from "react";
 import Img from "../assets/profile.jpg";
 
 import FramerReveal from "./FramerReveal";
-// import { motion } from 'framer-motion';
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const MemberCard = ({ member }) => {

@@ -1,8 +1,5 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 import { Route, useNavigate, Routes } from 'react-router-dom'
-
-import { ErrorBoundary } from 'react-error-boundary'
-import ErrorFallback from './components/ErrorFallback';
 import { eventsRef, projectRef, workshopRef } from './utils/firebase.utils';
 import BgSvg from './assets/bg/bg.svg'
 
@@ -68,125 +65,135 @@ useEffect(() => {
       <Routes>
       
           <Route path='/' element={
-            <ErrorBoundary
-            FallbackComponent={ErrorFallback}
-            onReset={() => navigate('/')}
-            >
+            // <ErrorBoundary
+            // FallbackComponent={ErrorFallback}
+            // onReset={() => navigate('/')}
+            // >
             <Suspense fallback={<Loader />}>
               <Home />
             </Suspense>
-          </ErrorBoundary>} 
+          // </ErrorBoundary>
+        } 
           />
 
           <Route path='/about' element={
-            <ErrorBoundary
-            FallbackComponent={ErrorFallback}
-            onReset={() => navigate('/')}
-            >
+            // <ErrorBoundary
+            // FallbackComponent={ErrorFallback}
+            // onReset={() => navigate('/')}
+            // >
             <Suspense fallback={<Loader />}>
               <About />
             </Suspense>
-          </ErrorBoundary>} 
+          // </ErrorBoundary>
+        } 
           />
 
           <Route path='/projects' element={
-            <ErrorBoundary
-            FallbackComponent={ErrorFallback}
-            onReset={() => navigate('/')}
-            >
+            // <ErrorBoundary
+            // FallbackComponent={ErrorFallback}
+            // onReset={() => navigate('/')}
+            // >
             <Suspense fallback={<Loader />}>
               <Works dataRef={projectRef} name="projects" />
             </Suspense>
-          </ErrorBoundary>} 
+          // </ErrorBoundary>
+        } 
           />
 
           <Route path='/workshops' element={
-            <ErrorBoundary
-            FallbackComponent={ErrorFallback}
-            onReset={() => navigate('/')}
-            >
+            // <ErrorBoundary
+            // FallbackComponent={ErrorFallback}
+            // onReset={() => navigate('/')}
+            // >
             <Suspense fallback={<Loader />}>
               <Works dataRef={workshopRef} name="workshops" />
             </Suspense>
-          </ErrorBoundary>} 
+          // </ErrorBoundary>
+        } 
           />
 
           <Route path='/events' element={
-            <ErrorBoundary
-            FallbackComponent={ErrorFallback}
-            onReset={() => navigate('/')}
-            >
+            // <ErrorBoundary
+            // FallbackComponent={ErrorFallback}
+            // onReset={() => navigate('/')}
+            // >
             <Suspense fallback={<Loader />}>
               <Works dataRef={eventsRef} name="events" />
             </Suspense>
-          </ErrorBoundary>} 
+          // </ErrorBoundary>
+        } 
           />
           
           <Route path='/projects/:id' element={
-            <ErrorBoundary
-              FallbackComponent={ErrorFallback}
-              onReset={() => navigate('/')}
-            >
+            // <ErrorBoundary
+            //   FallbackComponent={ErrorFallback}
+            //   onReset={() => navigate('/')}
+            // >
               <Suspense fallback={<Loader />}>
                 <Details dataRef={projectRef}/>
               </Suspense>
-            </ErrorBoundary>
+            // </ErrorBoundary>
           }
           />
 
           <Route path='/workshops/:id' element={
-            <ErrorBoundary
-              FallbackComponent={ErrorFallback}
-              onReset={() => navigate('/')}
-            >
+            // <ErrorBoundary
+            //   FallbackComponent={ErrorFallback}
+            //   onReset={() => navigate('/')}
+            // >
             <Suspense fallback={<Loader />}>
               <Details dataRef={workshopRef} />
             </Suspense>
-          </ErrorBoundary>} 
+          // </ErrorBoundary>
+        } 
           />
 
           <Route path='/events/:id' element={
-            <ErrorBoundary
-            FallbackComponent={ErrorFallback}
-            onReset={() => navigate('/')}
-            >
+            // <ErrorBoundary
+            // FallbackComponent={ErrorFallback}
+            // onReset={() => navigate('/')}
+            // >
             <Suspense fallback={<Loader />}>
               <Details dataRef={eventsRef} />
             </Suspense>
-          </ErrorBoundary>} 
+          // </ErrorBoundary>
+        } 
           />
 
           <Route path='/members' element={
-            <ErrorBoundary
-            FallbackComponent={ErrorFallback}
-            onReset={() => navigate('/')}
-            >
+            // <ErrorBoundary
+            // FallbackComponent={ErrorFallback}
+            // onReset={() => navigate('/')}
+            // >
             <Suspense fallback={<Loader />}>
               <Members />
             </Suspense>
-          </ErrorBoundary>} 
+          // </ErrorBoundary>
+        } 
           />
           
           <Route path='/gallery' element={
-            <ErrorBoundary
-            FallbackComponent={ErrorFallback}
-            onReset={() => navigate('/')}
-            >
+            // <ErrorBoundary
+            // FallbackComponent={ErrorFallback}
+            // onReset={() => navigate('/')}
+            // >
             <Suspense fallback={<Loader />}>
               <Gallery />
             </Suspense>
-          </ErrorBoundary>} 
+          // </ErrorBoundary>
+        } 
           />
 
           <Route path='*' element={
-            <ErrorBoundary
-            FallbackComponent={ErrorFallback}
-            onReset={() => navigate('/')}
-            >
+            // <ErrorBoundary
+            // FallbackComponent={ErrorFallback}
+            // onReset={() => navigate('/')}
+            // >
             <Suspense fallback={<Loader />}>
               <NoPage />
             </Suspense>
-          </ErrorBoundary>} 
+          // </ErrorBoundary>
+        } 
           />
 
       </Routes>

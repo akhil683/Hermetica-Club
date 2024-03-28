@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import FramerReveal from "../FramerReveal";
 import { motion, useAnimation } from "framer-motion";
 

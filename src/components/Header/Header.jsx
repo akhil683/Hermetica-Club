@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAnimation } from "framer-motion";
-
 import { CiMenuFries } from "react-icons/ci";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -34,7 +33,6 @@ const Header = () => {
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
-
     let xValue;
     if (showMenu) {
       xValue = 320;

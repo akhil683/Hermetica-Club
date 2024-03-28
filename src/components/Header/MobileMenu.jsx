@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import { AiFillHome } from "react-icons/ai";
+import { MdOutlineSupervisorAccount, MdEmojiEvents, MdPhotoSizeSelectActual } from "react-icons/md";
 import { FaInstagram, FaLinkedinIn, FaProjectDiagram, FaYoutube } from "react-icons/fa";
 import { IoMdInformationCircle } from "react-icons/io";
-import { MdOutlineSupervisorAccount, MdEmojiEvents, MdPhotoSizeSelectActual } from "react-icons/md";
+import { AiFillHome } from "react-icons/ai";
 
 const MobileMenu = ({ control }) => {
 

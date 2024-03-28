@@ -24,14 +24,6 @@ const Members = () => {
     setLastScrollY(window.scrollY);
   };
 
-  // const PorasSir = {
-  //   name: "Porash",
-  //   Position: "Final Year",
-  //   LinkedIn: "",
-  //   Instagram: "",
-  //   Image: ""
-  // }
-
   useEffect(() => {
     window.addEventListener("scroll", controlNavbar);
     return () => {
@@ -65,7 +57,6 @@ const Members = () => {
     return 0;
   };
   const sortedDefaultMembers = defaultMembers.sort(compare);
-  // console.log(sortedDefaultMembers);
 
   const handleClick = (position) => {
     const filteredMembers = data?.filter(
