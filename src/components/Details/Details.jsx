@@ -80,7 +80,7 @@ const Details = ({ dataRef }) => {
       <h3 className='text-violet text-2xl z-20 sm:text-3xl relative px-6 text-center mb-12'>{dataDetail?.name}</h3>
       <div className='flex mx-4 flex-wrap gap-12 justify-center'>
         <div className='relative sm:w-[350px] shadow-iconBg duration-300 shadow-2xl w-full hover:opacity-90 sm:h-[400px] h-[450px] rounded-xl overflow-hidden '>
-          <img src={Img} alt="" className=' w-full h-full object-cover rounded-lg' />
+          <img src={dataDetail?.Image ? dataDetail?.Image : Img} alt="" className=' w-full h-full object-cover rounded-lg' />
         </div>
         <div className='sm:max-w-[700px] w-full relative font-montserrat'>
           { dataDetail.ProposedBy && 
@@ -92,6 +92,7 @@ const Details = ({ dataRef }) => {
             value={dataDetail?.rating/dataDetail.rated}
             size={20}
             half={true}
+            edit={false}
           />
           <p className='text-subMainText text-justify text-md mt-4'>
             {dataDetail?.Abstract?.length < 800 

@@ -65,6 +65,14 @@ const Members = () => {
     const sortedFilteredMembers = filteredMembers.sort(compare);
     setFilteredMembers(sortedFilteredMembers);
   };
+  const Porash = {
+    name: "Porash singh",
+    Image:
+      "https://firebasestorage.googleapis.com/v0/b/hermetica-76788.appspot.com/o/Members%2Ffinal%20year%2Fporash11.jpg?alt=media&token=a0ca2043-7487-4fbc-b2d2-dae972826fa3",
+    Position: "Final Year Member",
+    Instagram: "https://www.instagram.com/porash.singh/",
+    LinkedIn: "https://www.linkedin.com/in/porashsingh0/",
+  };
 
   return (
     <div className="mt-4 mb-12">
@@ -105,6 +113,10 @@ const Members = () => {
         </div>
       ) : (
         <div className="flex flex-wrap justify-center mt-16 gap-12 mx-10">
+          {!filteredMembers.length || filteredMembers.length === 14 ? (
+            <MemberCard member={Porash} />
+          ) : null}
+
           {(filteredMembers.length
             ? filteredMembers
             : sortedDefaultMembers

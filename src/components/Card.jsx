@@ -23,7 +23,7 @@ const Card = ({ data, name }) => {
         <div className="flex gap-2 items-center">
           <ReactStars
             count={5}
-            value={data.rating}
+            value={data?.rating/data?.rated}
             color1="#ffd700"
             size={25}
             half={true}
