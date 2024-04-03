@@ -6,6 +6,7 @@ import {
   MdOutlineSupervisorAccount,
   MdEmojiEvents,
   MdPhotoSizeSelectActual,
+  MdOutlineAccountCircle,
 } from "react-icons/md";
 import {
   FaInstagram,
@@ -49,7 +50,7 @@ const MobileMenu = ({ control }) => {
         </li>
         <li className="px-4 py-3 duration-150 hover:text-mainText hover:bg-iconbgHover">
           <Link to="/guest_lectures" className="flex gap-2 items-center">
-            <MdEmojiEvents />
+            <MdOutlineAccountCircle />
             Guest Lectures
           </Link>
         </li>
