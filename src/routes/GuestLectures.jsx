@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getDocs } from "firebase/firestore";
 
-import Card from "../components/Card";
 import Skeleton from "../components/Skeleton";
 import FramerReveal from "../components/FramerReveal";
 

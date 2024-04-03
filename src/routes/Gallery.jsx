@@ -52,7 +52,7 @@ const Gallery = () => {
   return (
     <div className="sm:mb-12 pb-16">
       <div
-        className={`flex flex-wrap mx-4 -mt-[60px] sm:-mt-16 items-center sm:gap-4 gap-2 text-[10px] sm:text-sm font-montserrat fixed z-30 duration-300 ${show}`}
+        className={`flex flex-wrap mx-4 -mt-[80px] sm:-mt-16 items-center sm:gap-4 gap-2 text-[10px] sm:text-sm font-montserrat fixed z-30 duration-300 ${show}`}
       >
         <button
           className="py-2 px-4 bg-iconbgHover rounded-full hover:bg-violet focus:bg-violet duration-200"
@@ -93,7 +93,7 @@ const Gallery = () => {
           <Skeleton />
         </div>
       ) : (
-        <div className="flex flex-wrap justify-center mt-16 gap-4 mx-4">
+        <div className="flex flex-wrap justify-center mt-16 max-sm:mt-24 gap-4 mx-4">
           {(filterData.length ? filterData : defaultGallery)?.map((image) => {
             return (
               <FramerReveal key={image.ImageLink}>
