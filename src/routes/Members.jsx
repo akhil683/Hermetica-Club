@@ -113,7 +113,7 @@ const Members = () => {
         </div>
       ) : (
         <div className="flex flex-wrap justify-center mt-16 gap-12 mx-10">
-          {!filteredMembers.length || filteredMembers.length === 14 ? (
+          {!filteredMembers.length || filteredMembers.length === 13 ? (
             <MemberCard member={Porash} />
           ) : null}
 

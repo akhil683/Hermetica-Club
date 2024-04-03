@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 import { Route, useNavigate, Routes } from 'react-router-dom'
-import { eventsRef, projectRef, workshopRef } from './utils/firebase.utils';
+import { eventsRef, projectRef, workshopRef, lectureRef  } from './utils/firebase.utils';
 import BgSvg from './assets/bg/bg.svg'
 
 const About = lazy(() => import('./routes/About'))
@@ -14,6 +14,7 @@ const Works = lazy(() => import('./routes/Works'))
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header'
 import LoaderImg from './assets/loading.png';
+import GuestLectures from './routes/GuestLectures';
 
 const Loader = () => {
   return (
@@ -149,6 +150,30 @@ useEffect(() => {
           />
 
           <Route path='/events/:id' element={
+            // <ErrorBoundary
+            // FallbackComponent={ErrorFallback}
+            // onReset={() => navigate('/')}
+            // >
+            <Suspense fallback={<Loader />}>
+              <Details dataRef={eventsRef} />
+            </Suspense>
+          // </ErrorBoundary>
+        } 
+          />
+
+          <Route path='/guest_lectures' element={
+            // <ErrorBoundary
+            // FallbackComponent={ErrorFallback}
+            // onReset={() => navigate('/')}
+            // >
+            <Suspense fallback={<Loader />}>
+              <GuestLectures dataRef={lectureRef} />
+            </Suspense>
+          // </ErrorBoundary>
+        } 
+          />
+
+          <Route path='/guest_lectures/:id' element={
             // <ErrorBoundary
             // FallbackComponent={ErrorFallback}
             // onReset={() => navigate('/')}

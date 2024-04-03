@@ -81,6 +81,9 @@ const Header = () => {
             <Link to="/workshops">Workshops</Link>
           </li>
           <li className="px-4 py-2 nav-hover">
+            <Link to="/guest_lectures">Guest Lectures</Link>
+          </li>
+          <li className="px-4 py-2 nav-hover">
             <Link to="/members">Members</Link>
           </li>
           <li className="px-4 py-2 nav-hover">

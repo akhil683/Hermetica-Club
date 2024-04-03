@@ -1,14 +1,14 @@
+
 import React from "react";
-import { Link } from "react-router-dom";
 
 import ProjectImg from "../assets/profile.jpg";
 import ReactStars from "react-rating-stars-component";
 import FramerReveal from "./FramerReveal";
 
-const Card = ({ data, name }) => {
+const GuestCard = ({ data }) => {
   return (
     <FramerReveal>
-      <Link to={`/${name}/${data.id}`}
+      <div
         className="group hover:-translate-y-1 duration-200"
       >
         <div className="w-[300px] h-[280px] relative overflow-hidden duration-300 rounded-xl group-hover:shadow-2xl group-hover:shadow-iconBg max-sm:shadow-2xl max-sm:shadow-iconBg">
@@ -35,9 +35,9 @@ const Card = ({ data, name }) => {
             ? data.name
             : `${data?.name?.slice(0, 35)}...`}
         </h4>
-      </Link>
+      </div>
     </FramerReveal>
   );
 };
 
-export default Card;
+export default GuestCard;
