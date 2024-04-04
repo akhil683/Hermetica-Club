@@ -33,7 +33,8 @@ const MemberCard = ({ member }) => {
               {name}
             </span>
             <p className="px-4 py-2 mt-6 group-hover:mt-4 rounded-full bg-mainText duration-500 opacity-100 group-hover:opacity-100">
-              {name === "Aditya Saroch" || "Nikhil Singh Jadon" ? "Core Coordinator" : Position}
+              {/* {name === "Aditya Saroch" || "Nikhil Singh Jadon" ? "Core Coordinator" : Position} */}
+              {Position}
             </p>
           </div>
 
