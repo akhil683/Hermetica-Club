@@ -64,7 +64,7 @@ const AdityaSir = () => {
           Aditya Saroch
         </h4>
         <hr className=" bg-iconbgHover h-[1px] my-4" />
-        <p className="text-xl font-semibold my-2">Core Coordinator</p>
+        <p className="text-xl font-semibold my-2">Club Coordinator</p>
         <p className="">
           Branch : <span>Chemcial Engineering</span>
         </p>
