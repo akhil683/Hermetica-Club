@@ -144,9 +144,9 @@ const Details = ({ dataRef }) => {
       </form>
       </div>
     </FramerReveal>
-    <FramerReveal>
-      <Reviews dataDetail={dataDetail?.name} />
-    </FramerReveal>
+    {/* <framerreveal>
+      <reviews datadetail={datadetail?.name} />
+    </framerreveal> */}
       </>
       }
     </div>
