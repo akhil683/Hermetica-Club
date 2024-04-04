@@ -49,7 +49,7 @@ const NikhilSir = () => {
       >
         <h4 className='text-2xl font-semibold m-2 text-violet'>Nikhil Jadon</h4>
         <hr className=' bg-iconbgHover h-[1px] my-4' />
-        <p className='text-xl font-semibold my-2'>Club Coordinator</p>
+        <p className='text-xl font-semibold my-2'>Core Coordinator</p>
         <p className=''>Branch : <span>Chemcial Engineering</span></p>
         <p className=' text-subMainText my-4'>Nikhil Singh Jadon is the Club Coordinator of Team Hermetica for this year's technical fest. He has been in frontend representing his club in various activities. He has given his inputs on various projects like "Bladeless wind turbine" and contributed to active growth of the club.</p>
         <div className='my-6'>
