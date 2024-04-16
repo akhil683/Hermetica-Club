@@ -1,3 +1,2 @@
 # Hermetica Website Link
-https://www.teamhermetica 
-.in
+https://www.teamhermetica.in
